@@ -3,38 +3,74 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application!!!Tracy Branch</title>
+    <title>@ViewBag.Title - LegalDB</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+    <header id="header" role="banner">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" title="Information & People You Can Trust" href="#">
+                        <img src="~/images/logo-white.png" alt="Accurate Background" class="img-responsive logo-white" />
+                    </a>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Civil &nbsp;<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Advertizing", "Index", "Home")</li>
+                                <li>@Html.ActionLink("ParaLegal", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Attorney", "Index", "Home")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PI &nbsp;<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Advertizing", "Index", "Home")</li>
+                                <li>@Html.ActionLink("ParaLegal", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Attorney", "Index", "Home")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin &nbsp;<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Accounting", "Index", "Home")</li>
+                                <li>@Html.ActionLink("IT", "Index", "Home")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Employee &nbsp;<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>@Html.ActionLink("Employee List", "Index", "Home")</li>
+                                <li>@Html.ActionLink("My Info", "Index", "Home")</li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+    </header>
+    <div class="container-fluid body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        
     </div>
-
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year - LegalDB</p>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
