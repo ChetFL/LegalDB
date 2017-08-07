@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -79,7 +87,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -152,6 +164,198 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BestCaseLogin.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseType.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\chkCityName.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChkNmSfx.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CivilLetter.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CivilWkMnth.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\County.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRpt.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptAgency.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptMotorist.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccInjury.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccSeatPos.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccup.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptSeverity.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVeh.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehBody.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehDamScale.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehSpecFunc.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehTypeUse.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehUnitType.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DefaultSchedule.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DNSAddr.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DNSName.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpType.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLog.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogCAN.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogCB.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogFU.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogN.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogR.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogSgn.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICSource.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICStatu.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICTask.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IC_CN_Reason.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Jurisdiction.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Language.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lawyer.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBLogin.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NeedlesLogin.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Office.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PCLawLogin.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoliceDept.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuickBookLogin.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RptList.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RptMailingList.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\State.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tickler.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_Attny.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CallSource.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CaseType.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CivilEmp.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICLkUp.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICOffice.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICStat.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_Lawyers.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WBCT12.cs">
+      <DependentUpon>LegalDBEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,12 +365,408 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\0202_InsertShape_32.png" />
+    <Content Include="Images\0205_WebInsertHyperlink_32.png" />
+    <Content Include="Images\0356_NewComment_32.png" />
+    <Content Include="Images\10WinEnv.png" />
+    <Content Include="Images\112_ArrowReturnLeft_Blue_16x16_72.png" />
+    <Content Include="Images\112_Plus_Green_16x16_72.png" />
+    <Content Include="Images\12.jpg" />
+    <Content Include="Images\3D Boxes.png" />
+    <Content Include="Images\3x5Env.jpg" />
+    <Content Include="Images\9.jpg" />
+    <Content Include="Images\Actions-view-calendar-timeline-icon.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 16.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 24.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 32.png" />
+    <Content Include="Images\activity_monitor.png" />
+    <Content Include="Images\activity_window.png" />
+    <Content Include="Images\addressbook_contacts_16.png" />
+    <Content Include="Images\addressbook_edit_16.png" />
+    <Content Include="Images\admin.png" />
+    <Content Include="Images\administrator_keys.png" />
+    <Content Include="Images\alarm_clock_blue_16px.png" />
+    <Content Include="Images\alarm_clock_exclamation_16.png" />
+    <Content Include="Images\Alerts.png" />
+    <Content Include="Images\AlignCenter_16x16.png" />
+    <Content Include="Images\AlignLeft_16x16.png" />
+    <Content Include="Images\AlignRight_16x16.png" />
+    <Content Include="Images\AlignTextCenter16.png" />
+    <Content Include="Images\AlignTextJustify16.png" />
+    <Content Include="Images\AlignTextLeft16.png" />
+    <Content Include="Images\AlignTextRight16.png" />
+    <Content Include="Images\applications_cascade.png" />
+    <Content Include="Images\applications_cascade48x48.png" />
+    <Content Include="Images\applications_cascade72x72.png" />
+    <Content Include="Images\applications_cascade84x84.png" />
+    <Content Include="Images\applications_cascade96x96.png" />
+    <Content Include="Images\AppMenuImage.png" />
+    <Content Include="Images\app_cascade48x48.png" />
+    <Content Include="Images\arrange.png" />
+    <Content Include="Images\associate_img_update.jpg" />
+    <Content Include="Images\Back Icon.png" />
+    <Content Include="Images\Backstage.png" />
+    <Content Include="Images\Backstageblack.png" />
+    <Content Include="Images\Backstagesilver.png" />
+    <Content Include="Images\base_business_contacts.png" />
+    <Content Include="Images\base_charts.png" />
+    <Content Include="Images\base_map.png" />
+    <Content Include="Images\base_paperclip_32.png" />
+    <Content Include="Images\base_speaker_32.png" />
+    <Content Include="Images\Birds.png" />
+    <Content Include="Images\BlackWidow6_Setup.exe" />
+    <Content Include="Images\Blue.png" />
+    <Content Include="Images\bluebackground.jpg" />
+    <Content Include="Images\BlueLarge.png" />
+    <Content Include="Images\Bold16.png" />
+    <Content Include="Images\Bold_16x16.png" />
+    <Content Include="Images\book1.gif" />
+    <Content Include="Images\book_addressHS.png" />
+    <Content Include="Images\BordersAndShading_16x16.png" />
+    <Content Include="Images\Borders_16x16.png" />
+    <Content Include="Images\BottomBorder_16x16.png" />
+    <Content Include="Images\Bubbles.png" />
+    <Content Include="Images\Bullets16.png" />
+    <Content Include="Images\Bullets_16x16.png" />
+    <Content Include="Images\Butterflies.png" />
+    <Content Include="Images\Calendar16x16.png" />
+    <Content Include="Images\calendar_Week.png" />
+    <Content Include="Images\CascadeWindowsHS.png" />
+    <Content Include="Images\ChooseColor_16x16.png" />
+    <Content Include="Images\Circle Bands.png" />
+    <Content Include="Images\Circles.png" />
+    <Content Include="Images\ClearFormatting_16x16.png" />
+    <Content Include="Images\climate.PNG" />
+    <Content Include="Images\Close32.png" />
+    <Content Include="Images\CloseTab32.png" />
+    <Content Include="Images\Close_16x16.png" />
+    <Content Include="Images\ColorPalette.png" />
+    <Content Include="Images\colors.png" />
+    <Content Include="Images\Color_16x16.png" />
+    <Content Include="Images\ConnectionManager_48x48.png" />
+    <Content Include="Images\Copy of Save.png" />
+    <Content Include="Images\Copy.png" />
+    <Content Include="Images\Copy16.png" />
+    <Content Include="Images\Copy_16x16.png" />
+    <Content Include="Images\Cut16.png" />
+    <Content Include="Images\Cut_16x16.png" />
+    <Content Include="Images\DataContainer_MoveFirstHS.png" />
+    <Content Include="Images\DataContainer_MoveLastHS.png" />
+    <Content Include="Images\DataContainer_MoveNextHS.png" />
+    <Content Include="Images\DataContainer_MovePreviousHS.png" />
+    <Content Include="Images\DecreaseIndent16.png" />
+    <Content Include="Images\DecreaseIndent_16x16.png" />
+    <Content Include="Images\Default_16x16.png" />
+    <Content Include="Images\DeleteHS.png" />
+    <Content Include="Images\DiagonalDownBorder_16x16.png" />
+    <Content Include="Images\DiagonalUpBorder_16x16.png" />
+    <Content Include="Images\disable.png" />
+    <Content Include="Images\Document_16x16.png" />
+    <Content Include="Images\Dotted Arrows.png" />
+    <Content Include="Images\DownArrow_16x16.png" />
+    <Content Include="Images\DownArrow_32x32.png" />
+    <Content Include="Images\DrawTable_16x16.png" />
+    <Content Include="Images\DSB64.png" />
+    <Content Include="Images\EditDocument.png" />
+    <Content Include="Images\EditRedo_16x16.png" />
+    <Content Include="Images\EditUndo_16x16.png" />
+    <Content Include="Images\Edit_UndoHS.png" />
+    <Content Include="Images\email_delete_01.png" />
+    <Content Include="Images\Erase_16x16.png" />
+    <Content Include="Images\Exit.png" />
+    <Content Include="Images\FinalMark128x128.png" />
+    <Content Include="Images\FinalMark32.png" />
+    <Content Include="Images\FinalMark52x48.png" />
+    <Content Include="Images\Find16.png" />
+    <Content Include="Images\Find_16x16.png" />
+    <Content Include="Images\Find_32x32.png" />
+    <Content Include="Images\first16px.png" />
+    <Content Include="Images\FlowDirection32.png" />
+    <Content Include="Images\Floweral.png" />
+    <Content Include="Images\FolderClosed_48x48.png" />
+    <Content Include="Images\FontColor.png" />
+    <Content Include="Images\FontColor16.png" />
+    <Content Include="Images\FontColor_16x16.png" />
+    <Content Include="Images\FontScript_16x16.png" />
+    <Content Include="Images\Font_16x16.png" />
+    <Content Include="Images\Font_32x32.png" />
+    <Content Include="Images\Forecolor_16x16.png" />
+    <Content Include="Images\FormatPainter16.png" />
+    <Content Include="Images\FormatPainter_16x16.png" />
+    <Content Include="Images\Forward Icon.png" />
+    <Content Include="Images\globe.ico" />
+    <Content Include="Images\globe.png" />
+    <Content Include="Images\gnome_printer_printing.png" />
+    <Content Include="Images\GoTo_16x16.png" />
+    <Content Include="Images\Gray.png" />
+    <Content Include="Images\GrayLarge.png" />
+    <Content Include="Images\Green.png" />
+    <Content Include="Images\GreenLarge.png" />
+    <Content Include="Images\group_full_security_32.png" />
+    <Content Include="Images\GrowFont16.png" />
+    <Content Include="Images\HeaderLogoClear.jpg" />
+    <Content Include="Images\Help.png" />
+    <Content Include="Images\Help16.png" />
+    <Content Include="Images\Help_16x16.png" />
+    <Content Include="Images\Highlight_16x16.png" />
+    <Content Include="Images\Home Icon.png" />
+    <Content Include="Images\Hyperlink16.png" />
+    <Content Include="Images\Hyperlink32.png" />
+    <Content Include="Images\ICCallLog2.png" />
+    <Content Include="Images\image.jpg" />
+    <Content Include="Images\image.png" />
+    <Content Include="Images\IncreaseIndent16.png" />
+    <Content Include="Images\IncreaseIndent_16x16.png" />
+    <Content Include="Images\InsideBorders_16x16.png" />
+    <Content Include="Images\InsideHorizontalBorder_16x16.png" />
+    <Content Include="Images\InsideVerticalBorder_16x16.png" />
+    <Content Include="Images\InspectDocument32.png" />
+    <Content Include="Images\Italic16.png" />
+    <Content Include="Images\Italic_16x16.png" />
+    <Content Include="Images\j0387196.bmp" />
+    <Content Include="Images\j0387196.ico" />
+    <Content Include="Images\j0387196.jpg" />
+    <Content Include="Images\j0387196.jpg.ico" />
+    <Content Include="Images\j0387196.jpg_32x32.png" />
+    <Content Include="Images\j0387196.jpg_32x32.png.ico" />
+    <Content Include="Images\j0387196.png" />
+    <Content Include="Images\jabber_group.png" />
+    <Content Include="Images\justice.png" />
+    <Content Include="Images\justice111x128.png" />
+    <Content Include="Images\justice54x48.png" />
+    <Content Include="Images\Justify_16x16.png" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\kgpg_key3_kopete.png" />
+    <Content Include="Images\kxkb.png" />
+    <Content Include="Images\last16px.png" />
+    <Content Include="Images\lbl10_2x4.jpg" />
+    <Content Include="Images\lbl30_1x2 5-8.jpg" />
+    <Content Include="Images\LeftArrow_32x32.png" />
+    <Content Include="Images\LeftBorder_16x16.png" />
+    <Content Include="Images\LineColor_16x16.png" />
+    <Content Include="Images\Lines.png" />
+    <Content Include="Images\LineSpacing16.png" />
+    <Content Include="Images\LineSpacing_16x16.png" />
+    <Content Include="Images\load.png" />
+    <Content Include="Images\locker_art_supplies.png" />
+    <Content Include="Images\lockgreen.ico" />
+    <Content Include="Images\lockgreen.png" />
+    <Content Include="Images\logo-white.png" />
+    <Content Include="Images\looknfeel.png" />
+    <Content Include="Images\Margins32.png" />
+    <Content Include="Images\media_playlist_clear.png" />
+    <Content Include="Images\media_playlist_clear64x64.png" />
+    <Content Include="Images\Menu Icon.png" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\Minus_32x32.png" />
+    <Content Include="Images\modal.png" />
+    <Content Include="Images\MultilevelList16.png" />
+    <Content Include="Images\MultilevelList_16x16.png" />
+    <Content Include="Images\New32.png" />
+    <Content Include="Images\NewDocument_16x16.png" />
+    <Content Include="Images\NewPermission_32x32.png" />
+    <Content Include="Images\NewStar.png" />
+    <Content Include="Images\NewStarYellow.png" />
+    <Content Include="Images\new_window.png" />
+    <Content Include="Images\nextpage.png" />
+    <Content Include="Images\next_16px.png" />
+    <Content Include="Images\NoBorder_16x16.png" />
+    <Content Include="Images\Nodes.png" />
+    <Content Include="Images\Numbering16.png" />
+    <Content Include="Images\Numbering_16x16.png" />
+    <Content Include="Images\Object16.png" />
+    <Content Include="Images\Office2007Black.png" />
+    <Content Include="Images\Office2007Blue.png" />
+    <Content Include="Images\Office2007Silver.png" />
+    <Content Include="Images\Office2010Black.png" />
+    <Content Include="Images\Office2010Blue.png" />
+    <Content Include="Images\Office2010Silver.png" />
+    <Content Include="Images\office48x48.png" />
+    <Content Include="Images\office5.png" />
+    <Content Include="Images\office69x48.png" />
+    <Content Include="Images\onepage.png" />
+    <Content Include="Images\Open32.png" />
+    <Content Include="Images\openfolderHS.png" />
+    <Content Include="Images\Open_16x16.png" />
+    <Content Include="Images\open_file.gif" />
+    <Content Include="Images\Options.png" />
+    <Content Include="Images\Options_16x16.png" />
+    <Content Include="Images\Orange.png" />
+    <Content Include="Images\OrangeLarge.png" />
+    <Content Include="Images\Orientation32.png" />
+    <Content Include="Images\OuterBorders_16x16.png" />
+    <Content Include="Images\OutsideBorders16.png" />
+    <Content Include="Images\PageNumber.png" />
+    <Content Include="Images\PageNumber32.png" />
+    <Content Include="Images\ParagraphSpacing_16x16.png" />
+    <Content Include="Images\Paragraph_16x16.png" />
+    <Content Include="Images\Paragraph_32x32.png" />
+    <Content Include="Images\Paste16.png" />
+    <Content Include="Images\Paste32.png" />
+    <Content Include="Images\Paste_16x16.png" />
+    <Content Include="Images\Paste_32x32.png" />
+    <Content Include="Images\PCLaw.png" />
+    <Content Include="Images\PCLaw48x48.png" />
+    <Content Include="Images\PCLaw62x62.png" />
+    <Content Include="Images\percent %281%29.png" />
+    <Content Include="Images\percent %282%29.png" />
+    <Content Include="Images\percent %283%29.png" />
+    <Content Include="Images\percent.png" />
+    <Content Include="Images\phone_icon64x64.png" />
+    <Content Include="Images\phone_icon_48x48.png" />
+    <Content Include="Images\phone_icon_by_cemagraphics.png" />
+    <Content Include="Images\Pink.png" />
+    <Content Include="Images\PinkLarge.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\Plus_32x32.png" />
+    <Content Include="Images\postcard.jpg" />
+    <Content Include="Images\preferences_desktop_keyboard_shortcuts.png" />
+    <Content Include="Images\preferences_desktop_user_password.png" />
+    <Content Include="Images\previouspage.png" />
+    <Content Include="Images\previous_16px.png" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\PrintArea.png" />
+    <Content Include="Images\PrintArea128x128.png" />
+    <Content Include="Images\PrintArea50x48.png" />
+    <Content Include="Images\Printer_48x48.png" />
+    <Content Include="Images\PrintHS.png" />
+    <Content Include="Images\PrintPreviewHS.png" />
+    <Content Include="Images\PrintPreview_16x16.png" />
+    <Content Include="Images\printquick32.png" />
+    <Content Include="Images\PrintSetupHS.png" />
+    <Content Include="Images\Print_16x16.png" />
+    <Content Include="Images\property_16.png" />
+    <Content Include="Images\PublishPlan_16x16.png" />
+    <Content Include="Images\RbB64.png" />
+    <Content Include="Images\README.html" />
+    <Content Include="Images\Red.png" />
+    <Content Include="Images\RedLarge.png" />
+    <Content Include="Images\Redo16.png" />
+    <Content Include="Images\Refresh Icon.png" />
+    <Content Include="Images\RefreshArrow_32x32.png" />
+    <Content Include="Images\RefreshDocViewHS.png" />
+    <Content Include="Images\replace_16.png" />
+    <Content Include="Images\Replace_16x16.png" />
+    <Content Include="Images\replace_32.png" />
+    <Content Include="Images\report %281%29.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\reports.png" />
+    <Content Include="Images\reset.png" />
+    <Content Include="Images\return.png" />
+    <Content Include="Images\Ribbon2.png" />
+    <Content Include="Images\Ribbon\chooseforms.png" />
+    <Content Include="Images\Ribbon\Clipboard.png" />
+    <Content Include="Images\Ribbon\Copy.png" />
+    <Content Include="Images\Ribbon\Cut.png" />
+    <Content Include="Images\Ribbon\Find16 %281%29.png" />
+    <Content Include="Images\Ribbon\FindNext.png" />
+    <Content Include="Images\Ribbon\folder.png" />
+    <Content Include="Images\Ribbon\folderclosed.png" />
+    <Content Include="Images\Ribbon\Heading1.png" />
+    <Content Include="Images\Ribbon\Heading2.png" />
+    <Content Include="Images\Ribbon\Heading3.png" />
+    <Content Include="Images\Ribbon\Intense.png" />
+    <Content Include="Images\Ribbon\low_importance.png" />
+    <Content Include="Images\Ribbon\Replace16.png" />
+    <Content Include="Images\Ribbon\Save16.png" />
+    <Content Include="Images\Ribbon\Select16.png" />
+    <Content Include="Images\Ribbon\selectall.gif" />
+    <Content Include="Images\Ribbon\Undo16.png" />
+    <Content Include="Images\RightArrow_32x32.png" />
+    <Content Include="Images\RightBorder_16x16.png" />
+    <Content Include="Images\Rounded Squares.png" />
+    <Content Include="Images\rtl.png" />
+    <Content Include="Images\Save16.png" />
+    <Content Include="Images\saveHS.png" />
+    <Content Include="Images\Save_16x16.png" />
+    <Content Include="Images\security.png" />
+    <Content Include="Images\SelectionPane_16x16.png" />
+    <Content Include="Images\Select_16x16.png" />
+    <Content Include="Images\SendLinkByEmail_32x32.png" />
+    <Content Include="Images\Shading16.png" />
+    <Content Include="Images\Shading_16x16.png" />
+    <Content Include="Images\sharing.png" />
+    <Content Include="Images\ShowGridlines_16x16.png" />
+    <Content Include="Images\ShowHide_16x16.png" />
+    <Content Include="Images\ShrinkFont16.png" />
+    <Content Include="Images\Snowflakes.png" />
+    <Content Include="Images\Sort16.png" />
+    <Content Include="Images\SortHS.png" />
+    <Content Include="Images\SortUpHS.png" />
+    <Content Include="Images\Sort_16x16.png" />
+    <Content Include="Images\Squash.png" />
+    <Content Include="Images\start.png" />
+    <Content Include="Images\stock_mail_delete.png" />
+    <Content Include="Images\stock_people.png" />
+    <Content Include="Images\Stop Icon.png" />
+    <Content Include="Images\Strike.png" />
+    <Content Include="Images\StylesGroup.png" />
+    <Content Include="Images\Styles_32x32.png" />
+    <Content Include="Images\Subscript16.png" />
+    <Content Include="Images\Superscript16.png" />
+    <Content Include="Images\syncfusion.png" />
+    <Content Include="Images\system_config_language.png" />
+    <Content Include="Images\system_config_rootpassword.png" />
+    <Content Include="Images\Table_32.png" />
+    <Content Include="Images\Table_32x32.png" />
+    <Content Include="Images\telephone_red.png" />
+    <Content Include="Images\TextHighlight.png" />
+    <Content Include="Images\TextHighlightColor16.png" />
+    <Content Include="Images\ThemeFonts.png" />
+    <Content Include="Images\throbber.gif" />
+    <Content Include="Images\Tick_32x32.png" />
+    <Content Include="Images\TileWindowsHorizontallyHS.png" />
+    <Content Include="Images\TopBorder_16x16.png" />
+    <Content Include="Images\transparent-brush-image.png" />
+    <Content Include="Images\TransparentBackground.jpg" />
+    <Content Include="Images\Transparent_Image.jpg" />
+    <Content Include="Images\twopages.gif" />
+    <Content Include="Images\Underline16.png" />
+    <Content Include="Images\Undo16.png" />
+    <Content Include="Images\UpArrow_16x16.png" />
+    <Content Include="Images\UpArrow_32x32.png" />
+    <Content Include="Images\userTool.PNG" />
+    <Content Include="Images\user_group.png" />
+    <Content Include="Images\versions.png" />
+    <Content Include="Images\view_top_bottom.png" />
+    <Content Include="Images\WarningHS.png" />
+    <Content Include="Images\Web.png" />
+    <Content Include="Images\windows.png" />
+    <Content Include="Images\WindowsHS.png" />
+    <Content Include="Images\Word.png" />
+    <Content Include="Images\workstation.png" />
+    <Content Include="Images\workstation_vista.png" />
+    <Content Include="Images\Yellow.png" />
+    <Content Include="Images\zoom.png" />
+    <Content Include="Images\Zoom_32x32.png" />
+    <Content Include="Images\_108_14.ico" />
+    <Content Include="Images\_108_14.png" />
+    <Content Include="Images\_110_15.ico" />
+    <Content Include="Images\_154_16.ico" />
+    <Content Include="Images\_155_8.ico" />
+    <Content Include="Models\LegalDBEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegalDBEntity.edmx</DependentUpon>
+      <LastGenOutput>LegalDBEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LegalDBEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegalDBEntity.edmx</DependentUpon>
+      <LastGenOutput>LegalDBEntity.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\LegalDBEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LegalDBEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LegalDBEntity.edmx.diagram">
+      <DependentUpon>LegalDBEntity.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -180,7 +780,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -197,7 +799,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -206,6 +807,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

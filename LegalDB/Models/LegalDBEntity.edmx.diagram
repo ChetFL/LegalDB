@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2bcb71dbee4d4894b8922db0f0c70484" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="Models.BestCaseLogin" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CaseType" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.chkCityName" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ChkNmSfx" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CivilLetter" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CivilWkMnth" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.County" Width="1.5" PointX="2.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRpt" Width="1.5" PointX="16" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptAgency" Width="1.5" PointX="5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptMotorist" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptOccInjury" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptOccSeatPos" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptOccup" Width="1.5" PointX="11" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptSeverity" Width="1.5" PointX="13.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVeh" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVehBody" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVehDamScale" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVehSpecFunc" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVehTypeUse" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.CrashRptVehUnitType" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.DefaultSchedule" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Department" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.DNSAddr" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.DNSName" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Employee" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.EmpType" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogCAN" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogCB" Width="1.5" PointX="8.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogFU" Width="1.5" PointX="10.25" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogN" Width="1.5" PointX="13.625" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogR" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLogSgn" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Jurisdiction" Width="1.5" PointX="17.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Language" Width="1.5" PointX="17.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.LegalDBLogin" Width="1.5" PointX="17.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.NeedlesLogin" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.PCLawLogin" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.PoliceDept" Width="1.5" PointX="19.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.QuickBookLogin" Width="1.5" PointX="19.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.RptList" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.RptMailingList" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.State" Width="1.5" PointX="19.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Tickler" Width="1.5" PointX="19.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.IC_CN_Reason" Width="1.5" PointX="19.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICCallLog" Width="1.5" PointX="0.5" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICSource" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICStatu" Width="1.5" PointX="10.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.ICTask" Width="1.5" PointX="11.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Lawyer" Width="1.5" PointX="13.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Office" Width="1.5" PointX="15.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.WBCT12" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_Attny" Width="1.5" PointX="10.875" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_CallSource" Width="1.5" PointX="17.75" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_CaseType" Width="1.5" PointX="20" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_CivilEmp" Width="1.5" PointX="18" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_ICLkUp" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_ICOffice" Width="1.5" PointX="5.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_ICStat" Width="1.5" PointX="6" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.v_Lawyers" Width="1.5" PointX="18" PointY="21" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK__CrashRepo__Count__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_CrashRpt_CrashRptSeverity" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_CrashRptMotorist_CrashRptOccInjury" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_CrashRptMotorist_CrashRptOccSeatPos" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptO__Occup__70A8B9AE" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptO__WSeat__719CDDE7" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptV__Cargo__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptV__DamSc__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptV__SpecF__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptV__TypeU__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__CrashRptV__UnitT__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__RptMailin__Repor__15DA3E5D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application!!!222</title>
+    <title>@ViewBag.Title - LegalDB</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="width:100%">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="width: 100%">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -16,18 +16,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <img id="logo" HorizontalAlignment="Left" src="~/Images/logo-white.png" alt="" />&nbsp;&nbsp;
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Civil<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu" >
+                            <li>@Html.ActionLink("Advertizing", "Index", "Home")</li>
+                            <li>@Html.ActionLink("ParaLegal", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Attorney", "Index", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">PI<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Advertizing", "Index", "Home")</li>
+                            <li>@Html.ActionLink("ParaLegal", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Attorney", "Index", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Accounting", "Index", "Home")</li>
+                            <li>@Html.ActionLink("IT", "Index", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("User", "User", "Home")</li>
+                    @*<li>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>@Html.ActionLink("About", "Contact", "Home")</li>
+                        </ul>
+                    </li>*@
                 </ul>
             </div>
+            @Html.ActionLink("About", "Contact", "Home")
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="width:100%">
         @RenderBody()
         <hr />
         <footer>
