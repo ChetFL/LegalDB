@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - LegalDB</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/ej/web/bootstrap-theme/ej.web.all.min.css")
+    @Scripts.Render("~/Scripts/jquery-3.1.1.min.js")
+    @Scripts.Render("~/Scripts/jsrender.min.js")
+    @Scripts.Render("~/Scripts/ej/ej.web.all.min.js")
+
+
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body style="width:100%">
@@ -26,7 +33,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Civil<b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu" >
                             <li>@Html.ActionLink("Advertizing", "Index", "Home")</li>
-                            <li>@Html.ActionLink("ParaLegal", "Index", "Home")</li>
+                            <li>@Html.ActionLink("ParaLegal", "ICCallLog", "ICCallLogs")</li>
                             <li>@Html.ActionLink("Attorney", "Index", "Home")</li>
                         </ul>
                     </li>
@@ -39,30 +46,26 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Employee &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("Accounting", "Index", "Home")</li>
-                            <li>@Html.ActionLink("IT", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Employee List", "Index", "Home")</li>
+                            <li>@Html.ActionLink("My Info", "Index", "Home")</li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("User", "User", "Home")</li>
-                    @*<li>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>@Html.ActionLink("About", "Contact", "Home")</li>
-                        </ul>
-                    </li>*@
+                    @*<li>@Html.ActionLink("User", "User", "Home")</li>*@
                 </ul>
+                @Html.Partial("_LayoutPartial")
             </div>
-            @Html.ActionLink("About", "Contact", "Home")
         </div>
     </div>
     <div class="container body-content" style="width:100%">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year - LegalDB Web Application</p>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
