@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LegalDB.Models.News>
+
+<h2>News</h2>
+@*<div class="panel-group" id="accordion">
+    @foreach (var item in Model)
+    {
+        var collapseId = "News1" + item.ID;
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href=@collapseId>@Html.DisplayFor(modelItem => item.Title)<span class="badge alert-success">New @collapseId</span></a>
+                </h4>
+            </div>
+            <div id=@collapseId class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>@Html.DisplayFor(modelItem => item.Detail)</p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>*@
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detail)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>*@
+    </tr>
+}
+
+</table>

@@ -1,60 +1,58 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    3200 W Market St, Suite 106<br />
-    Akron, OH 44333<br />
-    <abbr title="Phone">P:</abbr>
-    800.444.1967
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>General IT</h2>
-        <p>
-            CTMS 
-            <span class="glyphicon glyphicon-earphone"> (330) 541-2834</span>
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Advertising</h2>
-        <p>
-            LegalDB
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Call Tracking</h2>
-        <p>NuGet</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Client Tracking</h2>
-        <p>You</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>News</h2>
-        <p>You</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Alerts</h2>
-        <p>You</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>System Manager</h2>
-        <p>You</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="container">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#GeneralITcollapse">General IT</a>
+                </h4>
+            </div>
+            <div id="GeneralITcollapse" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <h5>CTMS</h5>
+                    <h6><span class="glyphicon glyphicon-earphone">&nbsp;(330)541-2834</span></h6>
+                    <h6><span class="glyphicon glyphicon-envelope">&nbsp;helpdesk@ctmsohio.com</span></h6>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#LegalDBcollapse">LegalDB or Other IT Related</a>
+                </h4>
+            </div>
+            <div id="LegalDBcollapse" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <h5>Chester</h5>
+                    <h6><span class="glyphicon glyphicon-earphone">&nbsp;3205</span></h6>
+                    <h6><span class="glyphicon glyphicon-envelope">&nbsp;chester@amourgis.com</span></h6>
+                    <br />
+                    <h5>Tracy</h5>
+                    <h6><span class="glyphicon glyphicon-earphone">&nbsp;3223</span></h6>
+                    <h6><span class="glyphicon glyphicon-envelope">&nbsp;tracyz@amourgis.com</span></h6>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#Accountingcollapse">Accounting/HR/Admin</a>
+                </h4>
+            </div>
+            <div id="Accountingcollapse" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <h5>Angela</h5>
+                    <h6><span class="glyphicon glyphicon-earphone">&nbsp;3212</span></h6>
+                    <h6><span class="glyphicon glyphicon-envelope">&nbsp;aparks@amourgis.com</span></h6>
+                    <br />
+                    <h5>Lisa</h5>
+                    <h6><span class="glyphicon glyphicon-earphone">&nbsp;3226</span></h6>
+                    <h6><span class="glyphicon glyphicon-envelope">&nbsp;lisal@amourgis.com</span></h6>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

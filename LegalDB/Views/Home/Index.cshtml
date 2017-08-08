@@ -1,23 +1,96 @@
-﻿@{
+﻿@model IEnumerable<LegalDB.Models.News>
+ 
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div>
-    <a href="~/images/LandingPic.jpg">
-        <img src="~/images/LandingPic.jpg" class="img-responsive"/>
-    </a>
+     <img src="~/images/LandingPic.jpg" class="img-responsive"/>
 </div>
 <div class="container">
+    
     <div class="row">
         <div class="col-md-6">
-            <h2>News</h2>
-            <p>You</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            @Html.Partial("_News", Model)
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#News1">News 1<span class="badge alert-success">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="News1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>News 1 Detail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#News2">News 2</a>
+                        </h4>
+                    </div>
+                    <div id="News2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>News 2 Detail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#News3">News 3</a>
+                        </h4>
+                    </div>
+                    <div id="News3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>News 3 Detail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
             <h2>Alerts</h2>
-            <p>You</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Alert1">Alert 1 <span class="badge alert-danger">New</span></a>
+                        </h4>
+                    </div>
+                    <div id="Alert1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Alert 1 Detail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Alert2">Alert 2</a>
+                        </h4>
+                    </div>
+                    <div id="Alert2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Alert 2 Detail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#Alert3">Alert 3</a>
+                        </h4>
+                    </div>
+                    <div id="Alert3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Alert 3 Detail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

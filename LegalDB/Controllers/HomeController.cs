@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LegalDB.Models;
 
 namespace LegalDB.Controllers
 {
     public class HomeController : Controller
     {
+        LegalDBWebEntities db = new LegalDBWebEntities();
         public ActionResult Index()
         {
-            return View();
+            return View(db.News.ToList());
         }
 
         public ActionResult About()
