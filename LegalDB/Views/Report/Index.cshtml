@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LegalDB.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Detail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <div><a href="@Url.Action("Report",new { id = "PDF" })">Get Report PDF</a></div>
+    <div><a href="@Url.Action("Report",new { id = "Excel" })">Get Report Excel</a></div>
+    <div><a href="@Url.Action("Report",new { id = "Word" })">Get Report Word</a></div>
+    <div><a href="@Url.Action("Report",new { id = "Image" })">Get Report Image</a></div>
+    @if (Model != null)
+    {
+        <section>
+            <h4>Report Viewer Section</h4>
+            <img src="@Url.Action("Report", new { id = "PDF" })" />
+        </section>
+    }
+</div>

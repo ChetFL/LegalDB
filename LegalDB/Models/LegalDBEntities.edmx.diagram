@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ba691eda763b42b8aa06b8ed585c9d19" Name="Diagram1">
         <EntityTypeShape EntityType="LegalDBWebModel.News" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Jurisdiction" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

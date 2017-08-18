@@ -1,0 +1,4 @@
+﻿@*@model DateTime?
+@Html.TextBox("", Model.HasValue ? Model.Value.Date.ToString("yyyy-MM-dd") : "", new { @class = "date", @type = "date" })
+@Html.TextBox("", Model.HasValue ? Model.Value.TimeOfDay.ToString() : "", new { @class = "time", @type = "time" })
+<button class="btn btn-default btnTimeNow">Now</button>*@

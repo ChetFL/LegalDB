@@ -26,5 +26,6 @@ namespace LegalDB.Models
         }
     
         public virtual DbSet<News> News { get; set; }
+        public virtual DbSet<Jurisdiction> Jurisdictions { get; set; }
     }
 }

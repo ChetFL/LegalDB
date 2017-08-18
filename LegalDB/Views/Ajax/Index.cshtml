@@ -1,0 +1,17 @@
+﻿<h2>Index</h2>
+
+@Ajax.ActionLink("First", "First", new AjaxOptions {
+    HttpMethod="Get",
+    UpdateTargetId= "divJurisdiction",
+    InsertionMode = InsertionMode.Replace
+})
+<span style="color:blue">|</span>
+@Ajax.ActionLink("Last", "Last", new AjaxOptions
+{
+    HttpMethod = "Get",
+    UpdateTargetId = "divJurisdiction",
+    InsertionMode = InsertionMode.Replace
+})
+
+
+<div id="divJurisdiction"></div>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<LegalDB.Models.Jurisdiction>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WebAddr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abbr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsCounty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrayerExempt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChkRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastRecNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastRunTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastRunStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebAddr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abbr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCounty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrayerExempt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChkRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastRecNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastRunTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastRunStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

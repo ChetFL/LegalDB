@@ -1,0 +1,106 @@
+﻿@model LegalDB.Models.Jurisdiction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jurisdiction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebAddr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebAddr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Abbr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Abbr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCounty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCounty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrayerExempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrayerExempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChkRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChkRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastRecNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastRecNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastRunTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastRunTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastRunStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastRunStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

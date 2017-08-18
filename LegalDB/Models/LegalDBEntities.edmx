@@ -4,7 +4,24 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LegalDBWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LegalDBWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Jurisdiction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="WebAddr" Type="nvarchar" MaxLength="300" />
+          <Property Name="Abbr" Type="nvarchar" MaxLength="25" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="IsCounty" Type="bit" />
+          <Property Name="CountyID" Type="int" />
+          <Property Name="PrayerExempt" Type="bit" />
+          <Property Name="ChkRange" Type="int" />
+          <Property Name="LastRecNo" Type="bigint" />
+          <Property Name="LastRunTime" Type="datetime" />
+          <Property Name="LastRunStatus" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="News">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,10 +34,10 @@
           <Property Name="Active" Type="bit" />
         </EntityType>
         <EntityContainer Name="LegalDBWebModelStoreContainer">
+          <EntitySet Name="Jurisdiction" EntityType="Self.Jurisdiction" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LegalDBWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -37,7 +54,25 @@
         </EntityType>
         <EntityContainer Name="LegalDBWebEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="Jurisdictions" EntityType="LegalDBWebModel.Jurisdiction" />
         </EntityContainer>
+        <EntityType Name="Jurisdiction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WebAddr" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Abbr" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="IsCounty" Type="Boolean" />
+          <Property Name="CountyID" Type="Int32" />
+          <Property Name="PrayerExempt" Type="Boolean" />
+          <Property Name="ChkRange" Type="Int32" />
+          <Property Name="LastRecNo" Type="Int64" />
+          <Property Name="LastRunTime" Type="DateTime" Precision="3" />
+          <Property Name="LastRunStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -53,6 +88,24 @@
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jurisdictions">
+            <EntityTypeMapping TypeName="LegalDBWebModel.Jurisdiction">
+              <MappingFragment StoreEntitySet="Jurisdiction">
+                <ScalarProperty Name="LastRunStatus" ColumnName="LastRunStatus" />
+                <ScalarProperty Name="LastRunTime" ColumnName="LastRunTime" />
+                <ScalarProperty Name="LastRecNo" ColumnName="LastRecNo" />
+                <ScalarProperty Name="ChkRange" ColumnName="ChkRange" />
+                <ScalarProperty Name="PrayerExempt" ColumnName="PrayerExempt" />
+                <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+                <ScalarProperty Name="IsCounty" ColumnName="IsCounty" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Abbr" ColumnName="Abbr" />
+                <ScalarProperty Name="WebAddr" ColumnName="WebAddr" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
