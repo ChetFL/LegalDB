@@ -30,4 +30,5 @@ namespace LegalDB.Models
             return new ApplicationDbContext();
         }
     }
+
 }

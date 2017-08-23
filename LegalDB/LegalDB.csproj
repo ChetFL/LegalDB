@@ -44,14 +44,81 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="GridMvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grid.Mvc.3.0.0\lib\net40\GridMvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Syncfusion.Chart.Wpf, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Compression.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Core, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Diagram.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DocIO.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.DocIO.Helper.MVC, Version=15.3400.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DocToPDFConverter.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.EJ, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.EJ.Export, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.EJ.PdfViewer, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.EJ.Pivot, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.EJ.ReportViewer, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Gauge.Wpf, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Linq.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Olap.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Pdf.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PMML.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Presentation.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SFMaps.WPF, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Wpf, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.WPF, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -164,43 +231,1038 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ICCallLogsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BestCaseLogin.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseType.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\chkCityName.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChkNmSfx.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CivilLetter.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CivilWkMnth.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\County.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRpt.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptAgency.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptMotorist.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccInjury.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccSeatPos.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptOccup.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptSeverity.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVeh.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehBody.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehDamScale.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehSpecFunc.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehTypeUse.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrashRptVehUnitType.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DefaultSchedule.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DNSAddr.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DNSName.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpType.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLog.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICSource.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICStatu.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICTask.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Jurisdiction.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Language.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lawyer.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBLogin.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBWebEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBWebEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBWebEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalDBWebEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NeedlesLogin.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\News.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Office.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PCLawLogin.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoliceDept.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuickBookLogin.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RptList.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RptMailingList.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\State.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tickler.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_Attny.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CallSource.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CaseType.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_CivilEmp.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICLkUp.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICOffice.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_ICStat.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_Lawyers.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_LetterInfo.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WBCT12.cs">
+      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ej\web\bootstrap-theme\ej.theme.css" />
+    <Content Include="Content\ej\web\bootstrap-theme\ej.theme.min.css" />
+    <Content Include="Content\ej\web\bootstrap-theme\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\checkedtick.png" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\rating-star.png" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\slider-tick.png" />
+    <Content Include="Content\ej\web\bootstrap-theme\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\common-images\colorpicker_dark.png" />
+    <Content Include="Content\ej\web\common-images\colorpicker_light.png" />
+    <Content Include="Content\ej\web\common-images\colorpicker_light_material.png" />
+    <Content Include="Content\ej\web\common-images\diagram_context.png" />
+    <Content Include="Content\ej\web\common-images\diagram_context1.png" />
+    <Content Include="Content\ej\web\common-images\documenteditor\cellbottomalignment.svg" />
+    <Content Include="Content\ej\web\common-images\documenteditor\cellcenteralignment.svg" />
+    <Content Include="Content\ej\web\common-images\documenteditor\celltopalignment.svg" />
+    <Content Include="Content\ej\web\common-images\documenteditor\tablecenteralignment.svg" />
+    <Content Include="Content\ej\web\common-images\documenteditor\tableleftalignment.svg" />
+    <Content Include="Content\ej\web\common-images\documenteditor\tablerightalignment.svg" />
+    <Content Include="Content\ej\web\common-images\ejicons.svg" />
+    <Content Include="Content\ej\web\common-images\grid\dropPointer.cur" />
+    <Content Include="Content\ej\web\common-images\kanban\nouser.svg" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Bootom.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Bootom_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Left.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Left_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Right.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Right_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Top.png" />
+    <Content Include="Content\ej\web\common-images\maps\Arrow_Top_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Bar.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home_hover_lime.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home_hover_saffron.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home_lime.png" />
+    <Content Include="Content\ej\web\common-images\maps\Home_saffron.png" />
+    <Content Include="Content\ej\web\common-images\maps\Navicatior.png" />
+    <Content Include="Content\ej\web\common-images\maps\Zoom-In.png" />
+    <Content Include="Content\ej\web\common-images\maps\Zoom-In_hover.png" />
+    <Content Include="Content\ej\web\common-images\maps\Zoom-out.png" />
+    <Content Include="Content\ej\web\common-images\maps\Zoom-out_hover.png" />
+    <Content Include="Content\ej\web\common-images\mediaplayer\basic_view_toolbar_bg.png" />
+    <Content Include="Content\ej\web\common-images\mediaplayer\header_bg.png" />
+    <Content Include="Content\ej\web\common-images\mediaplayer\thumbnail.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\circle.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\diamond.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\down-arrow.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\green.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\red.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\right-arrow.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\three-color.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\triangle.png" />
+    <Content Include="Content\ej\web\common-images\olapkpi\up-arrow.png" />
+    <Content Include="Content\ej\web\common-images\pdfviewer\preloader-pdfviewer.gif" />
+    <Content Include="Content\ej\web\common-images\radialmenu\back.png" />
+    <Content Include="Content\ej\web\common-images\radialmenu\radial.png" />
+    <Content Include="Content\ej\web\common-images\reports\down.png" />
+    <Content Include="Content\ej\web\common-images\reports\minus.gif" />
+    <Content Include="Content\ej\web\common-images\reports\minus.jpg" />
+    <Content Include="Content\ej\web\common-images\reports\minus.png" />
+    <Content Include="Content\ej\web\common-images\reports\plus.gif" />
+    <Content Include="Content\ej\web\common-images\reports\plus.jpg" />
+    <Content Include="Content\ej\web\common-images\reports\plus.png" />
+    <Content Include="Content\ej\web\common-images\reports\up.png" />
+    <Content Include="Content\ej\web\common-images\reports\updown.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Blank.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Browser.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Check.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Diet.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.svg" />
+    <Content Include="Content\ej\web\common-images\ribbon\gallery.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Gantt.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\homegallery.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\paste.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Project.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Protect.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\Sales.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\style.gallery.png" />
+    <Content Include="Content\ej\web\common-images\ribbon\User.jpg" />
+    <Content Include="Content\ej\web\common-images\ribbon\Version.png" />
+    <Content Include="Content\ej\web\common-images\Rotate.cur" />
+    <Content Include="Content\ej\web\common-images\schedule_priority.png" />
+    <Content Include="Content\ej\web\common-images\spellcheck\highlight.png" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\blank.png" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\chart-sprites.png" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\charttab-sprites.png" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\charttype-sprites.png" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\down_arrow_dark.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\down_arrow_light.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\draw_border_dark.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\draw_border_grid_dark.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\draw_border_grid_light.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\draw_border_light.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.svg" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\format_painter_dark.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\format_painter_light.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\right_arrow_dark.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\right_arrow_light.cur" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\sprites.png" />
+    <Content Include="Content\ej\web\common-images\tools\drop-sibling-rtl.png" />
+    <Content Include="Content\ej\web\common-images\tools\file_icons.png" />
+    <Content Include="Content\ej\web\common-images\tools\icons.svg" />
+    <Content Include="Content\ej\web\default-theme\ej.theme.css" />
+    <Content Include="Content\ej\web\default-theme\ej.theme.min.css" />
+    <Content Include="Content\ej\web\default-theme\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\default-theme\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\default-theme\images\checkedtick.png" />
+    <Content Include="Content\ej\web\default-theme\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\default-theme\images\rating-star.png" />
+    <Content Include="Content\ej\web\default-theme\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\default-theme\images\slider-tick.png" />
+    <Content Include="Content\ej\web\default-theme\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\ej.widgets.core.bootstrap.min.css" />
+    <Content Include="Content\ej\web\ej.widgets.core.material.min.css" />
+    <Content Include="Content\ej\web\ej.widgets.core.min.css" />
+    <Content Include="Content\ej\web\ej.widgets.core.office-365.min.css" />
+    <Content Include="Content\ej\web\flat-azure-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\flat-azure-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\flat-azure-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\flat-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-lime-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\flat-lime-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\flat-lime-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\flat-lime-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-lime\ej.theme.css" />
+    <Content Include="Content\ej\web\flat-lime\ej.theme.min.css" />
+    <Content Include="Content\ej\web\flat-lime\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\flat-lime\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\flat-lime\images\checkedtick.png" />
+    <Content Include="Content\ej\web\flat-lime\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\flat-lime\images\rating-star.png" />
+    <Content Include="Content\ej\web\flat-lime\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\flat-lime\images\slider-tick.png" />
+    <Content Include="Content\ej\web\flat-lime\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\flat-saffron-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\flat-saffron-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\flat-saffron\ej.theme.css" />
+    <Content Include="Content\ej\web\flat-saffron\ej.theme.min.css" />
+    <Content Include="Content\ej\web\flat-saffron\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\flat-saffron\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\flat-saffron\images\checkedtick.png" />
+    <Content Include="Content\ej\web\flat-saffron\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\flat-saffron\images\rating-star.png" />
+    <Content Include="Content\ej\web\flat-saffron\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\flat-saffron\images\slider-tick.png" />
+    <Content Include="Content\ej\web\flat-saffron\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-azure-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-azure-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-azure\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-azure\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-azure\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-azure\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-azure\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-azure\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-azure\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-azure\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-azure\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-azure\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-lime-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-lime-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-lime\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-lime\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-lime\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-lime\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-lime\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-lime\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-lime\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-lime\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-lime\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-lime\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\gradient-saffron\ej.theme.css" />
+    <Content Include="Content\ej\web\gradient-saffron\ej.theme.min.css" />
+    <Content Include="Content\ej\web\gradient-saffron\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\gradient-saffron\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\gradient-saffron\images\checkedtick.png" />
+    <Content Include="Content\ej\web\gradient-saffron\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\gradient-saffron\images\rating-star.png" />
+    <Content Include="Content\ej\web\gradient-saffron\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\gradient-saffron\images\slider-tick.png" />
+    <Content Include="Content\ej\web\gradient-saffron\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\high-contrast-01\ej.theme.css" />
+    <Content Include="Content\ej\web\high-contrast-01\ej.theme.min.css" />
+    <Content Include="Content\ej\web\high-contrast-01\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\high-contrast-01\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\high-contrast-01\images\checkedtick.png" />
+    <Content Include="Content\ej\web\high-contrast-01\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\high-contrast-01\images\rating-star.png" />
+    <Content Include="Content\ej\web\high-contrast-01\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\high-contrast-01\images\slider-tick.png" />
+    <Content Include="Content\ej\web\high-contrast-01\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\high-contrast-02\ej.theme.css" />
+    <Content Include="Content\ej\web\high-contrast-02\ej.theme.min.css" />
+    <Content Include="Content\ej\web\high-contrast-02\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\high-contrast-02\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\high-contrast-02\images\checkedtick.png" />
+    <Content Include="Content\ej\web\high-contrast-02\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\high-contrast-02\images\rating-star.png" />
+    <Content Include="Content\ej\web\high-contrast-02\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\high-contrast-02\images\slider-tick.png" />
+    <Content Include="Content\ej\web\high-contrast-02\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\material\ej.theme.css" />
+    <Content Include="Content\ej\web\material\ej.theme.min.css" />
+    <Content Include="Content\ej\web\material\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\material\icons\ejicons.svg" />
+    <Content Include="Content\ej\web\material\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\material\images\checkedtick.png" />
+    <Content Include="Content\ej\web\material\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\material\images\rating-star.png" />
+    <Content Include="Content\ej\web\material\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\material\images\slider-tick.png" />
+    <Content Include="Content\ej\web\material\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\office-365\ej.theme.css" />
+    <Content Include="Content\ej\web\office-365\ej.theme.min.css" />
+    <Content Include="Content\ej\web\office-365\ej.web.all.min.css" />
+    <Content Include="Content\ej\web\office-365\icons\ejicons.svg" />
+    <Content Include="Content\ej\web\office-365\images\ajax-loader.gif" />
+    <Content Include="Content\ej\web\office-365\images\checkedtick.png" />
+    <Content Include="Content\ej\web\office-365\images\drop-sibling.png" />
+    <Content Include="Content\ej\web\office-365\images\Rating_Active.png" />
+    <Content Include="Content\ej\web\office-365\images\Rating_Clear.png" />
+    <Content Include="Content\ej\web\office-365\images\Rating_Default.png" />
+    <Content Include="Content\ej\web\office-365\images\rotator-icon.png" />
+    <Content Include="Content\ej\web\office-365\images\slider-tick.png" />
+    <Content Include="Content\ej\web\office-365\images\waitingpopup.gif" />
+    <Content Include="Content\ej\web\responsive-css\ej.responsive.css" />
+    <Content Include="Content\ej\web\responsive-css\ejgrid.responsive.css" />
+    <Content Include="Content\ej\web\ribbon-css\ej.icons.css" />
+    <Content Include="Content\Gridmvc.css" />
+    <Content Include="Content\gridmvc.datepicker.css" />
+    <Content Include="Content\gridmvc.datepicker.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\0202_InsertShape_32.png" />
+    <Content Include="Images\0205_WebInsertHyperlink_32.png" />
+    <Content Include="Images\0356_NewComment_32.png" />
+    <Content Include="Images\10WinEnv.png" />
+    <Content Include="Images\112_ArrowReturnLeft_Blue_16x16_72.png" />
+    <Content Include="Images\112_Plus_Green_16x16_72.png" />
+    <Content Include="Images\12.jpg" />
+    <Content Include="Images\3D Boxes.png" />
+    <Content Include="Images\3x5Env.jpg" />
+    <Content Include="Images\9.jpg" />
+    <Content Include="Images\Actions-view-calendar-timeline-icon.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 16.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 24.png" />
+    <Content Include="Images\Actions-view-pim-contacts-icon 32.png" />
+    <Content Include="Images\activity_monitor.png" />
+    <Content Include="Images\activity_window.png" />
+    <Content Include="Images\addressbook_contacts_16.png" />
+    <Content Include="Images\addressbook_edit_16.png" />
+    <Content Include="Images\admin.png" />
+    <Content Include="Images\administrator_keys.png" />
+    <Content Include="Images\alarm_clock_blue_16px.png" />
+    <Content Include="Images\alarm_clock_exclamation_16.png" />
+    <Content Include="Images\Alerts.png" />
+    <Content Include="Images\AlignCenter_16x16.png" />
+    <Content Include="Images\AlignLeft_16x16.png" />
+    <Content Include="Images\AlignRight_16x16.png" />
+    <Content Include="Images\AlignTextCenter16.png" />
+    <Content Include="Images\AlignTextJustify16.png" />
+    <Content Include="Images\AlignTextLeft16.png" />
+    <Content Include="Images\AlignTextRight16.png" />
+    <Content Include="Images\applications_cascade.png" />
+    <Content Include="Images\applications_cascade48x48.png" />
+    <Content Include="Images\applications_cascade72x72.png" />
+    <Content Include="Images\applications_cascade84x84.png" />
+    <Content Include="Images\applications_cascade96x96.png" />
+    <Content Include="Images\AppMenuImage.png" />
+    <Content Include="Images\app_cascade48x48.png" />
+    <Content Include="Images\arrange.png" />
+    <Content Include="Images\associate_img_update.jpg" />
+    <Content Include="Images\Back Icon.png" />
+    <Content Include="Images\Backstage.png" />
+    <Content Include="Images\Backstageblack.png" />
+    <Content Include="Images\Backstagesilver.png" />
+    <Content Include="Images\base_business_contacts.png" />
+    <Content Include="Images\base_charts.png" />
+    <Content Include="Images\base_map.png" />
+    <Content Include="Images\base_paperclip_32.png" />
+    <Content Include="Images\base_speaker_32.png" />
+    <Content Include="Images\Birds.png" />
+    <Content Include="Images\BlackWidow6_Setup.exe" />
+    <Content Include="Images\Blue.png" />
+    <Content Include="Images\bluebackground.jpg" />
+    <Content Include="Images\BlueLarge.png" />
+    <Content Include="Images\Bold16.png" />
+    <Content Include="Images\Bold_16x16.png" />
+    <Content Include="Images\book1.gif" />
+    <Content Include="Images\book_addressHS.png" />
+    <Content Include="Images\BordersAndShading_16x16.png" />
+    <Content Include="Images\Borders_16x16.png" />
+    <Content Include="Images\BottomBorder_16x16.png" />
+    <Content Include="Images\Bubbles.png" />
+    <Content Include="Images\Bullets16.png" />
+    <Content Include="Images\Bullets_16x16.png" />
+    <Content Include="Images\Butterflies.png" />
+    <Content Include="Images\Calendar16x16.png" />
+    <Content Include="Images\calendar_Week.png" />
+    <Content Include="Images\CascadeWindowsHS.png" />
+    <Content Include="Images\ChooseColor_16x16.png" />
+    <Content Include="Images\Circle Bands.png" />
+    <Content Include="Images\Circles.png" />
+    <Content Include="Images\ClearFormatting_16x16.png" />
+    <Content Include="Images\climate.PNG" />
+    <Content Include="Images\Close32.png" />
+    <Content Include="Images\CloseTab32.png" />
+    <Content Include="Images\Close_16x16.png" />
+    <Content Include="Images\ColorPalette.png" />
+    <Content Include="Images\colors.png" />
+    <Content Include="Images\Color_16x16.png" />
+    <Content Include="Images\ConnectionManager_48x48.png" />
+    <Content Include="Images\Copy of Save.png" />
+    <Content Include="Images\Copy.png" />
+    <Content Include="Images\Copy16.png" />
+    <Content Include="Images\Copy_16x16.png" />
+    <Content Include="Images\Cut16.png" />
+    <Content Include="Images\Cut_16x16.png" />
+    <Content Include="Images\DataContainer_MoveFirstHS.png" />
+    <Content Include="Images\DataContainer_MoveLastHS.png" />
+    <Content Include="Images\DataContainer_MoveNextHS.png" />
+    <Content Include="Images\DataContainer_MovePreviousHS.png" />
+    <Content Include="Images\DecreaseIndent16.png" />
+    <Content Include="Images\DecreaseIndent_16x16.png" />
+    <Content Include="Images\Default_16x16.png" />
+    <Content Include="Images\DeleteHS.png" />
+    <Content Include="Images\DiagonalDownBorder_16x16.png" />
+    <Content Include="Images\DiagonalUpBorder_16x16.png" />
+    <Content Include="Images\disable.png" />
+    <Content Include="Images\Document_16x16.png" />
+    <Content Include="Images\Dotted Arrows.png" />
+    <Content Include="Images\DownArrow_16x16.png" />
+    <Content Include="Images\DownArrow_32x32.png" />
+    <Content Include="Images\DrawTable_16x16.png" />
+    <Content Include="Images\DSB64.png" />
+    <Content Include="Images\EditDocument.png" />
+    <Content Include="Images\EditRedo_16x16.png" />
+    <Content Include="Images\EditUndo_16x16.png" />
+    <Content Include="Images\Edit_UndoHS.png" />
+    <Content Include="Images\email_delete_01.png" />
+    <Content Include="Images\Erase_16x16.png" />
+    <Content Include="Images\Exit.png" />
+    <Content Include="Images\FinalMark128x128.png" />
+    <Content Include="Images\FinalMark32.png" />
+    <Content Include="Images\FinalMark52x48.png" />
+    <Content Include="Images\Find16.png" />
+    <Content Include="Images\Find_16x16.png" />
+    <Content Include="Images\Find_32x32.png" />
+    <Content Include="Images\first16px.png" />
+    <Content Include="Images\FlowDirection32.png" />
+    <Content Include="Images\Floweral.png" />
+    <Content Include="Images\FolderClosed_48x48.png" />
+    <Content Include="Images\FontColor.png" />
+    <Content Include="Images\FontColor16.png" />
+    <Content Include="Images\FontColor_16x16.png" />
+    <Content Include="Images\FontScript_16x16.png" />
+    <Content Include="Images\Font_16x16.png" />
+    <Content Include="Images\Font_32x32.png" />
+    <Content Include="Images\Forecolor_16x16.png" />
+    <Content Include="Images\FormatPainter16.png" />
+    <Content Include="Images\FormatPainter_16x16.png" />
+    <Content Include="Images\Forward Icon.png" />
+    <Content Include="Images\globe.ico" />
+    <Content Include="Images\globe.png" />
+    <Content Include="Images\gnome_printer_printing.png" />
+    <Content Include="Images\GoTo_16x16.png" />
+    <Content Include="Images\Gray.png" />
+    <Content Include="Images\GrayLarge.png" />
+    <Content Include="Images\Green.png" />
+    <Content Include="Images\GreenLarge.png" />
+    <Content Include="Images\group_full_security_32.png" />
+    <Content Include="Images\GrowFont16.png" />
+    <Content Include="Images\HeaderLogoClear.jpg" />
+    <Content Include="Images\Help.png" />
+    <Content Include="Images\Help16.png" />
+    <Content Include="Images\Help_16x16.png" />
+    <Content Include="Images\Highlight_16x16.png" />
+    <Content Include="Images\Home Icon.png" />
+    <Content Include="Images\Hyperlink16.png" />
+    <Content Include="Images\Hyperlink32.png" />
+    <Content Include="Images\ICCallLog2.png" />
+    <Content Include="Images\image.jpg" />
+    <Content Include="Images\image.png" />
+    <Content Include="Images\IncreaseIndent16.png" />
+    <Content Include="Images\IncreaseIndent_16x16.png" />
+    <Content Include="Images\InsideBorders_16x16.png" />
+    <Content Include="Images\InsideHorizontalBorder_16x16.png" />
+    <Content Include="Images\InsideVerticalBorder_16x16.png" />
+    <Content Include="Images\InspectDocument32.png" />
+    <Content Include="Images\Italic16.png" />
+    <Content Include="Images\Italic_16x16.png" />
+    <Content Include="Images\j0387196.bmp" />
+    <Content Include="Images\j0387196.ico" />
+    <Content Include="Images\j0387196.jpg" />
+    <Content Include="Images\j0387196.jpg.ico" />
+    <Content Include="Images\j0387196.jpg_32x32.png" />
+    <Content Include="Images\j0387196.jpg_32x32.png.ico" />
+    <Content Include="Images\j0387196.png" />
+    <Content Include="Images\jabber_group.png" />
+    <Content Include="Images\justice.png" />
+    <Content Include="Images\justice111x128.png" />
+    <Content Include="Images\justice54x48.png" />
+    <Content Include="Images\Justify_16x16.png" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\kgpg_key3_kopete.png" />
+    <Content Include="Images\kxkb.png" />
+    <Content Include="Images\LandingPic.jpg" />
+    <Content Include="Images\last16px.png" />
+    <Content Include="Images\lbl10_2x4.jpg" />
+    <Content Include="Images\lbl30_1x2 5-8.jpg" />
+    <Content Include="Images\LeftArrow_32x32.png" />
+    <Content Include="Images\LeftBorder_16x16.png" />
+    <Content Include="Images\LineColor_16x16.png" />
+    <Content Include="Images\Lines.png" />
+    <Content Include="Images\LineSpacing16.png" />
+    <Content Include="Images\LineSpacing_16x16.png" />
+    <Content Include="Images\load.png" />
+    <Content Include="Images\locker_art_supplies.png" />
+    <Content Include="Images\lockgreen.ico" />
+    <Content Include="Images\lockgreen.png" />
+    <Content Include="Images\logo-white.png" />
+    <Content Include="Images\looknfeel.png" />
+    <Content Include="Images\Margins32.png" />
+    <Content Include="Images\media_playlist_clear.png" />
+    <Content Include="Images\media_playlist_clear64x64.png" />
+    <Content Include="Images\Menu Icon.png" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\Minus_32x32.png" />
+    <Content Include="Images\modal.png" />
+    <Content Include="Images\MultilevelList16.png" />
+    <Content Include="Images\MultilevelList_16x16.png" />
+    <Content Include="Images\New32.png" />
+    <Content Include="Images\NewDocument_16x16.png" />
+    <Content Include="Images\NewPermission_32x32.png" />
+    <Content Include="Images\NewStar.png" />
+    <Content Include="Images\NewStarYellow.png" />
+    <Content Include="Images\new_window.png" />
+    <Content Include="Images\nextpage.png" />
+    <Content Include="Images\next_16px.png" />
+    <Content Include="Images\NoBorder_16x16.png" />
+    <Content Include="Images\Nodes.png" />
+    <Content Include="Images\Numbering16.png" />
+    <Content Include="Images\Numbering_16x16.png" />
+    <Content Include="Images\Object16.png" />
+    <Content Include="Images\Office2007Black.png" />
+    <Content Include="Images\Office2007Blue.png" />
+    <Content Include="Images\Office2007Silver.png" />
+    <Content Include="Images\Office2010Black.png" />
+    <Content Include="Images\Office2010Blue.png" />
+    <Content Include="Images\Office2010Silver.png" />
+    <Content Include="Images\office48x48.png" />
+    <Content Include="Images\office5.png" />
+    <Content Include="Images\office69x48.png" />
+    <Content Include="Images\onepage.png" />
+    <Content Include="Images\Open32.png" />
+    <Content Include="Images\openfolderHS.png" />
+    <Content Include="Images\Open_16x16.png" />
+    <Content Include="Images\open_file.gif" />
+    <Content Include="Images\Options.png" />
+    <Content Include="Images\Options_16x16.png" />
+    <Content Include="Images\Orange.png" />
+    <Content Include="Images\OrangeLarge.png" />
+    <Content Include="Images\Orientation32.png" />
+    <Content Include="Images\OuterBorders_16x16.png" />
+    <Content Include="Images\OutsideBorders16.png" />
+    <Content Include="Images\PageNumber.png" />
+    <Content Include="Images\PageNumber32.png" />
+    <Content Include="Images\ParagraphSpacing_16x16.png" />
+    <Content Include="Images\Paragraph_16x16.png" />
+    <Content Include="Images\Paragraph_32x32.png" />
+    <Content Include="Images\Paste16.png" />
+    <Content Include="Images\Paste32.png" />
+    <Content Include="Images\Paste_16x16.png" />
+    <Content Include="Images\Paste_32x32.png" />
+    <Content Include="Images\PCLaw.png" />
+    <Content Include="Images\PCLaw48x48.png" />
+    <Content Include="Images\PCLaw62x62.png" />
+    <Content Include="Images\percent %281%29.png" />
+    <Content Include="Images\percent %282%29.png" />
+    <Content Include="Images\percent %283%29.png" />
+    <Content Include="Images\percent.png" />
+    <Content Include="Images\phone_icon64x64.png" />
+    <Content Include="Images\phone_icon_48x48.png" />
+    <Content Include="Images\phone_icon_by_cemagraphics.png" />
+    <Content Include="Images\Pink.png" />
+    <Content Include="Images\PinkLarge.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\Plus_32x32.png" />
+    <Content Include="Images\postcard.jpg" />
+    <Content Include="Images\preferences_desktop_keyboard_shortcuts.png" />
+    <Content Include="Images\preferences_desktop_user_password.png" />
+    <Content Include="Images\previouspage.png" />
+    <Content Include="Images\previous_16px.png" />
+    <Content Include="Images\print.png" />
+    <Content Include="Images\PrintArea.png" />
+    <Content Include="Images\PrintArea128x128.png" />
+    <Content Include="Images\PrintArea50x48.png" />
+    <Content Include="Images\Printer_48x48.png" />
+    <Content Include="Images\PrintHS.png" />
+    <Content Include="Images\PrintPreviewHS.png" />
+    <Content Include="Images\PrintPreview_16x16.png" />
+    <Content Include="Images\printquick32.png" />
+    <Content Include="Images\PrintSetupHS.png" />
+    <Content Include="Images\Print_16x16.png" />
+    <Content Include="Images\property_16.png" />
+    <Content Include="Images\PublishPlan_16x16.png" />
+    <Content Include="Images\RbB64.png" />
+    <Content Include="Images\README.html" />
+    <Content Include="Images\Red.png" />
+    <Content Include="Images\RedLarge.png" />
+    <Content Include="Images\Redo16.png" />
+    <Content Include="Images\Refresh Icon.png" />
+    <Content Include="Images\RefreshArrow_32x32.png" />
+    <Content Include="Images\RefreshDocViewHS.png" />
+    <Content Include="Images\replace_16.png" />
+    <Content Include="Images\Replace_16x16.png" />
+    <Content Include="Images\replace_32.png" />
+    <Content Include="Images\report %281%29.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\reports.png" />
+    <Content Include="Images\reset.png" />
+    <Content Include="Images\return.png" />
+    <Content Include="Images\Ribbon2.png" />
+    <Content Include="Images\Ribbon\chooseforms.png" />
+    <Content Include="Images\Ribbon\Clipboard.png" />
+    <Content Include="Images\Ribbon\Copy.png" />
+    <Content Include="Images\Ribbon\Cut.png" />
+    <Content Include="Images\Ribbon\Find16 %281%29.png" />
+    <Content Include="Images\Ribbon\FindNext.png" />
+    <Content Include="Images\Ribbon\folder.png" />
+    <Content Include="Images\Ribbon\folderclosed.png" />
+    <Content Include="Images\Ribbon\Heading1.png" />
+    <Content Include="Images\Ribbon\Heading2.png" />
+    <Content Include="Images\Ribbon\Heading3.png" />
+    <Content Include="Images\Ribbon\Intense.png" />
+    <Content Include="Images\Ribbon\low_importance.png" />
+    <Content Include="Images\Ribbon\Replace16.png" />
+    <Content Include="Images\Ribbon\Save16.png" />
+    <Content Include="Images\Ribbon\Select16.png" />
+    <Content Include="Images\Ribbon\selectall.gif" />
+    <Content Include="Images\Ribbon\Undo16.png" />
+    <Content Include="Images\RightArrow_32x32.png" />
+    <Content Include="Images\RightBorder_16x16.png" />
+    <Content Include="Images\Rounded Squares.png" />
+    <Content Include="Images\rtl.png" />
+    <Content Include="Images\Save16.png" />
+    <Content Include="Images\saveHS.png" />
+    <Content Include="Images\Save_16x16.png" />
+    <Content Include="Images\security.png" />
+    <Content Include="Images\SelectionPane_16x16.png" />
+    <Content Include="Images\Select_16x16.png" />
+    <Content Include="Images\SendLinkByEmail_32x32.png" />
+    <Content Include="Images\Shading16.png" />
+    <Content Include="Images\Shading_16x16.png" />
+    <Content Include="Images\sharing.png" />
+    <Content Include="Images\ShowGridlines_16x16.png" />
+    <Content Include="Images\ShowHide_16x16.png" />
+    <Content Include="Images\ShrinkFont16.png" />
+    <Content Include="Images\Snowflakes.png" />
+    <Content Include="Images\Sort16.png" />
+    <Content Include="Images\SortHS.png" />
+    <Content Include="Images\SortUpHS.png" />
+    <Content Include="Images\Sort_16x16.png" />
+    <Content Include="Images\Squash.png" />
+    <Content Include="Images\start.png" />
+    <Content Include="Images\stock_mail_delete.png" />
+    <Content Include="Images\stock_people.png" />
+    <Content Include="Images\Stop Icon.png" />
+    <Content Include="Images\Strike.png" />
+    <Content Include="Images\StylesGroup.png" />
+    <Content Include="Images\Styles_32x32.png" />
+    <Content Include="Images\Subscript16.png" />
+    <Content Include="Images\Superscript16.png" />
+    <Content Include="Images\syncfusion.png" />
+    <Content Include="Images\system_config_language.png" />
+    <Content Include="Images\system_config_rootpassword.png" />
+    <Content Include="Images\Table_32.png" />
+    <Content Include="Images\Table_32x32.png" />
+    <Content Include="Images\telephone_red.png" />
+    <Content Include="Images\TextHighlight.png" />
+    <Content Include="Images\TextHighlightColor16.png" />
+    <Content Include="Images\ThemeFonts.png" />
+    <Content Include="Images\throbber.gif" />
+    <Content Include="Images\Tick_32x32.png" />
+    <Content Include="Images\TileWindowsHorizontallyHS.png" />
+    <Content Include="Images\TopBorder_16x16.png" />
+    <Content Include="Images\transparent-brush-image.png" />
+    <Content Include="Images\TransparentBackground.jpg" />
+    <Content Include="Images\Transparent_Image.jpg" />
+    <Content Include="Images\twopages.gif" />
+    <Content Include="Images\Underline16.png" />
+    <Content Include="Images\Undo16.png" />
+    <Content Include="Images\UpArrow_16x16.png" />
+    <Content Include="Images\UpArrow_32x32.png" />
+    <Content Include="Images\userTool.PNG" />
+    <Content Include="Images\user_group.png" />
+    <Content Include="Images\versions.png" />
+    <Content Include="Images\view_top_bottom.png" />
+    <Content Include="Images\WarningHS.png" />
+    <Content Include="Images\Web.png" />
+    <Content Include="Images\windows.png" />
+    <Content Include="Images\WindowsHS.png" />
+    <Content Include="Images\Word.png" />
+    <Content Include="Images\workstation.png" />
+    <Content Include="Images\workstation_vista.png" />
+    <Content Include="Images\Yellow.png" />
+    <Content Include="Images\zoom.png" />
+    <Content Include="Images\Zoom_32x32.png" />
+    <Content Include="Images\_108_14.ico" />
+    <Content Include="Images\_108_14.png" />
+    <Content Include="Images\_110_15.ico" />
+    <Content Include="Images\_154_16.ico" />
+    <Content Include="Images\_155_8.ico" />
+    <Content Include="Models\LegalDBWebEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+      <LastGenOutput>LegalDBWebEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LegalDBWebEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+      <LastGenOutput>LegalDBWebEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Grid.mvc.readme" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr\event.js" />
+    <Content Include="Scripts\cldr\supplemental.js" />
+    <Content Include="Scripts\cldr\unresolved.js" />
+    <Content Include="Scripts\ej\ej.globalize.min.js" />
+    <Content Include="Scripts\ej\ej.unobtrusive.min.js" />
+    <Content Include="Content\ej\web\bootstrap-theme\ej.theme.less" />
+    <Content Include="Content\ej\web\common-images\ejicons.eot" />
+    <Content Include="Content\ej\web\common-images\ejicons.ttf" />
+    <Content Include="Content\ej\web\common-images\ejicons.woff" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.eot" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.ttf" />
+    <Content Include="Content\ej\web\common-images\ribbon\ejrbnicons.woff" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.eot" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.ttf" />
+    <Content Include="Content\ej\web\common-images\spreadsheet\ejxlicons.woff" />
+    <Content Include="Content\ej\web\common-images\tools\icons.eot" />
+    <Content Include="Content\ej\web\common-images\tools\icons.ttf" />
+    <Content Include="Content\ej\web\common-images\tools\icons.woff" />
+    <Content Include="Content\ej\web\default-theme\ej.theme.less" />
+    <Content Include="Content\ej\web\ej.widgets.core.bootstrap.less" />
+    <Content Include="Content\ej\web\ej.widgets.core.less" />
+    <Content Include="Content\ej\web\ej.widgets.core.material.less" />
+    <Content Include="Content\ej\web\ej.widgets.core.office-365.less" />
+    <Content Include="Content\ej\web\flat-azure-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\flat-lime-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\flat-lime\ej.theme.less" />
+    <Content Include="Content\ej\web\flat-saffron-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\flat-saffron\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-azure-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-azure\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-lime-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-lime\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-saffron-dark\ej.theme.less" />
+    <Content Include="Content\ej\web\gradient-saffron\ej.theme.less" />
+    <Content Include="Content\ej\web\high-contrast-01\ej.theme.less" />
+    <Content Include="Content\ej\web\high-contrast-02\ej.theme.less" />
+    <Content Include="Content\ej\web\material\ej.theme.less" />
+    <Content Include="Content\ej\web\material\icons\ejicons.eot" />
+    <Content Include="Content\ej\web\material\icons\ejicons.ttf" />
+    <Content Include="Content\ej\web\material\icons\ejicons.woff" />
+    <Content Include="Content\ej\web\office-365\ej.theme.less" />
+    <Content Include="Content\ej\web\office-365\icons\ejicons.eot" />
+    <Content Include="Content\ej\web\office-365\icons\ejicons.ttf" />
+    <Content Include="Content\ej\web\office-365\icons\ejicons.woff" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
+    <EntityDeploy Include="Models\LegalDBWebEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LegalDBWebEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LegalDBWebEntities.edmx.diagram">
+      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\ej\ej.web.all.min.intellisense.js" />
+    <Content Include="Scripts\ej\ej.web.all.min.js" />
+    <Content Include="Scripts\ej\ej.widget.angular.min.js" />
+    <Content Include="Scripts\ej\ej.widget.ko.min.js" />
+    <Content Include="Scripts\excanvas.min.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize\currency.js" />
+    <Content Include="Scripts\globalize\date.js" />
+    <Content Include="Scripts\globalize\message.js" />
+    <Content Include="Scripts\globalize\number.js" />
+    <Content Include="Scripts\globalize\plural.js" />
+    <Content Include="Scripts\globalize\relative-time.js" />
+    <Content Include="Scripts\globalize\unit.js" />
+    <Content Include="Scripts\gridmvc.js" />
+    <Content Include="Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Scripts\gridmvc.min.js" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+    <Content Include="Scripts\jquery.easing.jquery.json" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.easing.1.3.min.js" />
+    <Content Include="Scripts\jquery.easing.compatibility.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jsrender.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\pivotgrid.datasource.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -214,18 +1276,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
@@ -234,9 +1284,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ICCallLogs\Create.cshtml" />
+    <Content Include="Views\ICCallLogs\Delete.cshtml" />
+    <Content Include="Views\ICCallLogs\Details.cshtml" />
+    <Content Include="Views\ICCallLogs\Edit.cshtml" />
+    <Content Include="Views\ICCallLogs\Index.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Reports\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -244,7 +1309,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

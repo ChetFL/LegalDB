@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="11b7d59d1f1e491186594f157b1d4120" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="LegalDBWebModel.BestCaseLogin" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CaseType" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.chkCityName" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.ChkNmSfx" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CivilLetter" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CivilWkMnth" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.County" Width="1.5" PointX="2.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRpt" Width="1.5" PointX="16" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptAgency" Width="1.5" PointX="5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptMotorist" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptOccInjury" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptOccSeatPos" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptOccup" Width="1.5" PointX="11" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptSeverity" Width="1.5" PointX="13.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVeh" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVehBody" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVehDamScale" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVehSpecFunc" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVehTypeUse" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.CrashRptVehUnitType" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.DefaultSchedule" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Department" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.DNSAddr" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.DNSName" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.EmpType" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Jurisdiction" Width="1.5" PointX="15.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Language" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.LegalDBLogin" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.NeedlesLogin" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.News" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.PCLawLogin" Width="1.5" PointX="17.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.PoliceDept" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.QuickBookLogin" Width="1.5" PointX="17.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.RptList" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.RptMailingList" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.State" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.sysdiagram" Width="1.5" PointX="15.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Tickler" Width="1.5" PointX="17.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Employee" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.ICCallLog" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.ICSource" Width="1.5" PointX="19.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.ICStatu" Width="1.5" PointX="19.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.ICTask" Width="1.5" PointX="17.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Lawyer" Width="1.5" PointX="19.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.Office" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.WBCT12" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_Attny" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_CallSource" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_CaseType" Width="1.5" PointX="9.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_CivilEmp" Width="1.5" PointX="11.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_ICLkUp" Width="1.5" PointX="13.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_ICOffice" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_ICStat" Width="1.5" PointX="21.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_Lawyers" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LegalDBWebModel.v_LetterInfo" Width="1.5" PointX="21.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRepo__Count__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK_CrashRpt_CrashRptSeverity" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK_CrashRptMotorist_CrashRptOccInjury" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK_CrashRptMotorist_CrashRptOccSeatPos" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptO__Occup__70A8B9AE" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptO__WSeat__719CDDE7" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptV__Cargo__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptV__DamSc__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptV__SpecF__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptV__TypeU__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__CrashRptV__UnitT__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="LegalDBWebModel.FK__RptMailin__Repor__15DA3E5D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

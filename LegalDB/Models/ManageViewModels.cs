@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
 namespace LegalDB.Models
 {
-    public class IndexViewModel
+   public class IndexViewModel
     {
         public bool HasPassword { get; set; }
         public IList<UserLoginInfo> Logins { get; set; }
@@ -83,4 +85,40 @@ namespace LegalDB.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class Tab
+    {
+        public string ContentOne { get; set; }
+        public string ContentTwo { get; set; }
+        public string ContentThree { get; set; }
+    }
+
+    public class PrintMgr
+    {
+        public int PrtDoc { get; set; }
+        public int Process { get; set; }
+        public int SrvType { get; set; }
+        public int Service { get; set; }
+        public int FrmtLtr { get; set; }
+        public int FrmtCrd { get; set; }
+        public int FrmtLbl { get; set; }
+        public int LtrStyle { get; set; }
+    }
+    public class Incident
+    {
+        public Incident()
+        {
+        }
+
+        DateTime dt = DateTime.Now;
+
+        public DateTime DatePicker1
+        {
+            get;
+
+            set;
+
+        }
+    }
+
 }

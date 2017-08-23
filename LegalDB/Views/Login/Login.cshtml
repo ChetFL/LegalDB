@@ -1,0 +1,49 @@
+﻿@model LegalDB.Models.Employee
+
+@{
+    ViewBag.Title = "LegalDB Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <fieldset>
+        <legend>LegalDB Web</legend>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @if (@ViewBag.Message != null)
+        {
+            <div style="border: 1px solid red">
+                @ViewBag.Message
+            </div>
+        }
+        <table>
+            <tr>
+                <td>@Html.Label("User ID")</td>
+                @*<td>@Html.LabelFor(a => a.UserName)</td>*@
+                <td>@Html.TextBoxFor(a => a.UserName)</td>
+                <td>@Html.ValidationMessageFor(a => a.UserName)</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Password")
+                    @*@Html.LabelFor(a => a.UserPassword)*@
+                </td>
+                <td>
+                    @Html.PasswordFor(a => a.UserPassword)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.UserPassword)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Login" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+}  
