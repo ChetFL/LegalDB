@@ -1,8 +1,11 @@
-@using LegalDB.Models
-@using Syncfusion.JavaScript.Models
-@using Syncfusion.XlsIO.Parser.Biff_Records
-@model IEnumerable<LegalDB.Models.ICCallLog>
+@using LegalDB.Models;
+@using Syncfusion.JavaScript.Models;
+@using Syncfusion.XlsIO.Parser.Biff_Records;
+@*@model IEnumerable<LegalDB.Models.ICCallLog>*@
 @using GridMvc.Html
+@*@using PagedList.Mvc;
+@model PagedList;*@
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -90,6 +93,13 @@
         height: 250px;
     }
 </style>
+<style>
+    .txtbox {
+        width: 100px;
+        background-color: none;
+        border-color: none;
+    }
+</style>
 @section Scripts {
 
     @Scripts.Render("~/bundles/jqueryui")
@@ -111,7 +121,13 @@
 }
 
   
-
+@using (Html.BeginForm("Index", "ICCallog", FormMethod.Get))
+{
+    <p>
+        Find by ID: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
 <p>
     @*@Html.ActionLink("Create New", "Create")*@
 </p>
@@ -119,7 +135,8 @@
     <table class="table" style="width:704px">
         <tr>
             <td style="width:704px;visibility:hidden">
-                @Html.Grid(Model).AutoGenerateColumns().WithPaging(1)
+                @*@Html.Grid(Model).AutoGenerateColumns().WithPaging(1)*@
+                @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page}))*@
                 @*@(Html.EJ().Grid<ICCallLog>
                         ("FlatGrid")
                         .Datasource((IEnumerable<object>
@@ -228,7 +245,12 @@
         <div class="e-numericcontainer e-default" unselectable="no">
             <a class="e-link e-numericitem e-spacing e-currentitem e-active e-animate" role="link" style=""></a>
             <label>Record</label>&emsp;
-            <label>000000</label>&nbsp;<label>of</label>&nbsp;<label>000000</label>
+            @Html.TextBox("PageNumber","", new { id = "PageNumber" })
+            &nbsp;<label>of</label>&nbsp;
+            <input id="TotalPages" type="text" />
+            @*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+
+
             @*@Html.EJ().MaskEdit("RecID").Value("").Height("22px")*@
         </div>
     </div>

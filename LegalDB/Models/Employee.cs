@@ -21,13 +21,64 @@ namespace LegalDB.Models
         public string LastName { get; set; }
         public string Title { get; set; }
         public string DepartmentName { get; set; }
+        public string SocialSecurityNumber { get; set; }
+        public string EmployeeNumber { get; set; }
+        public string NationalEmplNumber { get; set; }
+        public string EmailName { get; set; }
+        public string Extension { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string StateOrProvince { get; set; }
+        public string Region { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; }
+        public string HomePhone { get; set; }
+        public string WorkPhone { get; set; }
         public Nullable<int> DepartmentID { get; set; }
+        public Nullable<System.DateTime> Birthdate { get; set; }
+        public Nullable<System.DateTime> DateHired { get; set; }
+        public Nullable<decimal> Salary { get; set; }
+        public Nullable<decimal> BillingRate { get; set; }
+        public Nullable<short> Deductions { get; set; }
+        public Nullable<int> SupervisorID { get; set; }
+        public string SpouseName { get; set; }
+        public string EmrgcyContactName { get; set; }
+        public string EmrgcyContactPhone { get; set; }
+        public byte[] Photograph { get; set; }
         public string Notes { get; set; }
         public Nullable<int> OfficeID { get; set; }
+        public byte[] upsize_ts { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
         public string PCLawPWD { get; set; }
         public string NeedlesName { get; set; }
         public Nullable<bool> Active { get; set; }
+        public string EmailAddress { get; set; }
+        public string KeySetID { get; set; }
+        public string DefLang { get; set; }
+        public string BaseLang { get; set; }
+        public string CellPhone { get; set; }
+        public bool Tickler { get; set; }
+        public Nullable<long> TickleInterval { get; set; }
+        public Nullable<bool> ClientNotice { get; set; }
+        public Nullable<bool> AppErrorNotice { get; set; }
+        public string PortNo { get; set; }
+        public string WksID { get; set; }
+        public string WksIP { get; set; }
+        public string QBName { get; set; }
+        public string QBPWD { get; set; }
+        public Nullable<bool> DailyLetters { get; set; }
+        public Nullable<int> lstOrder1 { get; set; }
+        public Nullable<int> Dept1 { get; set; }
+        public Nullable<int> lstOrder2 { get; set; }
+        public Nullable<int> Dept2 { get; set; }
+        public Nullable<int> lstOrder3 { get; set; }
+        public Nullable<int> Dept3 { get; set; }
+        public Nullable<int> lstOrder4 { get; set; }
+        public Nullable<int> Dept4 { get; set; }
+        public Nullable<int> lstOrder5 { get; set; }
+        public Nullable<int> Dept5 { get; set; }
+        public Nullable<System.DateTime> DateLeave { get; set; }
+        public Nullable<bool> ICNotice { get; set; }
     }
 }

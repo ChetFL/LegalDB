@@ -6,49 +6,65 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
 using System.Web.Mvc;
+using System.Web.UI;
 using LegalDB.Models;
 using Syncfusion.Linq;
 using System.Web.UI.WebControls;
-
+using PagedList.Mvc;
+using LegalDB.Models;
+using LegalDB.Repositories;
+using PagedList;
 
 
 namespace LegalDB.Controllers
 {
     public class ICCallLogsController : Controller
     {
-        private LegalDBWebEntities db = new LegalDBWebEntities();
-        private LegalDBWebEntities db2 = new LegalDBWebEntities();
+        private Models.LegalDBWebEntities db = new Models.LegalDBWebEntities();
+        private Models.LegalDBWebEntities db2 = new Models.LegalDBWebEntities();
+        //Property of the type IRepository <TEnt, in TPk>
+        //private IRepository<ICCallLog, int> _repository;
 
 
         // GET: ICCallLogs
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int? page)
         {
+            int pageSize = 1;
+            int pageNumber = (page ?? 1);
             ViewBag.datasource = new LegalDBWebEntities().ICCallLogs.OrderBy(icCallLog => icCallLog.ID).ToList();
             //ViewBag.datasource = new LegalDBWebEntities().ICCallLogs.ToList();
-            var detailData = new LegalDBWebEntities().ICCallLogs.Where(icDetail => icDetail.ID == 1).Take(1).ToList();
-            ViewBag.datasource = detailData;
-            LegalDBWebEntities dbEmp = new LegalDBWebEntities();
+            var detailData = new LegalDBWebEntities().ICCallLogs.Where(icDetail => icDetail.ID == pageNumber).Take(1).ToList();
+            ViewBag.datasource1 = detailData;
+            Models.LegalDBWebEntities dbEmp = new Models.LegalDBWebEntities();
             ViewBag.AnswBy = new SelectList(dbEmp.v_CivilEmp, "EmployeeID", "FirstName");
             //ViewBag.datasource = new LegalDBWebEntities().v_CivilEmp.OrderBy(vCivilEmp => vCivilEmp.EmployeeID).ToList();
-            LegalDBWebEntities dbLyr = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbLyr = new Models.LegalDBWebEntities();
             ViewBag.Assigned = new SelectList(dbLyr.v_Lawyers, "LawyerID", "FirstName");
             ViewBag.ConOffice = new SelectList(dbLyr.v_Lawyers, "LawyerID", "FirstName");
             //ViewBag.Datasource = new SelectList(db2.v_Lawyers,"LawyerID","FirstName");
-            LegalDBWebEntities dbClSrc = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbClSrc = new Models.LegalDBWebEntities();
             ViewBag.RefFrom = new SelectList(dbClSrc.v_CallSource, "ID", "Descr");
             //ViewBag.datasource = new LegalDBWebEntities().v_CallSource.OrderBy(vCallSource => vCallSource.ID).ToList();
-            LegalDBWebEntities dbCsTyp = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbCsTyp = new Models.LegalDBWebEntities();
             ViewBag.CaseType = new SelectList(dbCsTyp.v_CaseType, "CaseCode", "CaseDesc");
             //ViewBag.datasource = new LegalDBWebEntities().v_CaseType.OrderBy(vCaseType => vCaseType.CaseCode).ToList();
-            LegalDBWebEntities dbIcSt = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbIcSt = new Models.LegalDBWebEntities();
             ViewBag.IcStat = new SelectList(dbIcSt.v_ICStat, "ID", "Descr");
             //ViewBag.datasource = new LegalDBWebEntities().v_ICStat.OrderBy(vICStat => vICStat.ID).ToList();
-            LegalDBWebEntities dbAttny = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbAttny = new Models.LegalDBWebEntities();
             ViewBag.ConAtty = new SelectList(dbAttny.v_Attny, "LawyerID", "FirstName");
             //ViewBag.datasource = new LegalDBWebEntities().v_Attny.OrderBy(vAttny => vAttny.LawyerID).ToList();
-            LegalDBWebEntities dbIcOff = new LegalDBWebEntities();
+            Models.LegalDBWebEntities dbIcOff = new Models.LegalDBWebEntities();
             ViewBag.ApmOffice = new SelectList(dbIcOff.v_ICOffice, "OfficeID", "OfficeName");
+            ViewBag.ConOffice = new SelectList(dbIcOff.v_ICOffice, "OfficeID", "OfficeName");
             //ViewBag.datasource = new LegalDBWebEntities().v_ICOffice.OrderBy(vICOffice => vICOffice.OfficeID).ToList();
+            var tp = new LegalDBWebEntities().ICCallLogs;
+            //Used the following two formulas so that it doesn't round down on the returned integer
+            decimal totalPages = ((decimal)(tp.Count() / (decimal)pageSize));
+            ViewBag.TotalPages = System.Math.Ceiling(totalPages);
+            //ViewModel.ICCallLogs = IndexViewModel.ICCallLogs.ToPagedList(pageNumber, pageSize);
+            //ViewBag.OnePageofTeachers = viewModel.Teachers;
+            ViewBag.PageNumber = pageNumber;
 
 
             return View(await db.ICCallLogs.ToListAsync());
@@ -95,10 +111,11 @@ namespace LegalDB.Controllers
         // GET: ICCallLogs/Edit/5
         public async Task<ActionResult> Edit(long? id)
         {
+            id = 1;
             if (id == null)
             {
                 //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                id = 128;
+                id =128;
             }
             ICCallLog iCCallLog = await db.ICCallLogs.FindAsync(id);
             if (iCCallLog == null)
@@ -224,10 +241,11 @@ namespace LegalDB.Controllers
 
     //public class PageService
     //{
-    //    public LegalDBWebEntities db = new LegalDBWebEntities();
-    //    public LegalDBWebEntities _context;
+    //    public Models.LegalDBWebEntities db = new Models.LegalDBWebEntities();
+    //    public Models.LegalDBWebEntities _context;
+    //    PageService service = new PageService(db);
 
-    //    public PageService(LegalDBWebEntities context)
+    //    public PageService(Models.LegalDBWebEntities context)
     //    {
     //        _context = context;
     //    }
@@ -266,9 +284,9 @@ namespace LegalDB.Controllers
     //    }
     //}
 
-    //public class MyDbContext : DbContext
+    //public class LegalDBWebEntities : DbContext
     //{
-    //    public MyDbContext(string nameOrConnectionString)
+    //    public LegalDBWebEntities(string nameOrConnectionString)
     //        : base(nameOrConnectionString)
     //    {
     //    }
@@ -289,19 +307,85 @@ namespace LegalDB.Controllers
     //    {
     //        ToTable("ICCallLogs");
 
-    //        //Property(m => m.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-    //        //Property(m => m.CallerName);
-    //        //Property(m => m.Created);
+    //        Property(m => m.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+    //        Property(m => m.CallerName);
+    //        Property(m => m.CallerPhone);
+    //        Property(m => m.EmployeeID);
+    //        Property(m => m.CallSource);
+    //        Property(m => m.CaseType);
+    //        Property(m => m.DocketFrom);
+    //        Property(m => m.CaseNo);
+    //        Property(m => m.ICStatus);
+    //        Property(m => m.SchedDate);
+    //        Property(m => m.SchedTime);
+    //        Property(m => m.LawyerID);
+    //        Property(m => m.Notes);
+    //        Property(m => m.ContactDate);
+    //        Property(m => m.SchedCall);
+    //        Property(m => m.Tickler1);
+    //        Property(m => m.ApmtOffice);
+    //        Property(m => m.FName);
+    //        Property(m => m.MName);
+    //        Property(m => m.LName);
+    //        Property(m => m.DucumentID);
+    //        Property(m => m.ConAtty);
+    //        Property(m => m.EmailAddr);
+    //        Property(m => m.ConAttyLoc);
     //    }
 
     //}
 
     //public class Page
     //{
-    //    DbSet<ICCallLog> ICCallLogs { get; set; }
-    //    //public int Id { get; set; }
-    //    //public string CallerName { get; set; }
-    //    //public DateTime Created { get; set; }
-    //}
+    //    //DbSet<ICCallLog> ICCallLogs { get; set; }
+    //    public int ID { get; set; }
+    //    public string CallerName { get; set; }
+    //    public string CallerPhone { get; set; }
+    //    public int EmployeeID { get; set; }
+    //    public int CallSource { get; set; }
+    //    public string CaseType { get; set; }
+    //    public string DocketFrom { get; set; }
+    //    public string CaseNo { get; set; }
+    //    public int ICStatus { get; set; }
+    //    public System.DateTime SchedDate { get; set; }
+    //    public System.TimeSpan SchedTime { get; set; }
+    //    public int LawyerID { get; set; }
+    //    public string Notes { get; set; }
+    //    public System.DateTime ContactDate { get; set; }
+    //    public bool SchedCall { get; set; }
+    //    public System.DateTime Tickler1 { get; set; }
+    //    public int ApmtOffice { get; set; }
+    //    public string FName { get; set; }
+    //    public string MName { get; set; }
+    //    public string LName { get; set; }
+    //    public int DucumentID { get; set; }
+    //    public int ConAtty { get; set; }
+    //    public string EmailAddr { get; set; }
+    //    public string ConAttyLoc { get; set; }
+    //}.
 
+    //public class Navigation
+    //{
+        //private Models.LegalDBWebEntities db = new Models.LegalDBWebEntities();
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="page"></param>
+        ///// <returns></returns>
+        //public LegalDBWebEntities(). Page(int? page)
+        //{
+        //    var Calls = from s in db.ICCallLogs
+        //                select s;
+        //    if (page != null)
+        //    {
+        //        Calls = Calls.Where(s => s.ID.Equals(page));
+        //    }
+        //    int pageSize = 1;
+        //    int pageNumber = (page ?? 1);
+        //    //IPagedList<Calls> lst = data.ToPagedList(pageSize, pageNumber);
+        //    return Calls;
+
+        //}
+    //}
 }

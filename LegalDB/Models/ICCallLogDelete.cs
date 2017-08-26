@@ -12,7 +12,7 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ICCallLog
+    public partial class ICCallLogDelete
     {
         public Nullable<int> ID1 { get; set; }
         public long ID { get; set; }

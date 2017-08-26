@@ -12,13 +12,16 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class spt_fallback_usg
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
-        public Nullable<bool> Active { get; set; }
+        public string xserver_name { get; set; }
+        public System.DateTime xdttm_ins { get; set; }
+        public System.DateTime xdttm_last_ins_upd { get; set; }
+        public Nullable<int> xfallback_vstart { get; set; }
+        public short dbid { get; set; }
+        public int segmap { get; set; }
+        public int lstart { get; set; }
+        public int sizepg { get; set; }
+        public int vstart { get; set; }
     }
 }

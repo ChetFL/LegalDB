@@ -12,13 +12,11 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class OfficeArea
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
-        public Nullable<bool> Active { get; set; }
+        public long ID { get; set; }
+        public Nullable<int> Area { get; set; }
+        public string AreaName { get; set; }
+        public Nullable<int> State { get; set; }
     }
 }

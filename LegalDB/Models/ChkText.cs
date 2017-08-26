@@ -12,13 +12,10 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class ChkText
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
-        public Nullable<bool> Active { get; set; }
+        public int ID { get; set; }
+        public string ChkText1 { get; set; }
+        public Nullable<int> ChkType { get; set; }
     }
 }

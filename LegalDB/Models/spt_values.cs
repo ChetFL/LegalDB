@@ -12,13 +12,13 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class spt_values
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
-        public Nullable<bool> Active { get; set; }
+        public string name { get; set; }
+        public int number { get; set; }
+        public string type { get; set; }
+        public Nullable<int> low { get; set; }
+        public Nullable<int> high { get; set; }
+        public Nullable<int> status { get; set; }
     }
 }

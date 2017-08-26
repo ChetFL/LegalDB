@@ -12,13 +12,11 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class IC_CN_Reason
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
+        public long ID { get; set; }
+        public string CanDesc { get; set; }
+        public Nullable<int> Order { get; set; }
         public Nullable<bool> Active { get; set; }
     }
 }

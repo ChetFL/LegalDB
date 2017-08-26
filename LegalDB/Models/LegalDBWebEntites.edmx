@@ -1,0 +1,2881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.CaseType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CaseType">
+          <Key>
+            <PropertyRef Name="CaseCode" />
+          </Key>
+          <Property Name="CaseCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtrEntry" Type="nvarchar" MaxLength="50" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.CaseType2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CaseType2">
+          <Property Name="CaseCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtrEntry" Type="nvarchar" MaxLength="50" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.chkCityName' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="chkCityName">
+          <Key>
+            <PropertyRef Name="CNameID" />
+            <PropertyRef Name="CNameTxt" />
+          </Key>
+          <Property Name="CNameID" Type="bigint" Nullable="false" />
+          <Property Name="CNameTxt" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ChkNmSfx' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChkNmSfx">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="NmSfx" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NmSfx" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="NmType" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ChkText' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChkText">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ChkText" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChkType" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.ChkTextType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ChkTextType">
+          <Property Name="ID" Type="int" />
+          <Property Name="cboText" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.CivilWkMnth' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CivilWkMnth">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="YearNo" />
+            <PropertyRef Name="Mnth" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="YearNo" Type="int" Nullable="false" />
+          <Property Name="Mnth" Type="int" Nullable="false" />
+          <Property Name="MnthStrt" Type="datetime" />
+          <Property Name="MnthEnd" Type="datetime" />
+          <Property Name="Wk" Type="int" />
+          <Property Name="WkStrt" Type="datetime" />
+          <Property Name="WkEnd" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="upsize_ts" />
+            <PropertyRef Name="Tickler" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="Initals" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SocialSecurityNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="EmployeeNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="NationalEmplNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="EmailName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Extension" Type="nvarchar" MaxLength="30" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateOrProvince" Type="nvarchar" MaxLength="20" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="30" />
+          <Property Name="WorkPhone" Type="nvarchar" MaxLength="30" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="Birthdate" Type="datetime" />
+          <Property Name="DateHired" Type="datetime" />
+          <Property Name="Salary" Type="money" />
+          <Property Name="BillingRate" Type="money" />
+          <Property Name="Deductions" Type="smallint" />
+          <Property Name="SupervisorID" Type="int" />
+          <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmrgcyContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmrgcyContactPhone" Type="nvarchar" MaxLength="30" />
+          <Property Name="Photograph" Type="image" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="OfficeID" Type="int" />
+          <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="nchar" MaxLength="30" />
+          <Property Name="PCLawPWD" Type="nvarchar" MaxLength="50" />
+          <Property Name="NeedlesName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="KeySetID" Type="nchar" MaxLength="10" />
+          <Property Name="DefLang" Type="nchar" MaxLength="10" />
+          <Property Name="BaseLang" Type="nchar" MaxLength="10" />
+          <Property Name="CellPhone" Type="nchar" MaxLength="30" />
+          <Property Name="Tickler" Type="bit" Nullable="false" />
+          <Property Name="TickleInterval" Type="bigint" />
+          <Property Name="ClientNotice" Type="bit" />
+          <Property Name="AppErrorNotice" Type="bit" />
+          <Property Name="PortNo" Type="nchar" MaxLength="10" />
+          <Property Name="WksID" Type="nvarchar" MaxLength="50" />
+          <Property Name="WksIP" Type="nchar" MaxLength="15" />
+          <Property Name="QBName" Type="nvarchar" MaxLength="50" />
+          <Property Name="QBPWD" Type="nvarchar" MaxLength="50" />
+          <Property Name="DailyLetters" Type="bit" />
+          <Property Name="lstOrder1" Type="int" />
+          <Property Name="Dept1" Type="int" />
+          <Property Name="lstOrder2" Type="int" />
+          <Property Name="Dept2" Type="int" />
+          <Property Name="lstOrder3" Type="int" />
+          <Property Name="Dept3" Type="int" />
+          <Property Name="lstOrder4" Type="int" />
+          <Property Name="Dept4" Type="int" />
+          <Property Name="lstOrder5" Type="int" />
+          <Property Name="Dept5" Type="int" />
+          <Property Name="DateLeave" Type="datetime" />
+          <Property Name="ICNotice" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.IC_CN_Reason' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="IC_CN_Reason">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="CanDesc" Type="nvarchar" MaxLength="100" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.ICAttorney' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ICAttorney">
+          <Property Name="Atn0" Type="int" />
+          <Property Name="Atn1" Type="int" />
+          <Property Name="Atn2" Type="int" />
+          <Property Name="Atn3" Type="int" />
+          <Property Name="Atn4" Type="int" />
+          <Property Name="Atn5" Type="int" />
+          <Property Name="Atn6" Type="int" />
+          <Property Name="Atn7" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID1" Type="int" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="PNCID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CallerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CallerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="CallSource" Type="int" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DocketFrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ICStatus" Type="int" />
+          <Property Name="SchedDate" Type="datetime" />
+          <Property Name="SchedTime" Type="datetime" />
+          <Property Name="LawyerID" Type="int" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="ContactDate" Type="datetime" />
+          <Property Name="SchedCall" Type="bit" />
+          <Property Name="Tickler1" Type="datetime" />
+          <Property Name="ApmtOffice" Type="int" />
+          <Property Name="LtrID" Type="int" />
+          <Property Name="ApptNoShow" Type="bit" />
+          <Property Name="Tickler" Type="datetime" />
+          <Property Name="Rescheduled" Type="bit" />
+          <Property Name="Tickler2" Type="datetime" />
+          <Property Name="NewClient" Type="bit" />
+          <Property Name="RetainLater" Type="bit" />
+          <Property Name="Tickler3" Type="datetime" />
+          <Property Name="ApptCan" Type="bit" />
+          <Property Name="Tickler4" Type="datetime" />
+          <Property Name="FollowUp" Type="bit" />
+          <Property Name="Tickler5" Type="datetime" />
+          <Property Name="CallBack" Type="bit" />
+          <Property Name="Tickler6" Type="datetime" />
+          <Property Name="ApptCanDate" Type="datetime" />
+          <Property Name="ApptCanReason" Type="int" />
+          <Property Name="ReschedDate" Type="datetime" />
+          <Property Name="ReschedTime" Type="datetime" />
+          <Property Name="FollowUpDate" Type="datetime" />
+          <Property Name="FollowUpTime" Type="datetime" />
+          <Property Name="NewClientDate" Type="datetime" />
+          <Property Name="PCLawID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Details" Type="ntext" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Details2" Type="ntext" />
+          <Property Name="Details3" Type="ntext" />
+          <Property Name="Details4" Type="ntext" />
+          <Property Name="Details5" Type="ntext" />
+          <Property Name="Details6" Type="ntext" />
+          <Property Name="FollowupLst" Type="int" />
+          <Property Name="TBCB" Type="datetime" />
+          <Property Name="TBCBL" Type="datetime" />
+          <Property Name="LstMod" Type="datetime" />
+          <Property Name="LstModEID" Type="int" />
+          <Property Name="NotRetained" Type="bit" />
+          <Property Name="CallCnt" Type="int" />
+          <Property Name="TB_Dispute" Type="bit" />
+          <Property Name="DucumentID" Type="bigint" />
+          <Property Name="Detail1" Type="nvarchar(max)" />
+          <Property Name="ConAtty" Type="int" />
+          <Property Name="EmailAddr" Type="nvarchar" MaxLength="50" />
+          <Property Name="YN9pm" Type="int" />
+          <Property Name="ConAttyLoc" Type="nchar" MaxLength="10" />
+          <Property Name="Citrix" Type="bit" />
+          <Property Name="CitrixSDate" Type="datetime" />
+          <Property Name="CitrixRDate" Type="datetime" />
+          <Property Name="Division" Type="nchar" MaxLength="10" />
+          <Property Name="TrackID" Type="nvarchar" MaxLength="50" />
+          <Property Name="inNeedles" Type="bit" />
+          <Property Name="NRReason" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLog1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLog1">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PNCID" />
+            <PropertyRef Name="upsize_ts" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PNCID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CallerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CallerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="CallSource" Type="int" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DocketFrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ICStatus" Type="int" />
+          <Property Name="SchedDate" Type="datetime" />
+          <Property Name="SchedTime" Type="datetime" />
+          <Property Name="LawyerID" Type="int" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="ContactDate" Type="datetime" />
+          <Property Name="SchedCall" Type="bit" />
+          <Property Name="NewClient" Type="bit" />
+          <Property Name="ApmtOffice" Type="int" />
+          <Property Name="LtrID" Type="int" />
+          <Property Name="Tickler" Type="datetime" />
+          <Property Name="ApptCanDate" Type="datetime" />
+          <Property Name="ApptNoShow" Type="bit" />
+          <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Rescheduled" Type="bit" />
+          <Property Name="ApptCan" Type="bit" />
+          <Property Name="ApptCanReason" Type="int" />
+          <Property Name="ReschedDate" Type="datetime" />
+          <Property Name="ReschedTime" Type="datetime" />
+          <Property Name="NewClientDate" Type="datetime" />
+          <Property Name="RetainLater" Type="bit" />
+          <Property Name="Details" Type="ntext" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogCAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogCAN">
+          <Key>
+            <PropertyRef Name="IDCAN" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCAN" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ApptCanReason" Type="int" />
+          <Property Name="Detail4" Type="nvarchar(max)" />
+          <Property Name="ApptCanDate" Type="datetime" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogCB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogCB">
+          <Key>
+            <PropertyRef Name="IDCB" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCB" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Tickler6" Type="datetime" />
+          <Property Name="Detail6" Type="nvarchar(max)" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogDelete' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogDelete">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID1" Type="int" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="PNCID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CallerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CallerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="CallSource" Type="int" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DocketFrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ICStatus" Type="int" />
+          <Property Name="SchedDate" Type="datetime" />
+          <Property Name="SchedTime" Type="datetime" />
+          <Property Name="LawyerID" Type="int" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="ContactDate" Type="datetime" />
+          <Property Name="SchedCall" Type="bit" />
+          <Property Name="Tickler1" Type="datetime" />
+          <Property Name="ApmtOffice" Type="int" />
+          <Property Name="LtrID" Type="int" />
+          <Property Name="ApptNoShow" Type="bit" />
+          <Property Name="Tickler" Type="datetime" />
+          <Property Name="Rescheduled" Type="bit" />
+          <Property Name="Tickler2" Type="datetime" />
+          <Property Name="NewClient" Type="bit" />
+          <Property Name="RetainLater" Type="bit" />
+          <Property Name="Tickler3" Type="datetime" />
+          <Property Name="ApptCan" Type="bit" />
+          <Property Name="Tickler4" Type="datetime" />
+          <Property Name="FollowUp" Type="bit" />
+          <Property Name="Tickler5" Type="datetime" />
+          <Property Name="CallBack" Type="bit" />
+          <Property Name="Tickler6" Type="datetime" />
+          <Property Name="ApptCanDate" Type="datetime" />
+          <Property Name="ApptCanReason" Type="int" />
+          <Property Name="ReschedDate" Type="datetime" />
+          <Property Name="ReschedTime" Type="datetime" />
+          <Property Name="FollowUpDate" Type="datetime" />
+          <Property Name="FollowUpTime" Type="datetime" />
+          <Property Name="NewClientDate" Type="datetime" />
+          <Property Name="PCLawID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Details" Type="ntext" />
+          <Property Name="FName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Details2" Type="ntext" />
+          <Property Name="Details3" Type="ntext" />
+          <Property Name="Details4" Type="ntext" />
+          <Property Name="Details5" Type="ntext" />
+          <Property Name="Details6" Type="ntext" />
+          <Property Name="FollowupLst" Type="int" />
+          <Property Name="TBCB" Type="datetime" />
+          <Property Name="TBCBL" Type="datetime" />
+          <Property Name="LstMod" Type="datetime" />
+          <Property Name="LstModEID" Type="int" />
+          <Property Name="NotRetained" Type="bit" />
+          <Property Name="CallCnt" Type="int" />
+          <Property Name="TB_Dispute" Type="bit" />
+          <Property Name="DucumentID" Type="bigint" />
+          <Property Name="Detail1" Type="nvarchar(max)" />
+          <Property Name="ConAtty" Type="int" />
+          <Property Name="EmailAddr" Type="nvarchar" MaxLength="50" />
+          <Property Name="YN9pm" Type="int" />
+          <Property Name="ConAttyLoc" Type="nchar" MaxLength="10" />
+          <Property Name="Citrix" Type="bit" />
+          <Property Name="CitrixSDate" Type="datetime" />
+          <Property Name="CitrixRDate" Type="datetime" />
+          <Property Name="Division" Type="nchar" MaxLength="10" />
+          <Property Name="TrackID" Type="nvarchar" MaxLength="50" />
+          <Property Name="inNeedles" Type="bit" />
+          <Property Name="NRReason" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogFU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogFU">
+          <Key>
+            <PropertyRef Name="IDFU" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDFU" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="FollowUpDate" Type="datetime" />
+          <Property Name="FollowUpTime" Type="datetime" />
+          <Property Name="Tickler5" Type="datetime" />
+          <Property Name="Detail5" Type="nvarchar(max)" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="FollowUpAttny" Type="int" />
+          <Property Name="FollowUpTask" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogNS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogNS">
+          <Key>
+            <PropertyRef Name="IDNS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDNS" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Tickler1" Type="datetime" />
+          <Property Name="Detail1" Type="nvarchar(max)" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogRL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogRL">
+          <Key>
+            <PropertyRef Name="IDRL" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDRL" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="SignedBy" Type="int" />
+          <Property Name="SignedByDte" Type="datetime" />
+          <Property Name="SignUp" Type="int" />
+          <Property Name="PCLawID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PCLawDte" Type="datetime" />
+          <Property Name="Tickler3" Type="datetime" />
+          <Property Name="Detail3" Type="nvarchar(max)" />
+          <Property Name="Filed" Type="bit" />
+          <Property Name="FileDte" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICCallLogRS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICCallLogRS">
+          <Key>
+            <PropertyRef Name="IDRS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDRS" Type="bigint" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ReschedDate" Type="datetime" />
+          <Property Name="ReschedTime" Type="datetime" />
+          <Property Name="Tickler2" Type="datetime" />
+          <Property Name="Detail2" Type="nvarchar(max)" />
+          <Property Name="CurDateTime" Type="datetime" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="ReschedAtty" Type="int" />
+          <Property Name="ReschedTsk" Type="int" />
+          <Property Name="ReschedApmtOffice" Type="int" />
+          <Property Name="ReschedBy" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICSource' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICSource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Initials" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.ICStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ICStatus">
+          <Key>
+            <PropertyRef Name="ICID" />
+          </Key>
+          <Property Name="ICID" Type="int" Nullable="false" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Jurisdiction' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Jurisdiction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="OfficeGrp" Type="int" />
+          <Property Name="Jurisdiction" Type="nvarchar" MaxLength="50" />
+          <Property Name="URLString" Type="nvarchar(max)" />
+          <Property Name="BtnLabel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="txtMessage" Type="nvarchar" MaxLength="50" />
+          <Property Name="County" Type="bit" />
+          <Property Name="CountyArea" Type="int" />
+          <Property Name="Tag" Type="bigint" />
+          <Property Name="Parent" Type="bigint" />
+          <Property Name="SiteType" Type="bit" />
+          <Property Name="MultiPage" Type="bit" />
+          <Property Name="Pages" Type="int" />
+          <Property Name="AutoIncr" Type="bit" />
+          <Property Name="PrayerExempt" Type="bit" />
+          <Property Name="ScrapeTxt" Type="bit" />
+          <Property Name="LastPull" Type="bigint" />
+          <Property Name="intCurYr" Type="int" />
+          <Property Name="intRange" Type="int" />
+          <Property Name="intTmOut" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Lawyers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Lawyers">
+          <Key>
+            <PropertyRef Name="LawyerID" />
+          </Key>
+          <Property Name="LawyerID" Type="int" Nullable="false" />
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Initials" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="30" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="OfficeID" Type="int" />
+          <Property Name="EmployeeNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="RPTAlias" Type="nvarchar" MaxLength="10" />
+          <Property Name="lstOrder1" Type="int" />
+          <Property Name="Dept1" Type="int" />
+          <Property Name="lstOrder2" Type="int" />
+          <Property Name="Dept2" Type="int" />
+          <Property Name="lstOrder3" Type="int" />
+          <Property Name="Dept3" Type="int" />
+          <Property Name="OfficeDistrict" Type="int" />
+          <Property Name="OfficeGrpID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.MSreplication_options' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSreplication_options">
+          <Key>
+            <PropertyRef Name="optname" />
+            <PropertyRef Name="value" />
+            <PropertyRef Name="major_version" />
+            <PropertyRef Name="minor_version" />
+            <PropertyRef Name="revision" />
+            <PropertyRef Name="install_failures" />
+          </Key>
+          <Property Name="optname" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="value" Type="bit" Nullable="false" />
+          <Property Name="major_version" Type="int" Nullable="false" />
+          <Property Name="minor_version" Type="int" Nullable="false" />
+          <Property Name="revision" Type="int" Nullable="false" />
+          <Property Name="install_failures" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.OfficeArea' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OfficeArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="Area" Type="int" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Offices' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Offices">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+          </Key>
+          <Property Name="OfficeID" Type="int" Nullable="false" />
+          <Property Name="OfficeGroup" Type="int" />
+          <Property Name="Abbrev" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfficeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="StateOrProvince" Type="nvarchar" MaxLength="20" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="FaxNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="Inlist" Type="bit" />
+          <Property Name="StateID" Type="int" />
+          <Property Name="StateDef" Type="bit" />
+          <Property Name="AreaGrp1" Type="int" />
+          <Property Name="AreaGrp2" Type="int" />
+          <Property Name="AreaGrp3" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Offices2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Offices2">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+            <PropertyRef Name="upsize_ts" />
+          </Key>
+          <Property Name="OfficeID" Type="int" Nullable="false" />
+          <Property Name="OfficeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="StateOrProvince" Type="nvarchar" MaxLength="20" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="FaxNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="upsize_ts" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_db' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_db">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_dbid" Type="smallint" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="dbid" Type="smallint" Nullable="false" />
+          <Property Name="status" Type="smallint" Nullable="false" />
+          <Property Name="version" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_dev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_dev">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="low" />
+            <PropertyRef Name="high" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="phyname" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_low" Type="int" />
+          <Property Name="xfallback_drive" Type="char" MaxLength="2" />
+          <Property Name="low" Type="int" Nullable="false" />
+          <Property Name="high" Type="int" Nullable="false" />
+          <Property Name="status" Type="smallint" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="phyname" Type="varchar" MaxLength="127" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_usg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_usg">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="segmap" />
+            <PropertyRef Name="lstart" />
+            <PropertyRef Name="sizepg" />
+            <PropertyRef Name="vstart" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_vstart" Type="int" />
+          <Property Name="dbid" Type="smallint" Nullable="false" />
+          <Property Name="segmap" Type="int" Nullable="false" />
+          <Property Name="lstart" Type="int" Nullable="false" />
+          <Property Name="sizepg" Type="int" Nullable="false" />
+          <Property Name="vstart" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_monitor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_monitor">
+          <Key>
+            <PropertyRef Name="lastrun" />
+            <PropertyRef Name="cpu_busy" />
+            <PropertyRef Name="io_busy" />
+            <PropertyRef Name="idle" />
+            <PropertyRef Name="pack_received" />
+            <PropertyRef Name="pack_sent" />
+            <PropertyRef Name="connections" />
+            <PropertyRef Name="pack_errors" />
+            <PropertyRef Name="total_read" />
+            <PropertyRef Name="total_write" />
+            <PropertyRef Name="total_errors" />
+          </Key>
+          <Property Name="lastrun" Type="datetime" Nullable="false" />
+          <Property Name="cpu_busy" Type="int" Nullable="false" />
+          <Property Name="io_busy" Type="int" Nullable="false" />
+          <Property Name="idle" Type="int" Nullable="false" />
+          <Property Name="pack_received" Type="int" Nullable="false" />
+          <Property Name="pack_sent" Type="int" Nullable="false" />
+          <Property Name="connections" Type="int" Nullable="false" />
+          <Property Name="pack_errors" Type="int" Nullable="false" />
+          <Property Name="total_read" Type="int" Nullable="false" />
+          <Property Name="total_write" Type="int" Nullable="false" />
+          <Property Name="total_errors" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.WBCT12' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="WBCT12">
+          <Key>
+            <PropertyRef Name="DucumentID" />
+            <PropertyRef Name="CaseNo" />
+            <PropertyRef Name="DocketFrom" />
+            <PropertyRef Name="ContactFirstName" />
+            <PropertyRef Name="ContactLastName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="StateOrProvince" />
+            <PropertyRef Name="PostalCode" />
+          </Key>
+          <Property Name="DucumentID" Type="bigint" Nullable="false" />
+          <Property Name="DocTrackID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CaseNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CaseType" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileDate" Type="datetime" />
+          <Property Name="DocketFrom" Type="int" Nullable="false" />
+          <Property Name="Judge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServDate" Type="datetime" />
+          <Property Name="PrayerAmt" Type="float" />
+          <Property Name="CaseDesignation" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactFirstName" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="ContactMInit" Type="nvarchar" MaxLength="1" />
+          <Property Name="ContactLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StateOrProvince" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Plaintiff" Type="nvarchar" MaxLength="75" />
+          <Property Name="PlaintAddr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlainAtt" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfficeID" Type="int" />
+          <Property Name="LtrSent" Type="datetime" />
+          <Property Name="ServiceProof" Type="image" />
+          <Property Name="ServiceYN" Type="bit" />
+          <Property Name="DefaultTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Printed" Type="bit" />
+          <Property Name="Merge" Type="bit" />
+          <Property Name="BatchName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EnvlName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LtrVer" Type="int" />
+          <Property Name="DatePrt" Type="datetime" />
+          <Property Name="ReqMod" Type="bit" />
+          <Property Name="ModPrt" Type="bit" />
+          <Property Name="DateMod" Type="datetime" />
+          <Property Name="LblName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DNS" Type="bit" />
+          <Property Name="BarCode" Type="nvarchar" MaxLength="65" />
+          <Property Name="HumanReadable" Type="nchar" MaxLength="65" />
+          <Property Name="PrtDocket" Type="bit" />
+          <Property Name="Printed2" Type="bit" />
+          <Property Name="Export" Type="bit" />
+          <Property Name="Export2" Type="bit" />
+          <Property Name="createdate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_values' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_values">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="type" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="35" />
+          <Property Name="number" Type="int" Nullable="false" />
+          <Property Name="type" Type="nchar" MaxLength="3" Nullable="false" />
+          <Property Name="low" Type="int" />
+          <Property Name="high" Type="int" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <Function Name="sp_MScleanupmergepublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_MSrepl_startup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="masterModelStoreContainer">
+          <EntitySet Name="CaseType" EntityType="Self.CaseType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CaseType].[CaseCode] AS [CaseCode], 
+    [CaseType].[CaseType] AS [CaseType], 
+    [CaseType].[CaseGroup] AS [CaseGroup], 
+    [CaseType].[LtrEntry] AS [LtrEntry], 
+    [CaseType].[Designation] AS [Designation], 
+    [CaseType].[Active] AS [Active]
+    FROM [dbo].[CaseType] AS [CaseType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="chkCityName" EntityType="Self.chkCityName" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [chkCityName].[CNameID] AS [CNameID], 
+    [chkCityName].[CNameTxt] AS [CNameTxt]
+    FROM [dbo].[chkCityName] AS [chkCityName]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChkNmSfx" EntityType="Self.ChkNmSfx" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChkNmSfx].[ID] AS [ID], 
+    [ChkNmSfx].[NmSfx] AS [NmSfx], 
+    [ChkNmSfx].[NmType] AS [NmType]
+    FROM [dbo].[ChkNmSfx] AS [ChkNmSfx]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChkText" EntityType="Self.ChkText" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChkText].[ID] AS [ID], 
+    [ChkText].[ChkText] AS [ChkText], 
+    [ChkText].[ChkType] AS [ChkType]
+    FROM [dbo].[ChkText] AS [ChkText]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CivilWkMnth" EntityType="Self.CivilWkMnth" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CivilWkMnth].[ID] AS [ID], 
+    [CivilWkMnth].[Year] AS [Year], 
+    [CivilWkMnth].[YearNo] AS [YearNo], 
+    [CivilWkMnth].[Mnth] AS [Mnth], 
+    [CivilWkMnth].[MnthStrt] AS [MnthStrt], 
+    [CivilWkMnth].[MnthEnd] AS [MnthEnd], 
+    [CivilWkMnth].[Wk] AS [Wk], 
+    [CivilWkMnth].[WkStrt] AS [WkStrt], 
+    [CivilWkMnth].[WkEnd] AS [WkEnd]
+    FROM [dbo].[CivilWkMnth] AS [CivilWkMnth]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Employees" EntityType="Self.Employees" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Employees].[EmployeeID] AS [EmployeeID], 
+    [Employees].[Initals] AS [Initals], 
+    [Employees].[FirstName] AS [FirstName], 
+    [Employees].[MiddleName] AS [MiddleName], 
+    [Employees].[LastName] AS [LastName], 
+    [Employees].[Title] AS [Title], 
+    [Employees].[DepartmentName] AS [DepartmentName], 
+    [Employees].[SocialSecurityNumber] AS [SocialSecurityNumber], 
+    [Employees].[EmployeeNumber] AS [EmployeeNumber], 
+    [Employees].[NationalEmplNumber] AS [NationalEmplNumber], 
+    [Employees].[EmailName] AS [EmailName], 
+    [Employees].[Extension] AS [Extension], 
+    [Employees].[Address] AS [Address], 
+    [Employees].[City] AS [City], 
+    [Employees].[StateOrProvince] AS [StateOrProvince], 
+    [Employees].[Region] AS [Region], 
+    [Employees].[PostalCode] AS [PostalCode], 
+    [Employees].[Country] AS [Country], 
+    [Employees].[HomePhone] AS [HomePhone], 
+    [Employees].[WorkPhone] AS [WorkPhone], 
+    [Employees].[DepartmentID] AS [DepartmentID], 
+    [Employees].[Birthdate] AS [Birthdate], 
+    [Employees].[DateHired] AS [DateHired], 
+    [Employees].[Salary] AS [Salary], 
+    [Employees].[BillingRate] AS [BillingRate], 
+    [Employees].[Deductions] AS [Deductions], 
+    [Employees].[SupervisorID] AS [SupervisorID], 
+    [Employees].[SpouseName] AS [SpouseName], 
+    [Employees].[EmrgcyContactName] AS [EmrgcyContactName], 
+    [Employees].[EmrgcyContactPhone] AS [EmrgcyContactPhone], 
+    [Employees].[Photograph] AS [Photograph], 
+    [Employees].[Notes] AS [Notes], 
+    [Employees].[OfficeID] AS [OfficeID], 
+    [Employees].[upsize_ts] AS [upsize_ts], 
+    [Employees].[UserName] AS [UserName], 
+    [Employees].[UserPassword] AS [UserPassword], 
+    [Employees].[PCLawPWD] AS [PCLawPWD], 
+    [Employees].[NeedlesName] AS [NeedlesName], 
+    [Employees].[Active] AS [Active], 
+    [Employees].[EmailAddress] AS [EmailAddress], 
+    [Employees].[KeySetID] AS [KeySetID], 
+    [Employees].[DefLang] AS [DefLang], 
+    [Employees].[BaseLang] AS [BaseLang], 
+    [Employees].[CellPhone] AS [CellPhone], 
+    [Employees].[Tickler] AS [Tickler], 
+    [Employees].[TickleInterval] AS [TickleInterval], 
+    [Employees].[ClientNotice] AS [ClientNotice], 
+    [Employees].[AppErrorNotice] AS [AppErrorNotice], 
+    [Employees].[PortNo] AS [PortNo], 
+    [Employees].[WksID] AS [WksID], 
+    [Employees].[WksIP] AS [WksIP], 
+    [Employees].[QBName] AS [QBName], 
+    [Employees].[QBPWD] AS [QBPWD], 
+    [Employees].[DailyLetters] AS [DailyLetters], 
+    [Employees].[lstOrder1] AS [lstOrder1], 
+    [Employees].[Dept1] AS [Dept1], 
+    [Employees].[lstOrder2] AS [lstOrder2], 
+    [Employees].[Dept2] AS [Dept2], 
+    [Employees].[lstOrder3] AS [lstOrder3], 
+    [Employees].[Dept3] AS [Dept3], 
+    [Employees].[lstOrder4] AS [lstOrder4], 
+    [Employees].[Dept4] AS [Dept4], 
+    [Employees].[lstOrder5] AS [lstOrder5], 
+    [Employees].[Dept5] AS [Dept5], 
+    [Employees].[DateLeave] AS [DateLeave], 
+    [Employees].[ICNotice] AS [ICNotice]
+    FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="IC_CN_Reason" EntityType="Self.IC_CN_Reason" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [IC_CN_Reason].[ID] AS [ID], 
+    [IC_CN_Reason].[CanDesc] AS [CanDesc], 
+    [IC_CN_Reason].[Order] AS [Order], 
+    [IC_CN_Reason].[Active] AS [Active]
+    FROM [dbo].[IC_CN_Reason] AS [IC_CN_Reason]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLog" EntityType="Self.ICCallLog" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLog].[ID1] AS [ID1], 
+    [ICCallLog].[ID] AS [ID], 
+    [ICCallLog].[PNCID] AS [PNCID], 
+    [ICCallLog].[CallerName] AS [CallerName], 
+    [ICCallLog].[CallerPhone] AS [CallerPhone], 
+    [ICCallLog].[Address] AS [Address], 
+    [ICCallLog].[EmployeeID] AS [EmployeeID], 
+    [ICCallLog].[CallSource] AS [CallSource], 
+    [ICCallLog].[CaseType] AS [CaseType], 
+    [ICCallLog].[DocketFrom] AS [DocketFrom], 
+    [ICCallLog].[CaseNo] AS [CaseNo], 
+    [ICCallLog].[ICStatus] AS [ICStatus], 
+    [ICCallLog].[SchedDate] AS [SchedDate], 
+    [ICCallLog].[SchedTime] AS [SchedTime], 
+    [ICCallLog].[LawyerID] AS [LawyerID], 
+    [ICCallLog].[Notes] AS [Notes], 
+    [ICCallLog].[ContactDate] AS [ContactDate], 
+    [ICCallLog].[SchedCall] AS [SchedCall], 
+    [ICCallLog].[Tickler1] AS [Tickler1], 
+    [ICCallLog].[ApmtOffice] AS [ApmtOffice], 
+    [ICCallLog].[LtrID] AS [LtrID], 
+    [ICCallLog].[ApptNoShow] AS [ApptNoShow], 
+    [ICCallLog].[Tickler] AS [Tickler], 
+    [ICCallLog].[Rescheduled] AS [Rescheduled], 
+    [ICCallLog].[Tickler2] AS [Tickler2], 
+    [ICCallLog].[NewClient] AS [NewClient], 
+    [ICCallLog].[RetainLater] AS [RetainLater], 
+    [ICCallLog].[Tickler3] AS [Tickler3], 
+    [ICCallLog].[ApptCan] AS [ApptCan], 
+    [ICCallLog].[Tickler4] AS [Tickler4], 
+    [ICCallLog].[FollowUp] AS [FollowUp], 
+    [ICCallLog].[Tickler5] AS [Tickler5], 
+    [ICCallLog].[CallBack] AS [CallBack], 
+    [ICCallLog].[Tickler6] AS [Tickler6], 
+    [ICCallLog].[ApptCanDate] AS [ApptCanDate], 
+    [ICCallLog].[ApptCanReason] AS [ApptCanReason], 
+    [ICCallLog].[ReschedDate] AS [ReschedDate], 
+    [ICCallLog].[ReschedTime] AS [ReschedTime], 
+    [ICCallLog].[FollowUpDate] AS [FollowUpDate], 
+    [ICCallLog].[FollowUpTime] AS [FollowUpTime], 
+    [ICCallLog].[NewClientDate] AS [NewClientDate], 
+    [ICCallLog].[PCLawID] AS [PCLawID], 
+    [ICCallLog].[Details] AS [Details], 
+    [ICCallLog].[FName] AS [FName], 
+    [ICCallLog].[MName] AS [MName], 
+    [ICCallLog].[LName] AS [LName], 
+    [ICCallLog].[Details2] AS [Details2], 
+    [ICCallLog].[Details3] AS [Details3], 
+    [ICCallLog].[Details4] AS [Details4], 
+    [ICCallLog].[Details5] AS [Details5], 
+    [ICCallLog].[Details6] AS [Details6], 
+    [ICCallLog].[FollowupLst] AS [FollowupLst], 
+    [ICCallLog].[TBCB] AS [TBCB], 
+    [ICCallLog].[TBCBL] AS [TBCBL], 
+    [ICCallLog].[LstMod] AS [LstMod], 
+    [ICCallLog].[LstModEID] AS [LstModEID], 
+    [ICCallLog].[NotRetained] AS [NotRetained], 
+    [ICCallLog].[CallCnt] AS [CallCnt], 
+    [ICCallLog].[TB_Dispute] AS [TB_Dispute], 
+    [ICCallLog].[DucumentID] AS [DucumentID], 
+    [ICCallLog].[Detail1] AS [Detail1], 
+    [ICCallLog].[ConAtty] AS [ConAtty], 
+    [ICCallLog].[EmailAddr] AS [EmailAddr], 
+    [ICCallLog].[YN9pm] AS [YN9pm], 
+    [ICCallLog].[ConAttyLoc] AS [ConAttyLoc], 
+    [ICCallLog].[Citrix] AS [Citrix], 
+    [ICCallLog].[CitrixSDate] AS [CitrixSDate], 
+    [ICCallLog].[CitrixRDate] AS [CitrixRDate], 
+    [ICCallLog].[Division] AS [Division], 
+    [ICCallLog].[TrackID] AS [TrackID], 
+    [ICCallLog].[inNeedles] AS [inNeedles], 
+    [ICCallLog].[NRReason] AS [NRReason]
+    FROM [dbo].[ICCallLog] AS [ICCallLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLog1" EntityType="Self.ICCallLog1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLog1].[ID] AS [ID], 
+    [ICCallLog1].[PNCID] AS [PNCID], 
+    [ICCallLog1].[CallerName] AS [CallerName], 
+    [ICCallLog1].[CallerPhone] AS [CallerPhone], 
+    [ICCallLog1].[EmployeeID] AS [EmployeeID], 
+    [ICCallLog1].[CallSource] AS [CallSource], 
+    [ICCallLog1].[CaseType] AS [CaseType], 
+    [ICCallLog1].[DocketFrom] AS [DocketFrom], 
+    [ICCallLog1].[CaseNo] AS [CaseNo], 
+    [ICCallLog1].[ICStatus] AS [ICStatus], 
+    [ICCallLog1].[SchedDate] AS [SchedDate], 
+    [ICCallLog1].[SchedTime] AS [SchedTime], 
+    [ICCallLog1].[LawyerID] AS [LawyerID], 
+    [ICCallLog1].[Notes] AS [Notes], 
+    [ICCallLog1].[ContactDate] AS [ContactDate], 
+    [ICCallLog1].[SchedCall] AS [SchedCall], 
+    [ICCallLog1].[NewClient] AS [NewClient], 
+    [ICCallLog1].[ApmtOffice] AS [ApmtOffice], 
+    [ICCallLog1].[LtrID] AS [LtrID], 
+    [ICCallLog1].[Tickler] AS [Tickler], 
+    [ICCallLog1].[ApptCanDate] AS [ApptCanDate], 
+    [ICCallLog1].[ApptNoShow] AS [ApptNoShow], 
+    [ICCallLog1].[upsize_ts] AS [upsize_ts], 
+    [ICCallLog1].[Rescheduled] AS [Rescheduled], 
+    [ICCallLog1].[ApptCan] AS [ApptCan], 
+    [ICCallLog1].[ApptCanReason] AS [ApptCanReason], 
+    [ICCallLog1].[ReschedDate] AS [ReschedDate], 
+    [ICCallLog1].[ReschedTime] AS [ReschedTime], 
+    [ICCallLog1].[NewClientDate] AS [NewClientDate], 
+    [ICCallLog1].[RetainLater] AS [RetainLater], 
+    [ICCallLog1].[Details] AS [Details]
+    FROM [dbo].[ICCallLog1] AS [ICCallLog1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogCAN" EntityType="Self.ICCallLogCAN" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogCAN].[IDCAN] AS [IDCAN], 
+    [ICCallLogCAN].[ID] AS [ID], 
+    [ICCallLogCAN].[ApptCanReason] AS [ApptCanReason], 
+    [ICCallLogCAN].[Detail4] AS [Detail4], 
+    [ICCallLogCAN].[ApptCanDate] AS [ApptCanDate], 
+    [ICCallLogCAN].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogCAN].[EmployeeID] AS [EmployeeID]
+    FROM [dbo].[ICCallLogCAN] AS [ICCallLogCAN]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogCB" EntityType="Self.ICCallLogCB" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogCB].[IDCB] AS [IDCB], 
+    [ICCallLogCB].[ID] AS [ID], 
+    [ICCallLogCB].[Tickler6] AS [Tickler6], 
+    [ICCallLogCB].[Detail6] AS [Detail6], 
+    [ICCallLogCB].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogCB].[EmployeeID] AS [EmployeeID]
+    FROM [dbo].[ICCallLogCB] AS [ICCallLogCB]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogDelete" EntityType="Self.ICCallLogDelete" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogDelete].[ID1] AS [ID1], 
+    [ICCallLogDelete].[ID] AS [ID], 
+    [ICCallLogDelete].[PNCID] AS [PNCID], 
+    [ICCallLogDelete].[CallerName] AS [CallerName], 
+    [ICCallLogDelete].[CallerPhone] AS [CallerPhone], 
+    [ICCallLogDelete].[Address] AS [Address], 
+    [ICCallLogDelete].[EmployeeID] AS [EmployeeID], 
+    [ICCallLogDelete].[CallSource] AS [CallSource], 
+    [ICCallLogDelete].[CaseType] AS [CaseType], 
+    [ICCallLogDelete].[DocketFrom] AS [DocketFrom], 
+    [ICCallLogDelete].[CaseNo] AS [CaseNo], 
+    [ICCallLogDelete].[ICStatus] AS [ICStatus], 
+    [ICCallLogDelete].[SchedDate] AS [SchedDate], 
+    [ICCallLogDelete].[SchedTime] AS [SchedTime], 
+    [ICCallLogDelete].[LawyerID] AS [LawyerID], 
+    [ICCallLogDelete].[Notes] AS [Notes], 
+    [ICCallLogDelete].[ContactDate] AS [ContactDate], 
+    [ICCallLogDelete].[SchedCall] AS [SchedCall], 
+    [ICCallLogDelete].[Tickler1] AS [Tickler1], 
+    [ICCallLogDelete].[ApmtOffice] AS [ApmtOffice], 
+    [ICCallLogDelete].[LtrID] AS [LtrID], 
+    [ICCallLogDelete].[ApptNoShow] AS [ApptNoShow], 
+    [ICCallLogDelete].[Tickler] AS [Tickler], 
+    [ICCallLogDelete].[Rescheduled] AS [Rescheduled], 
+    [ICCallLogDelete].[Tickler2] AS [Tickler2], 
+    [ICCallLogDelete].[NewClient] AS [NewClient], 
+    [ICCallLogDelete].[RetainLater] AS [RetainLater], 
+    [ICCallLogDelete].[Tickler3] AS [Tickler3], 
+    [ICCallLogDelete].[ApptCan] AS [ApptCan], 
+    [ICCallLogDelete].[Tickler4] AS [Tickler4], 
+    [ICCallLogDelete].[FollowUp] AS [FollowUp], 
+    [ICCallLogDelete].[Tickler5] AS [Tickler5], 
+    [ICCallLogDelete].[CallBack] AS [CallBack], 
+    [ICCallLogDelete].[Tickler6] AS [Tickler6], 
+    [ICCallLogDelete].[ApptCanDate] AS [ApptCanDate], 
+    [ICCallLogDelete].[ApptCanReason] AS [ApptCanReason], 
+    [ICCallLogDelete].[ReschedDate] AS [ReschedDate], 
+    [ICCallLogDelete].[ReschedTime] AS [ReschedTime], 
+    [ICCallLogDelete].[FollowUpDate] AS [FollowUpDate], 
+    [ICCallLogDelete].[FollowUpTime] AS [FollowUpTime], 
+    [ICCallLogDelete].[NewClientDate] AS [NewClientDate], 
+    [ICCallLogDelete].[PCLawID] AS [PCLawID], 
+    [ICCallLogDelete].[Details] AS [Details], 
+    [ICCallLogDelete].[FName] AS [FName], 
+    [ICCallLogDelete].[MName] AS [MName], 
+    [ICCallLogDelete].[LName] AS [LName], 
+    [ICCallLogDelete].[Details2] AS [Details2], 
+    [ICCallLogDelete].[Details3] AS [Details3], 
+    [ICCallLogDelete].[Details4] AS [Details4], 
+    [ICCallLogDelete].[Details5] AS [Details5], 
+    [ICCallLogDelete].[Details6] AS [Details6], 
+    [ICCallLogDelete].[FollowupLst] AS [FollowupLst], 
+    [ICCallLogDelete].[TBCB] AS [TBCB], 
+    [ICCallLogDelete].[TBCBL] AS [TBCBL], 
+    [ICCallLogDelete].[LstMod] AS [LstMod], 
+    [ICCallLogDelete].[LstModEID] AS [LstModEID], 
+    [ICCallLogDelete].[NotRetained] AS [NotRetained], 
+    [ICCallLogDelete].[CallCnt] AS [CallCnt], 
+    [ICCallLogDelete].[TB_Dispute] AS [TB_Dispute], 
+    [ICCallLogDelete].[DucumentID] AS [DucumentID], 
+    [ICCallLogDelete].[Detail1] AS [Detail1], 
+    [ICCallLogDelete].[ConAtty] AS [ConAtty], 
+    [ICCallLogDelete].[EmailAddr] AS [EmailAddr], 
+    [ICCallLogDelete].[YN9pm] AS [YN9pm], 
+    [ICCallLogDelete].[ConAttyLoc] AS [ConAttyLoc], 
+    [ICCallLogDelete].[Citrix] AS [Citrix], 
+    [ICCallLogDelete].[CitrixSDate] AS [CitrixSDate], 
+    [ICCallLogDelete].[CitrixRDate] AS [CitrixRDate], 
+    [ICCallLogDelete].[Division] AS [Division], 
+    [ICCallLogDelete].[TrackID] AS [TrackID], 
+    [ICCallLogDelete].[inNeedles] AS [inNeedles], 
+    [ICCallLogDelete].[NRReason] AS [NRReason]
+    FROM [dbo].[ICCallLogDelete] AS [ICCallLogDelete]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogFU" EntityType="Self.ICCallLogFU" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogFU].[IDFU] AS [IDFU], 
+    [ICCallLogFU].[ID] AS [ID], 
+    [ICCallLogFU].[FollowUpDate] AS [FollowUpDate], 
+    [ICCallLogFU].[FollowUpTime] AS [FollowUpTime], 
+    [ICCallLogFU].[Tickler5] AS [Tickler5], 
+    [ICCallLogFU].[Detail5] AS [Detail5], 
+    [ICCallLogFU].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogFU].[EmployeeID] AS [EmployeeID], 
+    [ICCallLogFU].[FollowUpAttny] AS [FollowUpAttny], 
+    [ICCallLogFU].[FollowUpTask] AS [FollowUpTask]
+    FROM [dbo].[ICCallLogFU] AS [ICCallLogFU]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogNS" EntityType="Self.ICCallLogNS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogNS].[IDNS] AS [IDNS], 
+    [ICCallLogNS].[ID] AS [ID], 
+    [ICCallLogNS].[Tickler1] AS [Tickler1], 
+    [ICCallLogNS].[Detail1] AS [Detail1], 
+    [ICCallLogNS].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogNS].[EmployeeID] AS [EmployeeID]
+    FROM [dbo].[ICCallLogNS] AS [ICCallLogNS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogRL" EntityType="Self.ICCallLogRL" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogRL].[IDRL] AS [IDRL], 
+    [ICCallLogRL].[ID] AS [ID], 
+    [ICCallLogRL].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogRL].[EmployeeID] AS [EmployeeID], 
+    [ICCallLogRL].[SignedBy] AS [SignedBy], 
+    [ICCallLogRL].[SignedByDte] AS [SignedByDte], 
+    [ICCallLogRL].[SignUp] AS [SignUp], 
+    [ICCallLogRL].[PCLawID] AS [PCLawID], 
+    [ICCallLogRL].[PCLawDte] AS [PCLawDte], 
+    [ICCallLogRL].[Tickler3] AS [Tickler3], 
+    [ICCallLogRL].[Detail3] AS [Detail3], 
+    [ICCallLogRL].[Filed] AS [Filed], 
+    [ICCallLogRL].[FileDte] AS [FileDte]
+    FROM [dbo].[ICCallLogRL] AS [ICCallLogRL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICCallLogRS" EntityType="Self.ICCallLogRS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICCallLogRS].[IDRS] AS [IDRS], 
+    [ICCallLogRS].[ID] AS [ID], 
+    [ICCallLogRS].[ReschedDate] AS [ReschedDate], 
+    [ICCallLogRS].[ReschedTime] AS [ReschedTime], 
+    [ICCallLogRS].[Tickler2] AS [Tickler2], 
+    [ICCallLogRS].[Detail2] AS [Detail2], 
+    [ICCallLogRS].[CurDateTime] AS [CurDateTime], 
+    [ICCallLogRS].[EmployeeID] AS [EmployeeID], 
+    [ICCallLogRS].[ReschedAtty] AS [ReschedAtty], 
+    [ICCallLogRS].[ReschedTsk] AS [ReschedTsk], 
+    [ICCallLogRS].[ReschedApmtOffice] AS [ReschedApmtOffice], 
+    [ICCallLogRS].[ReschedBy] AS [ReschedBy]
+    FROM [dbo].[ICCallLogRS] AS [ICCallLogRS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICSource" EntityType="Self.ICSource" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICSource].[ID] AS [ID], 
+    [ICSource].[Initials] AS [Initials], 
+    [ICSource].[Desc] AS [Desc]
+    FROM [dbo].[ICSource] AS [ICSource]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ICStatus" EntityType="Self.ICStatus" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ICStatus].[ICID] AS [ICID], 
+    [ICStatus].[Desc] AS [Desc], 
+    [ICStatus].[Sort] AS [Sort]
+    FROM [dbo].[ICStatus] AS [ICStatus]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Jurisdiction" EntityType="Self.Jurisdiction" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Jurisdiction].[ID] AS [ID], 
+    [Jurisdiction].[OfficeGrp] AS [OfficeGrp], 
+    [Jurisdiction].[Jurisdiction] AS [Jurisdiction], 
+    [Jurisdiction].[URLString] AS [URLString], 
+    [Jurisdiction].[BtnLabel] AS [BtnLabel], 
+    [Jurisdiction].[Active] AS [Active], 
+    [Jurisdiction].[txtMessage] AS [txtMessage], 
+    [Jurisdiction].[County] AS [County], 
+    [Jurisdiction].[CountyArea] AS [CountyArea], 
+    [Jurisdiction].[Tag] AS [Tag], 
+    [Jurisdiction].[Parent] AS [Parent], 
+    [Jurisdiction].[SiteType] AS [SiteType], 
+    [Jurisdiction].[MultiPage] AS [MultiPage], 
+    [Jurisdiction].[Pages] AS [Pages], 
+    [Jurisdiction].[AutoIncr] AS [AutoIncr], 
+    [Jurisdiction].[PrayerExempt] AS [PrayerExempt], 
+    [Jurisdiction].[ScrapeTxt] AS [ScrapeTxt], 
+    [Jurisdiction].[LastPull] AS [LastPull], 
+    [Jurisdiction].[intCurYr] AS [intCurYr], 
+    [Jurisdiction].[intRange] AS [intRange], 
+    [Jurisdiction].[intTmOut] AS [intTmOut]
+    FROM [dbo].[Jurisdiction] AS [Jurisdiction]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lawyers" EntityType="Self.Lawyers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Lawyers].[LawyerID] AS [LawyerID], 
+    [Lawyers].[DepartmentName] AS [DepartmentName], 
+    [Lawyers].[Initials] AS [Initials], 
+    [Lawyers].[FirstName] AS [FirstName], 
+    [Lawyers].[MiddleName] AS [MiddleName], 
+    [Lawyers].[LastName] AS [LastName], 
+    [Lawyers].[Title] AS [Title], 
+    [Lawyers].[EmailName] AS [EmailName], 
+    [Lawyers].[DepartmentID] AS [DepartmentID], 
+    [Lawyers].[OfficeID] AS [OfficeID], 
+    [Lawyers].[EmployeeNumber] AS [EmployeeNumber], 
+    [Lawyers].[Active] AS [Active], 
+    [Lawyers].[RPTAlias] AS [RPTAlias], 
+    [Lawyers].[lstOrder1] AS [lstOrder1], 
+    [Lawyers].[Dept1] AS [Dept1], 
+    [Lawyers].[lstOrder2] AS [lstOrder2], 
+    [Lawyers].[Dept2] AS [Dept2], 
+    [Lawyers].[lstOrder3] AS [lstOrder3], 
+    [Lawyers].[Dept3] AS [Dept3], 
+    [Lawyers].[OfficeDistrict] AS [OfficeDistrict], 
+    [Lawyers].[OfficeGrpID] AS [OfficeGrpID]
+    FROM [dbo].[Lawyers] AS [Lawyers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSreplication_options].[optname] AS [optname], 
+    [MSreplication_options].[value] AS [value], 
+    [MSreplication_options].[major_version] AS [major_version], 
+    [MSreplication_options].[minor_version] AS [minor_version], 
+    [MSreplication_options].[revision] AS [revision], 
+    [MSreplication_options].[install_failures] AS [install_failures]
+    FROM [dbo].[MSreplication_options] AS [MSreplication_options]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OfficeArea" EntityType="Self.OfficeArea" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OfficeArea].[ID] AS [ID], 
+    [OfficeArea].[Area] AS [Area], 
+    [OfficeArea].[AreaName] AS [AreaName], 
+    [OfficeArea].[State] AS [State]
+    FROM [dbo].[OfficeArea] AS [OfficeArea]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Offices" EntityType="Self.Offices" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Offices].[OfficeID] AS [OfficeID], 
+    [Offices].[OfficeGroup] AS [OfficeGroup], 
+    [Offices].[Abbrev] AS [Abbrev], 
+    [Offices].[OfficeName] AS [OfficeName], 
+    [Offices].[Address] AS [Address], 
+    [Offices].[City] AS [City], 
+    [Offices].[PostalCode] AS [PostalCode], 
+    [Offices].[StateOrProvince] AS [StateOrProvince], 
+    [Offices].[PhoneNumber] AS [PhoneNumber], 
+    [Offices].[FaxNumber] AS [FaxNumber], 
+    [Offices].[EmailAddress] AS [EmailAddress], 
+    [Offices].[Notes] AS [Notes], 
+    [Offices].[Inlist] AS [Inlist], 
+    [Offices].[StateID] AS [StateID], 
+    [Offices].[StateDef] AS [StateDef], 
+    [Offices].[AreaGrp1] AS [AreaGrp1], 
+    [Offices].[AreaGrp2] AS [AreaGrp2], 
+    [Offices].[AreaGrp3] AS [AreaGrp3]
+    FROM [dbo].[Offices] AS [Offices]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Offices2" EntityType="Self.Offices2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Offices2].[OfficeID] AS [OfficeID], 
+    [Offices2].[OfficeName] AS [OfficeName], 
+    [Offices2].[Address] AS [Address], 
+    [Offices2].[City] AS [City], 
+    [Offices2].[PostalCode] AS [PostalCode], 
+    [Offices2].[StateOrProvince] AS [StateOrProvince], 
+    [Offices2].[PhoneNumber] AS [PhoneNumber], 
+    [Offices2].[FaxNumber] AS [FaxNumber], 
+    [Offices2].[EmailAddress] AS [EmailAddress], 
+    [Offices2].[Notes] AS [Notes], 
+    [Offices2].[upsize_ts] AS [upsize_ts]
+    FROM [dbo].[Offices2] AS [Offices2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_db].[xserver_name] AS [xserver_name], 
+    [spt_fallback_db].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_db].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_db].[xfallback_dbid] AS [xfallback_dbid], 
+    [spt_fallback_db].[name] AS [name], 
+    [spt_fallback_db].[dbid] AS [dbid], 
+    [spt_fallback_db].[status] AS [status], 
+    [spt_fallback_db].[version] AS [version]
+    FROM [dbo].[spt_fallback_db] AS [spt_fallback_db]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_dev].[xserver_name] AS [xserver_name], 
+    [spt_fallback_dev].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_dev].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_dev].[xfallback_low] AS [xfallback_low], 
+    [spt_fallback_dev].[xfallback_drive] AS [xfallback_drive], 
+    [spt_fallback_dev].[low] AS [low], 
+    [spt_fallback_dev].[high] AS [high], 
+    [spt_fallback_dev].[status] AS [status], 
+    [spt_fallback_dev].[name] AS [name], 
+    [spt_fallback_dev].[phyname] AS [phyname]
+    FROM [dbo].[spt_fallback_dev] AS [spt_fallback_dev]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_usg].[xserver_name] AS [xserver_name], 
+    [spt_fallback_usg].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_usg].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_usg].[xfallback_vstart] AS [xfallback_vstart], 
+    [spt_fallback_usg].[dbid] AS [dbid], 
+    [spt_fallback_usg].[segmap] AS [segmap], 
+    [spt_fallback_usg].[lstart] AS [lstart], 
+    [spt_fallback_usg].[sizepg] AS [sizepg], 
+    [spt_fallback_usg].[vstart] AS [vstart]
+    FROM [dbo].[spt_fallback_usg] AS [spt_fallback_usg]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_monitor].[lastrun] AS [lastrun], 
+    [spt_monitor].[cpu_busy] AS [cpu_busy], 
+    [spt_monitor].[io_busy] AS [io_busy], 
+    [spt_monitor].[idle] AS [idle], 
+    [spt_monitor].[pack_received] AS [pack_received], 
+    [spt_monitor].[pack_sent] AS [pack_sent], 
+    [spt_monitor].[connections] AS [connections], 
+    [spt_monitor].[pack_errors] AS [pack_errors], 
+    [spt_monitor].[total_read] AS [total_read], 
+    [spt_monitor].[total_write] AS [total_write], 
+    [spt_monitor].[total_errors] AS [total_errors]
+    FROM [dbo].[spt_monitor] AS [spt_monitor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WBCT12" EntityType="Self.WBCT12" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WBCT12].[DucumentID] AS [DucumentID], 
+    [WBCT12].[DocTrackID] AS [DocTrackID], 
+    [WBCT12].[CaseNo] AS [CaseNo], 
+    [WBCT12].[CaseType] AS [CaseType], 
+    [WBCT12].[FileDate] AS [FileDate], 
+    [WBCT12].[DocketFrom] AS [DocketFrom], 
+    [WBCT12].[Judge] AS [Judge], 
+    [WBCT12].[ServDate] AS [ServDate], 
+    [WBCT12].[PrayerAmt] AS [PrayerAmt], 
+    [WBCT12].[CaseDesignation] AS [CaseDesignation], 
+    [WBCT12].[ContactFirstName] AS [ContactFirstName], 
+    [WBCT12].[ContactMInit] AS [ContactMInit], 
+    [WBCT12].[ContactLastName] AS [ContactLastName], 
+    [WBCT12].[FullName] AS [FullName], 
+    [WBCT12].[Address] AS [Address], 
+    [WBCT12].[City] AS [City], 
+    [WBCT12].[StateOrProvince] AS [StateOrProvince], 
+    [WBCT12].[PostalCode] AS [PostalCode], 
+    [WBCT12].[Country] AS [Country], 
+    [WBCT12].[Plaintiff] AS [Plaintiff], 
+    [WBCT12].[PlaintAddr] AS [PlaintAddr], 
+    [WBCT12].[PlainAtt] AS [PlainAtt], 
+    [WBCT12].[OfficeID] AS [OfficeID], 
+    [WBCT12].[LtrSent] AS [LtrSent], 
+    [WBCT12].[ServiceProof] AS [ServiceProof], 
+    [WBCT12].[ServiceYN] AS [ServiceYN], 
+    [WBCT12].[DefaultTitle] AS [DefaultTitle], 
+    [WBCT12].[Printed] AS [Printed], 
+    [WBCT12].[Merge] AS [Merge], 
+    [WBCT12].[BatchName] AS [BatchName], 
+    [WBCT12].[EnvlName] AS [EnvlName], 
+    [WBCT12].[LtrVer] AS [LtrVer], 
+    [WBCT12].[DatePrt] AS [DatePrt], 
+    [WBCT12].[ReqMod] AS [ReqMod], 
+    [WBCT12].[ModPrt] AS [ModPrt], 
+    [WBCT12].[DateMod] AS [DateMod], 
+    [WBCT12].[LblName] AS [LblName], 
+    [WBCT12].[DNS] AS [DNS], 
+    [WBCT12].[BarCode] AS [BarCode], 
+    [WBCT12].[HumanReadable] AS [HumanReadable], 
+    [WBCT12].[PrtDocket] AS [PrtDocket], 
+    [WBCT12].[Printed2] AS [Printed2], 
+    [WBCT12].[Export] AS [Export], 
+    [WBCT12].[Export2] AS [Export2], 
+    [WBCT12].[createdate] AS [createdate]
+    FROM [dbo].[WBCT12] AS [WBCT12]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_values" EntityType="Self.spt_values" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_values].[name] AS [name], 
+    [spt_values].[number] AS [number], 
+    [spt_values].[type] AS [type], 
+    [spt_values].[low] AS [low], 
+    [spt_values].[high] AS [high], 
+    [spt_values].[status] AS [status]
+    FROM [dbo].[spt_values] AS [spt_values]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CaseType">
+          <Key>
+            <PropertyRef Name="CaseCode" />
+          </Key>
+          <Property Name="CaseCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CaseType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaseGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtrEntry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="chkCityName">
+          <Key>
+            <PropertyRef Name="CNameID" />
+            <PropertyRef Name="CNameTxt" />
+          </Key>
+          <Property Name="CNameID" Type="Int64" Nullable="false" />
+          <Property Name="CNameTxt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChkNmSfx">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="NmSfx" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NmSfx" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NmType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ChkText">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ChkText1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChkType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CivilWkMnth">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="YearNo" />
+            <PropertyRef Name="Mnth" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="YearNo" Type="Int32" Nullable="false" />
+          <Property Name="Mnth" Type="Int32" Nullable="false" />
+          <Property Name="MnthStrt" Type="DateTime" Precision="3" />
+          <Property Name="MnthEnd" Type="DateTime" Precision="3" />
+          <Property Name="Wk" Type="Int32" />
+          <Property Name="WkStrt" Type="DateTime" Precision="3" />
+          <Property Name="WkEnd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="upsize_ts" />
+            <PropertyRef Name="Tickler" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="Initals" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SocialSecurityNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NationalEmplNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmailName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Extension" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StateOrProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="Birthdate" Type="DateTime" Precision="3" />
+          <Property Name="DateHired" Type="DateTime" Precision="3" />
+          <Property Name="Salary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BillingRate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Deductions" Type="Int16" />
+          <Property Name="SupervisorID" Type="Int32" />
+          <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmrgcyContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmrgcyContactPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Photograph" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeID" Type="Int32" />
+          <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PCLawPWD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NeedlesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KeySetID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DefLang" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="BaseLang" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Tickler" Type="Boolean" Nullable="false" />
+          <Property Name="TickleInterval" Type="Int64" />
+          <Property Name="ClientNotice" Type="Boolean" />
+          <Property Name="AppErrorNotice" Type="Boolean" />
+          <Property Name="PortNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="WksID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WksIP" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="QBName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QBPWD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DailyLetters" Type="Boolean" />
+          <Property Name="lstOrder1" Type="Int32" />
+          <Property Name="Dept1" Type="Int32" />
+          <Property Name="lstOrder2" Type="Int32" />
+          <Property Name="Dept2" Type="Int32" />
+          <Property Name="lstOrder3" Type="Int32" />
+          <Property Name="Dept3" Type="Int32" />
+          <Property Name="lstOrder4" Type="Int32" />
+          <Property Name="Dept4" Type="Int32" />
+          <Property Name="lstOrder5" Type="Int32" />
+          <Property Name="Dept5" Type="Int32" />
+          <Property Name="DateLeave" Type="DateTime" Precision="3" />
+          <Property Name="ICNotice" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="IC_CN_Reason">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="CanDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ICCallLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID1" Type="Int32" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="PNCID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CallerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CallerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="CallSource" Type="Int32" />
+          <Property Name="CaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DocketFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ICStatus" Type="Int32" />
+          <Property Name="SchedDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedTime" Type="DateTime" Precision="3" />
+          <Property Name="LawyerID" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedCall" Type="Boolean" />
+          <Property Name="Tickler1" Type="DateTime" Precision="3" />
+          <Property Name="ApmtOffice" Type="Int32" />
+          <Property Name="LtrID" Type="Int32" />
+          <Property Name="ApptNoShow" Type="Boolean" />
+          <Property Name="Tickler" Type="DateTime" Precision="3" />
+          <Property Name="Rescheduled" Type="Boolean" />
+          <Property Name="Tickler2" Type="DateTime" Precision="3" />
+          <Property Name="NewClient" Type="Boolean" />
+          <Property Name="RetainLater" Type="Boolean" />
+          <Property Name="Tickler3" Type="DateTime" Precision="3" />
+          <Property Name="ApptCan" Type="Boolean" />
+          <Property Name="Tickler4" Type="DateTime" Precision="3" />
+          <Property Name="FollowUp" Type="Boolean" />
+          <Property Name="Tickler5" Type="DateTime" Precision="3" />
+          <Property Name="CallBack" Type="Boolean" />
+          <Property Name="Tickler6" Type="DateTime" Precision="3" />
+          <Property Name="ApptCanDate" Type="DateTime" Precision="3" />
+          <Property Name="ApptCanReason" Type="Int32" />
+          <Property Name="ReschedDate" Type="DateTime" Precision="3" />
+          <Property Name="ReschedTime" Type="DateTime" Precision="3" />
+          <Property Name="FollowUpDate" Type="DateTime" Precision="3" />
+          <Property Name="FollowUpTime" Type="DateTime" Precision="3" />
+          <Property Name="NewClientDate" Type="DateTime" Precision="3" />
+          <Property Name="PCLawID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Details2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FollowupLst" Type="Int32" />
+          <Property Name="TBCB" Type="DateTime" Precision="3" />
+          <Property Name="TBCBL" Type="DateTime" Precision="3" />
+          <Property Name="LstMod" Type="DateTime" Precision="3" />
+          <Property Name="LstModEID" Type="Int32" />
+          <Property Name="NotRetained" Type="Boolean" />
+          <Property Name="CallCnt" Type="Int32" />
+          <Property Name="TB_Dispute" Type="Boolean" />
+          <Property Name="DucumentID" Type="Int64" />
+          <Property Name="Detail1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConAtty" Type="Int32" />
+          <Property Name="EmailAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YN9pm" Type="Int32" />
+          <Property Name="ConAttyLoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Citrix" Type="Boolean" />
+          <Property Name="CitrixSDate" Type="DateTime" Precision="3" />
+          <Property Name="CitrixRDate" Type="DateTime" Precision="3" />
+          <Property Name="Division" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TrackID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="inNeedles" Type="Boolean" />
+          <Property Name="NRReason" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLog1">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PNCID" />
+            <PropertyRef Name="upsize_ts" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PNCID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CallerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CallerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="CallSource" Type="Int32" />
+          <Property Name="CaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DocketFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ICStatus" Type="Int32" />
+          <Property Name="SchedDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedTime" Type="DateTime" Precision="3" />
+          <Property Name="LawyerID" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedCall" Type="Boolean" />
+          <Property Name="NewClient" Type="Boolean" />
+          <Property Name="ApmtOffice" Type="Int32" />
+          <Property Name="LtrID" Type="Int32" />
+          <Property Name="Tickler" Type="DateTime" Precision="3" />
+          <Property Name="ApptCanDate" Type="DateTime" Precision="3" />
+          <Property Name="ApptNoShow" Type="Boolean" />
+          <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Rescheduled" Type="Boolean" />
+          <Property Name="ApptCan" Type="Boolean" />
+          <Property Name="ApptCanReason" Type="Int32" />
+          <Property Name="ReschedDate" Type="DateTime" Precision="3" />
+          <Property Name="ReschedTime" Type="DateTime" Precision="3" />
+          <Property Name="NewClientDate" Type="DateTime" Precision="3" />
+          <Property Name="RetainLater" Type="Boolean" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ICCallLogCAN">
+          <Key>
+            <PropertyRef Name="IDCAN" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCAN" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ApptCanReason" Type="Int32" />
+          <Property Name="Detail4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApptCanDate" Type="DateTime" Precision="3" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLogCB">
+          <Key>
+            <PropertyRef Name="IDCB" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDCB" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Tickler6" Type="DateTime" Precision="3" />
+          <Property Name="Detail6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLogDelete">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID1" Type="Int32" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="PNCID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CallerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CallerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="CallSource" Type="Int32" />
+          <Property Name="CaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DocketFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ICStatus" Type="Int32" />
+          <Property Name="SchedDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedTime" Type="DateTime" Precision="3" />
+          <Property Name="LawyerID" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContactDate" Type="DateTime" Precision="3" />
+          <Property Name="SchedCall" Type="Boolean" />
+          <Property Name="Tickler1" Type="DateTime" Precision="3" />
+          <Property Name="ApmtOffice" Type="Int32" />
+          <Property Name="LtrID" Type="Int32" />
+          <Property Name="ApptNoShow" Type="Boolean" />
+          <Property Name="Tickler" Type="DateTime" Precision="3" />
+          <Property Name="Rescheduled" Type="Boolean" />
+          <Property Name="Tickler2" Type="DateTime" Precision="3" />
+          <Property Name="NewClient" Type="Boolean" />
+          <Property Name="RetainLater" Type="Boolean" />
+          <Property Name="Tickler3" Type="DateTime" Precision="3" />
+          <Property Name="ApptCan" Type="Boolean" />
+          <Property Name="Tickler4" Type="DateTime" Precision="3" />
+          <Property Name="FollowUp" Type="Boolean" />
+          <Property Name="Tickler5" Type="DateTime" Precision="3" />
+          <Property Name="CallBack" Type="Boolean" />
+          <Property Name="Tickler6" Type="DateTime" Precision="3" />
+          <Property Name="ApptCanDate" Type="DateTime" Precision="3" />
+          <Property Name="ApptCanReason" Type="Int32" />
+          <Property Name="ReschedDate" Type="DateTime" Precision="3" />
+          <Property Name="ReschedTime" Type="DateTime" Precision="3" />
+          <Property Name="FollowUpDate" Type="DateTime" Precision="3" />
+          <Property Name="FollowUpTime" Type="DateTime" Precision="3" />
+          <Property Name="NewClientDate" Type="DateTime" Precision="3" />
+          <Property Name="PCLawID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Details2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FollowupLst" Type="Int32" />
+          <Property Name="TBCB" Type="DateTime" Precision="3" />
+          <Property Name="TBCBL" Type="DateTime" Precision="3" />
+          <Property Name="LstMod" Type="DateTime" Precision="3" />
+          <Property Name="LstModEID" Type="Int32" />
+          <Property Name="NotRetained" Type="Boolean" />
+          <Property Name="CallCnt" Type="Int32" />
+          <Property Name="TB_Dispute" Type="Boolean" />
+          <Property Name="DucumentID" Type="Int64" />
+          <Property Name="Detail1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ConAtty" Type="Int32" />
+          <Property Name="EmailAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YN9pm" Type="Int32" />
+          <Property Name="ConAttyLoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Citrix" Type="Boolean" />
+          <Property Name="CitrixSDate" Type="DateTime" Precision="3" />
+          <Property Name="CitrixRDate" Type="DateTime" Precision="3" />
+          <Property Name="Division" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TrackID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="inNeedles" Type="Boolean" />
+          <Property Name="NRReason" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLogFU">
+          <Key>
+            <PropertyRef Name="IDFU" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDFU" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="FollowUpDate" Type="DateTime" Precision="3" />
+          <Property Name="FollowUpTime" Type="DateTime" Precision="3" />
+          <Property Name="Tickler5" Type="DateTime" Precision="3" />
+          <Property Name="Detail5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="FollowUpAttny" Type="Int32" />
+          <Property Name="FollowUpTask" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLogN">
+          <Key>
+            <PropertyRef Name="IDNS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDNS" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Tickler1" Type="DateTime" Precision="3" />
+          <Property Name="Detail1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICCallLogRL">
+          <Key>
+            <PropertyRef Name="IDRL" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDRL" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="SignedBy" Type="Int32" />
+          <Property Name="SignedByDte" Type="DateTime" Precision="3" />
+          <Property Name="SignUp" Type="Int32" />
+          <Property Name="PCLawID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PCLawDte" Type="DateTime" Precision="3" />
+          <Property Name="Tickler3" Type="DateTime" Precision="3" />
+          <Property Name="Detail3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Filed" Type="Boolean" />
+          <Property Name="FileDte" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ICCallLogR">
+          <Key>
+            <PropertyRef Name="IDRS" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDRS" Type="Int64" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ReschedDate" Type="DateTime" Precision="3" />
+          <Property Name="ReschedTime" Type="DateTime" Precision="3" />
+          <Property Name="Tickler2" Type="DateTime" Precision="3" />
+          <Property Name="Detail2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="ReschedAtty" Type="Int32" />
+          <Property Name="ReschedTsk" Type="Int32" />
+          <Property Name="ReschedApmtOffice" Type="Int32" />
+          <Property Name="ReschedBy" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICSource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Initials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ICStatu">
+          <Key>
+            <PropertyRef Name="ICID" />
+          </Key>
+          <Property Name="ICID" Type="Int32" Nullable="false" />
+          <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Jurisdiction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OfficeGrp" Type="Int32" />
+          <Property Name="Jurisdiction1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URLString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BtnLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="txtMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="Boolean" />
+          <Property Name="CountyArea" Type="Int32" />
+          <Property Name="Tag" Type="Int64" />
+          <Property Name="Parent" Type="Int64" />
+          <Property Name="SiteType" Type="Boolean" />
+          <Property Name="MultiPage" Type="Boolean" />
+          <Property Name="Pages" Type="Int32" />
+          <Property Name="AutoIncr" Type="Boolean" />
+          <Property Name="PrayerExempt" Type="Boolean" />
+          <Property Name="ScrapeTxt" Type="Boolean" />
+          <Property Name="LastPull" Type="Int64" />
+          <Property Name="intCurYr" Type="Int32" />
+          <Property Name="intRange" Type="Int32" />
+          <Property Name="intTmOut" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Lawyer">
+          <Key>
+            <PropertyRef Name="LawyerID" />
+          </Key>
+          <Property Name="LawyerID" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Initials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="OfficeID" Type="Int32" />
+          <Property Name="EmployeeNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="RPTAlias" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="lstOrder1" Type="Int32" />
+          <Property Name="Dept1" Type="Int32" />
+          <Property Name="lstOrder2" Type="Int32" />
+          <Property Name="Dept2" Type="Int32" />
+          <Property Name="lstOrder3" Type="Int32" />
+          <Property Name="Dept3" Type="Int32" />
+          <Property Name="OfficeDistrict" Type="Int32" />
+          <Property Name="OfficeGrpID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MSreplication_options">
+          <Key>
+            <PropertyRef Name="optname" />
+            <PropertyRef Name="value" />
+            <PropertyRef Name="major_version" />
+            <PropertyRef Name="minor_version" />
+            <PropertyRef Name="revision" />
+            <PropertyRef Name="install_failures" />
+          </Key>
+          <Property Name="optname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="Boolean" Nullable="false" />
+          <Property Name="major_version" Type="Int32" Nullable="false" />
+          <Property Name="minor_version" Type="Int32" Nullable="false" />
+          <Property Name="revision" Type="Int32" Nullable="false" />
+          <Property Name="install_failures" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OfficeArea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Office">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+          </Key>
+          <Property Name="OfficeID" Type="Int32" Nullable="false" />
+          <Property Name="OfficeGroup" Type="Int32" />
+          <Property Name="Abbrev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StateOrProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Inlist" Type="Boolean" />
+          <Property Name="StateID" Type="Int32" />
+          <Property Name="StateDef" Type="Boolean" />
+          <Property Name="AreaGrp1" Type="Int32" />
+          <Property Name="AreaGrp2" Type="Int32" />
+          <Property Name="AreaGrp3" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Offices2">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+            <PropertyRef Name="upsize_ts" />
+          </Key>
+          <Property Name="OfficeID" Type="Int32" Nullable="false" />
+          <Property Name="OfficeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StateOrProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="upsize_ts" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="spt_fallback_db">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_dbid" Type="Int16" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dbid" Type="Int16" Nullable="false" />
+          <Property Name="status" Type="Int16" Nullable="false" />
+          <Property Name="version" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_fallback_dev">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="low" />
+            <PropertyRef Name="high" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="phyname" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_low" Type="Int32" />
+          <Property Name="xfallback_drive" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="low" Type="Int32" Nullable="false" />
+          <Property Name="high" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int16" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phyname" Type="String" MaxLength="127" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_fallback_usg">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="segmap" />
+            <PropertyRef Name="lstart" />
+            <PropertyRef Name="sizepg" />
+            <PropertyRef Name="vstart" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_vstart" Type="Int32" />
+          <Property Name="dbid" Type="Int16" Nullable="false" />
+          <Property Name="segmap" Type="Int32" Nullable="false" />
+          <Property Name="lstart" Type="Int32" Nullable="false" />
+          <Property Name="sizepg" Type="Int32" Nullable="false" />
+          <Property Name="vstart" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_monitor">
+          <Key>
+            <PropertyRef Name="lastrun" />
+            <PropertyRef Name="cpu_busy" />
+            <PropertyRef Name="io_busy" />
+            <PropertyRef Name="idle" />
+            <PropertyRef Name="pack_received" />
+            <PropertyRef Name="pack_sent" />
+            <PropertyRef Name="connections" />
+            <PropertyRef Name="pack_errors" />
+            <PropertyRef Name="total_read" />
+            <PropertyRef Name="total_write" />
+            <PropertyRef Name="total_errors" />
+          </Key>
+          <Property Name="lastrun" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cpu_busy" Type="Int32" Nullable="false" />
+          <Property Name="io_busy" Type="Int32" Nullable="false" />
+          <Property Name="idle" Type="Int32" Nullable="false" />
+          <Property Name="pack_received" Type="Int32" Nullable="false" />
+          <Property Name="pack_sent" Type="Int32" Nullable="false" />
+          <Property Name="connections" Type="Int32" Nullable="false" />
+          <Property Name="pack_errors" Type="Int32" Nullable="false" />
+          <Property Name="total_read" Type="Int32" Nullable="false" />
+          <Property Name="total_write" Type="Int32" Nullable="false" />
+          <Property Name="total_errors" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WBCT12">
+          <Key>
+            <PropertyRef Name="DucumentID" />
+            <PropertyRef Name="CaseNo" />
+            <PropertyRef Name="DocketFrom" />
+            <PropertyRef Name="ContactFirstName" />
+            <PropertyRef Name="ContactLastName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="StateOrProvince" />
+            <PropertyRef Name="PostalCode" />
+          </Key>
+          <Property Name="DucumentID" Type="Int64" Nullable="false" />
+          <Property Name="DocTrackID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CaseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileDate" Type="DateTime" Precision="3" />
+          <Property Name="DocketFrom" Type="Int32" Nullable="false" />
+          <Property Name="Judge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServDate" Type="DateTime" Precision="3" />
+          <Property Name="PrayerAmt" Type="Double" />
+          <Property Name="CaseDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactFirstName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContactMInit" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ContactLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StateOrProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Plaintiff" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Name="PlaintAddr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlainAtt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeID" Type="Int32" />
+          <Property Name="LtrSent" Type="DateTime" Precision="3" />
+          <Property Name="ServiceProof" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ServiceYN" Type="Boolean" />
+          <Property Name="DefaultTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Printed" Type="Boolean" />
+          <Property Name="Merge" Type="Boolean" />
+          <Property Name="BatchName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EnvlName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LtrVer" Type="Int32" />
+          <Property Name="DatePrt" Type="DateTime" Precision="3" />
+          <Property Name="ReqMod" Type="Boolean" />
+          <Property Name="ModPrt" Type="Boolean" />
+          <Property Name="DateMod" Type="DateTime" Precision="3" />
+          <Property Name="LblName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DNS" Type="Boolean" />
+          <Property Name="BarCode" Type="String" MaxLength="65" FixedLength="false" Unicode="true" />
+          <Property Name="HumanReadable" Type="String" MaxLength="65" FixedLength="true" Unicode="true" />
+          <Property Name="PrtDocket" Type="Boolean" />
+          <Property Name="Printed2" Type="Boolean" />
+          <Property Name="Export" Type="Boolean" />
+          <Property Name="Export2" Type="Boolean" />
+          <Property Name="createdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="spt_values">
+          <Key>
+            <PropertyRef Name="number" />
+            <PropertyRef Name="type" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="number" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="low" Type="Int32" />
+          <Property Name="high" Type="Int32" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CaseTypes" EntityType="Self.CaseType" />
+          <EntitySet Name="chkCityNames" EntityType="Self.chkCityName" />
+          <EntitySet Name="ChkNmSfxes" EntityType="Self.ChkNmSfx" />
+          <EntitySet Name="ChkTexts" EntityType="Self.ChkText" />
+          <EntitySet Name="CivilWkMnths" EntityType="Self.CivilWkMnth" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="IC_CN_Reason" EntityType="Self.IC_CN_Reason" />
+          <EntitySet Name="ICCallLogs" EntityType="Self.ICCallLog" />
+          <EntitySet Name="ICCallLog1" EntityType="Self.ICCallLog1" />
+          <EntitySet Name="ICCallLogCANs" EntityType="Self.ICCallLogCAN" />
+          <EntitySet Name="ICCallLogCBs" EntityType="Self.ICCallLogCB" />
+          <EntitySet Name="ICCallLogDeletes" EntityType="Self.ICCallLogDelete" />
+          <EntitySet Name="ICCallLogFUs" EntityType="Self.ICCallLogFU" />
+          <EntitySet Name="ICCallLogNS" EntityType="Self.ICCallLogN" />
+          <EntitySet Name="ICCallLogRLs" EntityType="Self.ICCallLogRL" />
+          <EntitySet Name="ICCallLogRS" EntityType="Self.ICCallLogR" />
+          <EntitySet Name="ICSources" EntityType="Self.ICSource" />
+          <EntitySet Name="ICStatus" EntityType="Self.ICStatu" />
+          <EntitySet Name="Jurisdictions" EntityType="Self.Jurisdiction" />
+          <EntitySet Name="Lawyers" EntityType="Self.Lawyer" />
+          <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" />
+          <EntitySet Name="OfficeAreas" EntityType="Self.OfficeArea" />
+          <EntitySet Name="Offices" EntityType="Self.Office" />
+          <EntitySet Name="Offices2" EntityType="Self.Offices2" />
+          <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" />
+          <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" />
+          <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" />
+          <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" />
+          <EntitySet Name="WBCT12" EntityType="Self.WBCT12" />
+          <EntitySet Name="spt_values" EntityType="Self.spt_values" />
+          <FunctionImport Name="sp_MScleanupmergepublisher" />
+          <FunctionImport Name="sp_MSrepl_startup" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+          <EntitySetMapping Name="CaseTypes">
+            <EntityTypeMapping TypeName="masterModel.CaseType">
+              <MappingFragment StoreEntitySet="CaseType">
+                <ScalarProperty Name="CaseCode" ColumnName="CaseCode" />
+                <ScalarProperty Name="CaseType1" ColumnName="CaseType" />
+                <ScalarProperty Name="CaseGroup" ColumnName="CaseGroup" />
+                <ScalarProperty Name="LtrEntry" ColumnName="LtrEntry" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chkCityNames">
+            <EntityTypeMapping TypeName="masterModel.chkCityName">
+              <MappingFragment StoreEntitySet="chkCityName">
+                <ScalarProperty Name="CNameID" ColumnName="CNameID" />
+                <ScalarProperty Name="CNameTxt" ColumnName="CNameTxt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChkNmSfxes">
+            <EntityTypeMapping TypeName="masterModel.ChkNmSfx">
+              <MappingFragment StoreEntitySet="ChkNmSfx">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NmSfx" ColumnName="NmSfx" />
+                <ScalarProperty Name="NmType" ColumnName="NmType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChkTexts">
+            <EntityTypeMapping TypeName="masterModel.ChkText">
+              <MappingFragment StoreEntitySet="ChkText">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ChkText1" ColumnName="ChkText" />
+                <ScalarProperty Name="ChkType" ColumnName="ChkType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CivilWkMnths">
+            <EntityTypeMapping TypeName="masterModel.CivilWkMnth">
+              <MappingFragment StoreEntitySet="CivilWkMnth">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="YearNo" ColumnName="YearNo" />
+                <ScalarProperty Name="Mnth" ColumnName="Mnth" />
+                <ScalarProperty Name="MnthStrt" ColumnName="MnthStrt" />
+                <ScalarProperty Name="MnthEnd" ColumnName="MnthEnd" />
+                <ScalarProperty Name="Wk" ColumnName="Wk" />
+                <ScalarProperty Name="WkStrt" ColumnName="WkStrt" />
+                <ScalarProperty Name="WkEnd" ColumnName="WkEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="masterModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Initals" ColumnName="Initals" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="SocialSecurityNumber" ColumnName="SocialSecurityNumber" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="NationalEmplNumber" ColumnName="NationalEmplNumber" />
+                <ScalarProperty Name="EmailName" ColumnName="EmailName" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="DateHired" ColumnName="DateHired" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="BillingRate" ColumnName="BillingRate" />
+                <ScalarProperty Name="Deductions" ColumnName="Deductions" />
+                <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="EmrgcyContactName" ColumnName="EmrgcyContactName" />
+                <ScalarProperty Name="EmrgcyContactPhone" ColumnName="EmrgcyContactPhone" />
+                <ScalarProperty Name="Photograph" ColumnName="Photograph" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="PCLawPWD" ColumnName="PCLawPWD" />
+                <ScalarProperty Name="NeedlesName" ColumnName="NeedlesName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="KeySetID" ColumnName="KeySetID" />
+                <ScalarProperty Name="DefLang" ColumnName="DefLang" />
+                <ScalarProperty Name="BaseLang" ColumnName="BaseLang" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="Tickler" ColumnName="Tickler" />
+                <ScalarProperty Name="TickleInterval" ColumnName="TickleInterval" />
+                <ScalarProperty Name="ClientNotice" ColumnName="ClientNotice" />
+                <ScalarProperty Name="AppErrorNotice" ColumnName="AppErrorNotice" />
+                <ScalarProperty Name="PortNo" ColumnName="PortNo" />
+                <ScalarProperty Name="WksID" ColumnName="WksID" />
+                <ScalarProperty Name="WksIP" ColumnName="WksIP" />
+                <ScalarProperty Name="QBName" ColumnName="QBName" />
+                <ScalarProperty Name="QBPWD" ColumnName="QBPWD" />
+                <ScalarProperty Name="DailyLetters" ColumnName="DailyLetters" />
+                <ScalarProperty Name="lstOrder1" ColumnName="lstOrder1" />
+                <ScalarProperty Name="Dept1" ColumnName="Dept1" />
+                <ScalarProperty Name="lstOrder2" ColumnName="lstOrder2" />
+                <ScalarProperty Name="Dept2" ColumnName="Dept2" />
+                <ScalarProperty Name="lstOrder3" ColumnName="lstOrder3" />
+                <ScalarProperty Name="Dept3" ColumnName="Dept3" />
+                <ScalarProperty Name="lstOrder4" ColumnName="lstOrder4" />
+                <ScalarProperty Name="Dept4" ColumnName="Dept4" />
+                <ScalarProperty Name="lstOrder5" ColumnName="lstOrder5" />
+                <ScalarProperty Name="Dept5" ColumnName="Dept5" />
+                <ScalarProperty Name="DateLeave" ColumnName="DateLeave" />
+                <ScalarProperty Name="ICNotice" ColumnName="ICNotice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IC_CN_Reason">
+            <EntityTypeMapping TypeName="masterModel.IC_CN_Reason">
+              <MappingFragment StoreEntitySet="IC_CN_Reason">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CanDesc" ColumnName="CanDesc" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogs">
+            <EntityTypeMapping TypeName="masterModel.ICCallLog">
+              <MappingFragment StoreEntitySet="ICCallLog">
+                <ScalarProperty Name="ID1" ColumnName="ID1" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PNCID" ColumnName="PNCID" />
+                <ScalarProperty Name="CallerName" ColumnName="CallerName" />
+                <ScalarProperty Name="CallerPhone" ColumnName="CallerPhone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CallSource" ColumnName="CallSource" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="DocketFrom" ColumnName="DocketFrom" />
+                <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+                <ScalarProperty Name="ICStatus" ColumnName="ICStatus" />
+                <ScalarProperty Name="SchedDate" ColumnName="SchedDate" />
+                <ScalarProperty Name="SchedTime" ColumnName="SchedTime" />
+                <ScalarProperty Name="LawyerID" ColumnName="LawyerID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+                <ScalarProperty Name="SchedCall" ColumnName="SchedCall" />
+                <ScalarProperty Name="Tickler1" ColumnName="Tickler1" />
+                <ScalarProperty Name="ApmtOffice" ColumnName="ApmtOffice" />
+                <ScalarProperty Name="LtrID" ColumnName="LtrID" />
+                <ScalarProperty Name="ApptNoShow" ColumnName="ApptNoShow" />
+                <ScalarProperty Name="Tickler" ColumnName="Tickler" />
+                <ScalarProperty Name="Rescheduled" ColumnName="Rescheduled" />
+                <ScalarProperty Name="Tickler2" ColumnName="Tickler2" />
+                <ScalarProperty Name="NewClient" ColumnName="NewClient" />
+                <ScalarProperty Name="RetainLater" ColumnName="RetainLater" />
+                <ScalarProperty Name="Tickler3" ColumnName="Tickler3" />
+                <ScalarProperty Name="ApptCan" ColumnName="ApptCan" />
+                <ScalarProperty Name="Tickler4" ColumnName="Tickler4" />
+                <ScalarProperty Name="FollowUp" ColumnName="FollowUp" />
+                <ScalarProperty Name="Tickler5" ColumnName="Tickler5" />
+                <ScalarProperty Name="CallBack" ColumnName="CallBack" />
+                <ScalarProperty Name="Tickler6" ColumnName="Tickler6" />
+                <ScalarProperty Name="ApptCanDate" ColumnName="ApptCanDate" />
+                <ScalarProperty Name="ApptCanReason" ColumnName="ApptCanReason" />
+                <ScalarProperty Name="ReschedDate" ColumnName="ReschedDate" />
+                <ScalarProperty Name="ReschedTime" ColumnName="ReschedTime" />
+                <ScalarProperty Name="FollowUpDate" ColumnName="FollowUpDate" />
+                <ScalarProperty Name="FollowUpTime" ColumnName="FollowUpTime" />
+                <ScalarProperty Name="NewClientDate" ColumnName="NewClientDate" />
+                <ScalarProperty Name="PCLawID" ColumnName="PCLawID" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="MName" ColumnName="MName" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="Details2" ColumnName="Details2" />
+                <ScalarProperty Name="Details3" ColumnName="Details3" />
+                <ScalarProperty Name="Details4" ColumnName="Details4" />
+                <ScalarProperty Name="Details5" ColumnName="Details5" />
+                <ScalarProperty Name="Details6" ColumnName="Details6" />
+                <ScalarProperty Name="FollowupLst" ColumnName="FollowupLst" />
+                <ScalarProperty Name="TBCB" ColumnName="TBCB" />
+                <ScalarProperty Name="TBCBL" ColumnName="TBCBL" />
+                <ScalarProperty Name="LstMod" ColumnName="LstMod" />
+                <ScalarProperty Name="LstModEID" ColumnName="LstModEID" />
+                <ScalarProperty Name="NotRetained" ColumnName="NotRetained" />
+                <ScalarProperty Name="CallCnt" ColumnName="CallCnt" />
+                <ScalarProperty Name="TB_Dispute" ColumnName="TB_Dispute" />
+                <ScalarProperty Name="DucumentID" ColumnName="DucumentID" />
+                <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+                <ScalarProperty Name="ConAtty" ColumnName="ConAtty" />
+                <ScalarProperty Name="EmailAddr" ColumnName="EmailAddr" />
+                <ScalarProperty Name="YN9pm" ColumnName="YN9pm" />
+                <ScalarProperty Name="ConAttyLoc" ColumnName="ConAttyLoc" />
+                <ScalarProperty Name="Citrix" ColumnName="Citrix" />
+                <ScalarProperty Name="CitrixSDate" ColumnName="CitrixSDate" />
+                <ScalarProperty Name="CitrixRDate" ColumnName="CitrixRDate" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="TrackID" ColumnName="TrackID" />
+                <ScalarProperty Name="inNeedles" ColumnName="inNeedles" />
+                <ScalarProperty Name="NRReason" ColumnName="NRReason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLog1">
+            <EntityTypeMapping TypeName="masterModel.ICCallLog1">
+              <MappingFragment StoreEntitySet="ICCallLog1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PNCID" ColumnName="PNCID" />
+                <ScalarProperty Name="CallerName" ColumnName="CallerName" />
+                <ScalarProperty Name="CallerPhone" ColumnName="CallerPhone" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CallSource" ColumnName="CallSource" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="DocketFrom" ColumnName="DocketFrom" />
+                <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+                <ScalarProperty Name="ICStatus" ColumnName="ICStatus" />
+                <ScalarProperty Name="SchedDate" ColumnName="SchedDate" />
+                <ScalarProperty Name="SchedTime" ColumnName="SchedTime" />
+                <ScalarProperty Name="LawyerID" ColumnName="LawyerID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+                <ScalarProperty Name="SchedCall" ColumnName="SchedCall" />
+                <ScalarProperty Name="NewClient" ColumnName="NewClient" />
+                <ScalarProperty Name="ApmtOffice" ColumnName="ApmtOffice" />
+                <ScalarProperty Name="LtrID" ColumnName="LtrID" />
+                <ScalarProperty Name="Tickler" ColumnName="Tickler" />
+                <ScalarProperty Name="ApptCanDate" ColumnName="ApptCanDate" />
+                <ScalarProperty Name="ApptNoShow" ColumnName="ApptNoShow" />
+                <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+                <ScalarProperty Name="Rescheduled" ColumnName="Rescheduled" />
+                <ScalarProperty Name="ApptCan" ColumnName="ApptCan" />
+                <ScalarProperty Name="ApptCanReason" ColumnName="ApptCanReason" />
+                <ScalarProperty Name="ReschedDate" ColumnName="ReschedDate" />
+                <ScalarProperty Name="ReschedTime" ColumnName="ReschedTime" />
+                <ScalarProperty Name="NewClientDate" ColumnName="NewClientDate" />
+                <ScalarProperty Name="RetainLater" ColumnName="RetainLater" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogCANs">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogCAN">
+              <MappingFragment StoreEntitySet="ICCallLogCAN">
+                <ScalarProperty Name="IDCAN" ColumnName="IDCAN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ApptCanReason" ColumnName="ApptCanReason" />
+                <ScalarProperty Name="Detail4" ColumnName="Detail4" />
+                <ScalarProperty Name="ApptCanDate" ColumnName="ApptCanDate" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogCBs">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogCB">
+              <MappingFragment StoreEntitySet="ICCallLogCB">
+                <ScalarProperty Name="IDCB" ColumnName="IDCB" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tickler6" ColumnName="Tickler6" />
+                <ScalarProperty Name="Detail6" ColumnName="Detail6" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogDeletes">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogDelete">
+              <MappingFragment StoreEntitySet="ICCallLogDelete">
+                <ScalarProperty Name="ID1" ColumnName="ID1" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PNCID" ColumnName="PNCID" />
+                <ScalarProperty Name="CallerName" ColumnName="CallerName" />
+                <ScalarProperty Name="CallerPhone" ColumnName="CallerPhone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CallSource" ColumnName="CallSource" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="DocketFrom" ColumnName="DocketFrom" />
+                <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+                <ScalarProperty Name="ICStatus" ColumnName="ICStatus" />
+                <ScalarProperty Name="SchedDate" ColumnName="SchedDate" />
+                <ScalarProperty Name="SchedTime" ColumnName="SchedTime" />
+                <ScalarProperty Name="LawyerID" ColumnName="LawyerID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+                <ScalarProperty Name="SchedCall" ColumnName="SchedCall" />
+                <ScalarProperty Name="Tickler1" ColumnName="Tickler1" />
+                <ScalarProperty Name="ApmtOffice" ColumnName="ApmtOffice" />
+                <ScalarProperty Name="LtrID" ColumnName="LtrID" />
+                <ScalarProperty Name="ApptNoShow" ColumnName="ApptNoShow" />
+                <ScalarProperty Name="Tickler" ColumnName="Tickler" />
+                <ScalarProperty Name="Rescheduled" ColumnName="Rescheduled" />
+                <ScalarProperty Name="Tickler2" ColumnName="Tickler2" />
+                <ScalarProperty Name="NewClient" ColumnName="NewClient" />
+                <ScalarProperty Name="RetainLater" ColumnName="RetainLater" />
+                <ScalarProperty Name="Tickler3" ColumnName="Tickler3" />
+                <ScalarProperty Name="ApptCan" ColumnName="ApptCan" />
+                <ScalarProperty Name="Tickler4" ColumnName="Tickler4" />
+                <ScalarProperty Name="FollowUp" ColumnName="FollowUp" />
+                <ScalarProperty Name="Tickler5" ColumnName="Tickler5" />
+                <ScalarProperty Name="CallBack" ColumnName="CallBack" />
+                <ScalarProperty Name="Tickler6" ColumnName="Tickler6" />
+                <ScalarProperty Name="ApptCanDate" ColumnName="ApptCanDate" />
+                <ScalarProperty Name="ApptCanReason" ColumnName="ApptCanReason" />
+                <ScalarProperty Name="ReschedDate" ColumnName="ReschedDate" />
+                <ScalarProperty Name="ReschedTime" ColumnName="ReschedTime" />
+                <ScalarProperty Name="FollowUpDate" ColumnName="FollowUpDate" />
+                <ScalarProperty Name="FollowUpTime" ColumnName="FollowUpTime" />
+                <ScalarProperty Name="NewClientDate" ColumnName="NewClientDate" />
+                <ScalarProperty Name="PCLawID" ColumnName="PCLawID" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="MName" ColumnName="MName" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="Details2" ColumnName="Details2" />
+                <ScalarProperty Name="Details3" ColumnName="Details3" />
+                <ScalarProperty Name="Details4" ColumnName="Details4" />
+                <ScalarProperty Name="Details5" ColumnName="Details5" />
+                <ScalarProperty Name="Details6" ColumnName="Details6" />
+                <ScalarProperty Name="FollowupLst" ColumnName="FollowupLst" />
+                <ScalarProperty Name="TBCB" ColumnName="TBCB" />
+                <ScalarProperty Name="TBCBL" ColumnName="TBCBL" />
+                <ScalarProperty Name="LstMod" ColumnName="LstMod" />
+                <ScalarProperty Name="LstModEID" ColumnName="LstModEID" />
+                <ScalarProperty Name="NotRetained" ColumnName="NotRetained" />
+                <ScalarProperty Name="CallCnt" ColumnName="CallCnt" />
+                <ScalarProperty Name="TB_Dispute" ColumnName="TB_Dispute" />
+                <ScalarProperty Name="DucumentID" ColumnName="DucumentID" />
+                <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+                <ScalarProperty Name="ConAtty" ColumnName="ConAtty" />
+                <ScalarProperty Name="EmailAddr" ColumnName="EmailAddr" />
+                <ScalarProperty Name="YN9pm" ColumnName="YN9pm" />
+                <ScalarProperty Name="ConAttyLoc" ColumnName="ConAttyLoc" />
+                <ScalarProperty Name="Citrix" ColumnName="Citrix" />
+                <ScalarProperty Name="CitrixSDate" ColumnName="CitrixSDate" />
+                <ScalarProperty Name="CitrixRDate" ColumnName="CitrixRDate" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="TrackID" ColumnName="TrackID" />
+                <ScalarProperty Name="inNeedles" ColumnName="inNeedles" />
+                <ScalarProperty Name="NRReason" ColumnName="NRReason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogFUs">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogFU">
+              <MappingFragment StoreEntitySet="ICCallLogFU">
+                <ScalarProperty Name="IDFU" ColumnName="IDFU" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FollowUpDate" ColumnName="FollowUpDate" />
+                <ScalarProperty Name="FollowUpTime" ColumnName="FollowUpTime" />
+                <ScalarProperty Name="Tickler5" ColumnName="Tickler5" />
+                <ScalarProperty Name="Detail5" ColumnName="Detail5" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FollowUpAttny" ColumnName="FollowUpAttny" />
+                <ScalarProperty Name="FollowUpTask" ColumnName="FollowUpTask" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogNS">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogN">
+              <MappingFragment StoreEntitySet="ICCallLogNS">
+                <ScalarProperty Name="IDNS" ColumnName="IDNS" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tickler1" ColumnName="Tickler1" />
+                <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogRLs">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogRL">
+              <MappingFragment StoreEntitySet="ICCallLogRL">
+                <ScalarProperty Name="IDRL" ColumnName="IDRL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="SignedBy" ColumnName="SignedBy" />
+                <ScalarProperty Name="SignedByDte" ColumnName="SignedByDte" />
+                <ScalarProperty Name="SignUp" ColumnName="SignUp" />
+                <ScalarProperty Name="PCLawID" ColumnName="PCLawID" />
+                <ScalarProperty Name="PCLawDte" ColumnName="PCLawDte" />
+                <ScalarProperty Name="Tickler3" ColumnName="Tickler3" />
+                <ScalarProperty Name="Detail3" ColumnName="Detail3" />
+                <ScalarProperty Name="Filed" ColumnName="Filed" />
+                <ScalarProperty Name="FileDte" ColumnName="FileDte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICCallLogRS">
+            <EntityTypeMapping TypeName="masterModel.ICCallLogR">
+              <MappingFragment StoreEntitySet="ICCallLogRS">
+                <ScalarProperty Name="IDRS" ColumnName="IDRS" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ReschedDate" ColumnName="ReschedDate" />
+                <ScalarProperty Name="ReschedTime" ColumnName="ReschedTime" />
+                <ScalarProperty Name="Tickler2" ColumnName="Tickler2" />
+                <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+                <ScalarProperty Name="CurDateTime" ColumnName="CurDateTime" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="ReschedAtty" ColumnName="ReschedAtty" />
+                <ScalarProperty Name="ReschedTsk" ColumnName="ReschedTsk" />
+                <ScalarProperty Name="ReschedApmtOffice" ColumnName="ReschedApmtOffice" />
+                <ScalarProperty Name="ReschedBy" ColumnName="ReschedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICSources">
+            <EntityTypeMapping TypeName="masterModel.ICSource">
+              <MappingFragment StoreEntitySet="ICSource">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Initials" ColumnName="Initials" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICStatus">
+            <EntityTypeMapping TypeName="masterModel.ICStatu">
+              <MappingFragment StoreEntitySet="ICStatus">
+                <ScalarProperty Name="ICID" ColumnName="ICID" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jurisdictions">
+            <EntityTypeMapping TypeName="masterModel.Jurisdiction">
+              <MappingFragment StoreEntitySet="Jurisdiction">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OfficeGrp" ColumnName="OfficeGrp" />
+                <ScalarProperty Name="Jurisdiction1" ColumnName="Jurisdiction" />
+                <ScalarProperty Name="URLString" ColumnName="URLString" />
+                <ScalarProperty Name="BtnLabel" ColumnName="BtnLabel" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="txtMessage" ColumnName="txtMessage" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="CountyArea" ColumnName="CountyArea" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="SiteType" ColumnName="SiteType" />
+                <ScalarProperty Name="MultiPage" ColumnName="MultiPage" />
+                <ScalarProperty Name="Pages" ColumnName="Pages" />
+                <ScalarProperty Name="AutoIncr" ColumnName="AutoIncr" />
+                <ScalarProperty Name="PrayerExempt" ColumnName="PrayerExempt" />
+                <ScalarProperty Name="ScrapeTxt" ColumnName="ScrapeTxt" />
+                <ScalarProperty Name="LastPull" ColumnName="LastPull" />
+                <ScalarProperty Name="intCurYr" ColumnName="intCurYr" />
+                <ScalarProperty Name="intRange" ColumnName="intRange" />
+                <ScalarProperty Name="intTmOut" ColumnName="intTmOut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lawyers">
+            <EntityTypeMapping TypeName="masterModel.Lawyer">
+              <MappingFragment StoreEntitySet="Lawyers">
+                <ScalarProperty Name="LawyerID" ColumnName="LawyerID" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="Initials" ColumnName="Initials" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EmailName" ColumnName="EmailName" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RPTAlias" ColumnName="RPTAlias" />
+                <ScalarProperty Name="lstOrder1" ColumnName="lstOrder1" />
+                <ScalarProperty Name="Dept1" ColumnName="Dept1" />
+                <ScalarProperty Name="lstOrder2" ColumnName="lstOrder2" />
+                <ScalarProperty Name="Dept2" ColumnName="Dept2" />
+                <ScalarProperty Name="lstOrder3" ColumnName="lstOrder3" />
+                <ScalarProperty Name="Dept3" ColumnName="Dept3" />
+                <ScalarProperty Name="OfficeDistrict" ColumnName="OfficeDistrict" />
+                <ScalarProperty Name="OfficeGrpID" ColumnName="OfficeGrpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSreplication_options">
+            <EntityTypeMapping TypeName="masterModel.MSreplication_options">
+              <MappingFragment StoreEntitySet="MSreplication_options">
+                <ScalarProperty Name="optname" ColumnName="optname" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="major_version" ColumnName="major_version" />
+                <ScalarProperty Name="minor_version" ColumnName="minor_version" />
+                <ScalarProperty Name="revision" ColumnName="revision" />
+                <ScalarProperty Name="install_failures" ColumnName="install_failures" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OfficeAreas">
+            <EntityTypeMapping TypeName="masterModel.OfficeArea">
+              <MappingFragment StoreEntitySet="OfficeArea">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="State" ColumnName="State" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offices">
+            <EntityTypeMapping TypeName="masterModel.Office">
+              <MappingFragment StoreEntitySet="Offices">
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="OfficeGroup" ColumnName="OfficeGroup" />
+                <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Inlist" ColumnName="Inlist" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateDef" ColumnName="StateDef" />
+                <ScalarProperty Name="AreaGrp1" ColumnName="AreaGrp1" />
+                <ScalarProperty Name="AreaGrp2" ColumnName="AreaGrp2" />
+                <ScalarProperty Name="AreaGrp3" ColumnName="AreaGrp3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offices2">
+            <EntityTypeMapping TypeName="masterModel.Offices2">
+              <MappingFragment StoreEntitySet="Offices2">
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="upsize_ts" ColumnName="upsize_ts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_db">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_db">
+              <MappingFragment StoreEntitySet="spt_fallback_db">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_dbid" ColumnName="xfallback_dbid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="dbid" ColumnName="dbid" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_dev">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_dev">
+              <MappingFragment StoreEntitySet="spt_fallback_dev">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_low" ColumnName="xfallback_low" />
+                <ScalarProperty Name="xfallback_drive" ColumnName="xfallback_drive" />
+                <ScalarProperty Name="low" ColumnName="low" />
+                <ScalarProperty Name="high" ColumnName="high" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phyname" ColumnName="phyname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_usg">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_usg">
+              <MappingFragment StoreEntitySet="spt_fallback_usg">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_vstart" ColumnName="xfallback_vstart" />
+                <ScalarProperty Name="dbid" ColumnName="dbid" />
+                <ScalarProperty Name="segmap" ColumnName="segmap" />
+                <ScalarProperty Name="lstart" ColumnName="lstart" />
+                <ScalarProperty Name="sizepg" ColumnName="sizepg" />
+                <ScalarProperty Name="vstart" ColumnName="vstart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_monitor">
+            <EntityTypeMapping TypeName="masterModel.spt_monitor">
+              <MappingFragment StoreEntitySet="spt_monitor">
+                <ScalarProperty Name="lastrun" ColumnName="lastrun" />
+                <ScalarProperty Name="cpu_busy" ColumnName="cpu_busy" />
+                <ScalarProperty Name="io_busy" ColumnName="io_busy" />
+                <ScalarProperty Name="idle" ColumnName="idle" />
+                <ScalarProperty Name="pack_received" ColumnName="pack_received" />
+                <ScalarProperty Name="pack_sent" ColumnName="pack_sent" />
+                <ScalarProperty Name="connections" ColumnName="connections" />
+                <ScalarProperty Name="pack_errors" ColumnName="pack_errors" />
+                <ScalarProperty Name="total_read" ColumnName="total_read" />
+                <ScalarProperty Name="total_write" ColumnName="total_write" />
+                <ScalarProperty Name="total_errors" ColumnName="total_errors" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WBCT12">
+            <EntityTypeMapping TypeName="masterModel.WBCT12">
+              <MappingFragment StoreEntitySet="WBCT12">
+                <ScalarProperty Name="DucumentID" ColumnName="DucumentID" />
+                <ScalarProperty Name="DocTrackID" ColumnName="DocTrackID" />
+                <ScalarProperty Name="CaseNo" ColumnName="CaseNo" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="FileDate" ColumnName="FileDate" />
+                <ScalarProperty Name="DocketFrom" ColumnName="DocketFrom" />
+                <ScalarProperty Name="Judge" ColumnName="Judge" />
+                <ScalarProperty Name="ServDate" ColumnName="ServDate" />
+                <ScalarProperty Name="PrayerAmt" ColumnName="PrayerAmt" />
+                <ScalarProperty Name="CaseDesignation" ColumnName="CaseDesignation" />
+                <ScalarProperty Name="ContactFirstName" ColumnName="ContactFirstName" />
+                <ScalarProperty Name="ContactMInit" ColumnName="ContactMInit" />
+                <ScalarProperty Name="ContactLastName" ColumnName="ContactLastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Plaintiff" ColumnName="Plaintiff" />
+                <ScalarProperty Name="PlaintAddr" ColumnName="PlaintAddr" />
+                <ScalarProperty Name="PlainAtt" ColumnName="PlainAtt" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+                <ScalarProperty Name="LtrSent" ColumnName="LtrSent" />
+                <ScalarProperty Name="ServiceProof" ColumnName="ServiceProof" />
+                <ScalarProperty Name="ServiceYN" ColumnName="ServiceYN" />
+                <ScalarProperty Name="DefaultTitle" ColumnName="DefaultTitle" />
+                <ScalarProperty Name="Printed" ColumnName="Printed" />
+                <ScalarProperty Name="Merge" ColumnName="Merge" />
+                <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+                <ScalarProperty Name="EnvlName" ColumnName="EnvlName" />
+                <ScalarProperty Name="LtrVer" ColumnName="LtrVer" />
+                <ScalarProperty Name="DatePrt" ColumnName="DatePrt" />
+                <ScalarProperty Name="ReqMod" ColumnName="ReqMod" />
+                <ScalarProperty Name="ModPrt" ColumnName="ModPrt" />
+                <ScalarProperty Name="DateMod" ColumnName="DateMod" />
+                <ScalarProperty Name="LblName" ColumnName="LblName" />
+                <ScalarProperty Name="DNS" ColumnName="DNS" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+                <ScalarProperty Name="HumanReadable" ColumnName="HumanReadable" />
+                <ScalarProperty Name="PrtDocket" ColumnName="PrtDocket" />
+                <ScalarProperty Name="Printed2" ColumnName="Printed2" />
+                <ScalarProperty Name="Export" ColumnName="Export" />
+                <ScalarProperty Name="Export2" ColumnName="Export2" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_values">
+            <EntityTypeMapping TypeName="masterModel.spt_values">
+              <MappingFragment StoreEntitySet="spt_values">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="low" ColumnName="low" />
+                <ScalarProperty Name="high" ColumnName="high" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_MScleanupmergepublisher" FunctionName="masterModel.Store.sp_MScleanupmergepublisher" />
+          <FunctionImportMapping FunctionImportName="sp_MSrepl_startup" FunctionName="masterModel.Store.sp_MSrepl_startup" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

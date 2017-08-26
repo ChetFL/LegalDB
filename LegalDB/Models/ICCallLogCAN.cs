@@ -12,13 +12,14 @@ namespace LegalDB.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaseType
+    public partial class ICCallLogCAN
     {
-        public string CaseCode { get; set; }
-        public string CaseType1 { get; set; }
-        public string CaseGroup { get; set; }
-        public string LtrEntry { get; set; }
-        public string Designation { get; set; }
-        public Nullable<bool> Active { get; set; }
+        public long IDCAN { get; set; }
+        public long ID { get; set; }
+        public Nullable<int> ApptCanReason { get; set; }
+        public string Detail4 { get; set; }
+        public Nullable<System.DateTime> ApptCanDate { get; set; }
+        public Nullable<System.DateTime> CurDateTime { get; set; }
+        public Nullable<int> EmployeeID { get; set; }
     }
 }

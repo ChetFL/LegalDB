@@ -14,7 +14,7 @@ namespace LegalDB.Models
     
     public partial class ICStatu
     {
-        public int ID { get; set; }
+        public int ICID { get; set; }
         public string Desc { get; set; }
         public Nullable<int> Sort { get; set; }
     }

@@ -15,16 +15,25 @@ namespace LegalDB.Models
     public partial class Jurisdiction
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string WebAddr { get; set; }
-        public string Abbr { get; set; }
+        public Nullable<int> OfficeGrp { get; set; }
+        public string Jurisdiction1 { get; set; }
+        public string URLString { get; set; }
+        public string BtnLabel { get; set; }
         public Nullable<bool> Active { get; set; }
-        public Nullable<bool> IsCounty { get; set; }
-        public Nullable<int> CountyID { get; set; }
+        public string txtMessage { get; set; }
+        public Nullable<bool> County { get; set; }
+        public Nullable<int> CountyArea { get; set; }
+        public Nullable<long> Tag { get; set; }
+        public Nullable<long> Parent { get; set; }
+        public Nullable<bool> SiteType { get; set; }
+        public Nullable<bool> MultiPage { get; set; }
+        public Nullable<int> Pages { get; set; }
+        public Nullable<bool> AutoIncr { get; set; }
         public Nullable<bool> PrayerExempt { get; set; }
-        public Nullable<int> ChkRange { get; set; }
-        public Nullable<long> LastRecNo { get; set; }
-        public Nullable<System.DateTime> LastRunTime { get; set; }
-        public string LastRunStatus { get; set; }
+        public Nullable<bool> ScrapeTxt { get; set; }
+        public Nullable<long> LastPull { get; set; }
+        public Nullable<int> intCurYr { get; set; }
+        public Nullable<int> intRange { get; set; }
+        public Nullable<int> intTmOut { get; set; }
     }
 }

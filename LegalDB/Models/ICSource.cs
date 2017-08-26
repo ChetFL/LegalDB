@@ -17,6 +17,5 @@ namespace LegalDB.Models
         public int ID { get; set; }
         public string Initials { get; set; }
         public string Desc { get; set; }
-        public Nullable<bool> Active { get; set; }
     }
 }

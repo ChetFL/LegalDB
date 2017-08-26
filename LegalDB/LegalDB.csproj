@@ -88,6 +88,30 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Syncfusion.Chart.Wpf, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Compression.Base, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Core, Version=15.3450.0.26, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
@@ -169,6 +193,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mvc5, Version=1.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc5.1.2.3\lib\net45\Unity.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -232,6 +260,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ICCallLogsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -239,189 +268,116 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BestCaseLogin.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CaseType.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\chkCityName.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChkNmSfx.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CivilLetter.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\ChkText.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CivilWkMnth.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\County.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRpt.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptAgency.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptMotorist.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptOccInjury.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptOccSeatPos.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptOccup.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptSeverity.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVeh.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVehBody.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVehDamScale.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVehSpecFunc.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVehTypeUse.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CrashRptVehUnitType.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DefaultSchedule.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Department.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DNSAddr.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DNSName.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EmpType.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ICCallLog.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLog1.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogCAN.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogCB.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogDelete.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogFU.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogN.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogR.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ICCallLogRL.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ICSource.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ICStatu.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ICTask.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\IC_CN_Reason.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Jurisdiction.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Language.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Lawyer.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LegalDBLogin.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LegalDBWebEntities.Context.cs">
+    <Compile Include="Models\LegalDBWebEntites.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LegalDBWebEntities.Context.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LegalDBWebEntities.cs">
+    <Compile Include="Models\LegalDBWebEntites.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LegalDBWebEntities.Designer.cs">
+    <Compile Include="Models\LegalDBWebEntites.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\NeedlesLogin.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\News.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\MSreplication_options.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Office.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PCLawLogin.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\OfficeArea.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PoliceDept.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\Offices2.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuickBookLogin.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\spt_fallback_db.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RptList.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\spt_fallback_dev.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RptMailingList.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\spt_fallback_usg.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\State.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\spt_monitor.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Tickler.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_Attny.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_CallSource.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_CaseType.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_CivilEmp.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_ICLkUp.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_ICOffice.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_ICStat.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_Lawyers.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\v_LetterInfo.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+    <Compile Include="Models\spt_values.cs">
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WBCT12.cs">
-      <DependentUpon>LegalDBWebEntities.tt</DependentUpon>
+      <DependentUpon>LegalDBWebEntites.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICCallLogInfoRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -706,6 +662,7 @@
     <Content Include="Content\Gridmvc.css" />
     <Content Include="Content\gridmvc.datepicker.css" />
     <Content Include="Content\gridmvc.datepicker.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -1131,15 +1088,15 @@
     <Content Include="Images\_110_15.ico" />
     <Content Include="Images\_154_16.ico" />
     <Content Include="Images\_155_8.ico" />
-    <Content Include="Models\LegalDBWebEntities.Context.tt">
+    <Content Include="Models\LegalDBWebEntites.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
-      <LastGenOutput>LegalDBWebEntities.Context.cs</LastGenOutput>
+      <DependentUpon>LegalDBWebEntites.edmx</DependentUpon>
+      <LastGenOutput>LegalDBWebEntites.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\LegalDBWebEntities.tt">
+    <Content Include="Models\LegalDBWebEntites.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
-      <LastGenOutput>LegalDBWebEntities.cs</LastGenOutput>
+      <DependentUpon>LegalDBWebEntites.edmx</DependentUpon>
+      <LastGenOutput>LegalDBWebEntites.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -1197,12 +1154,12 @@
     <Content Include="Content\ej\web\office-365\icons\ejicons.woff" />
     <Content Include="ClassDiagram1.cd" />
     <Content Include="ClassDiagram2.cd" />
-    <EntityDeploy Include="Models\LegalDBWebEntities.edmx">
+    <EntityDeploy Include="Models\LegalDBWebEntites.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LegalDBWebEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>LegalDBWebEntites.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\LegalDBWebEntities.edmx.diagram">
-      <DependentUpon>LegalDBWebEntities.edmx</DependentUpon>
+    <Content Include="Models\LegalDBWebEntites.edmx.diagram">
+      <DependentUpon>LegalDBWebEntites.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\ej\ej.web.all.min.intellisense.js" />
     <Content Include="Scripts\ej\ej.web.all.min.js" />

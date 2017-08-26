@@ -21,7 +21,19 @@ namespace LegalDB.Models
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public string Title { get; set; }
+        public string EmailName { get; set; }
+        public Nullable<int> DepartmentID { get; set; }
         public Nullable<int> OfficeID { get; set; }
+        public string EmployeeNumber { get; set; }
         public Nullable<bool> Active { get; set; }
+        public string RPTAlias { get; set; }
+        public Nullable<int> lstOrder1 { get; set; }
+        public Nullable<int> Dept1 { get; set; }
+        public Nullable<int> lstOrder2 { get; set; }
+        public Nullable<int> Dept2 { get; set; }
+        public Nullable<int> lstOrder3 { get; set; }
+        public Nullable<int> Dept3 { get; set; }
+        public Nullable<int> OfficeDistrict { get; set; }
+        public Nullable<int> OfficeGrpID { get; set; }
     }
 }
